@@ -1,16 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected Vector2 controllerInput;
+    public void OnMove(InputAction.CallbackContext context)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        controllerInput = context.action.ReadValue<Vector2>();
     }
 }
