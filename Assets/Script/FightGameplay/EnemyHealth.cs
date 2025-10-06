@@ -25,4 +25,12 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("El enemigo se murio :c");
         }
     }
+    void OnEnable()
+    {
+        FightManager.Instance.enemies.Add(this);
+    }
+    void OnDisable()
+    {
+        FightManager.Instance.enemies.Remove(this);
+    }
 }
