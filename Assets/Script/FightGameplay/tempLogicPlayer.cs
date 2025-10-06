@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class tempLogicPlayer : MonoBehaviour
 {
-    public AttackTurn temptest = new AttackTurn();
+    public TurnLogic temptest = new TurnLogic();
     [ContextMenu("meter en cola")]
     public void queueSometing()
     {
