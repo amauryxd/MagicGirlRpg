@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +10,10 @@ public class FightManager : MonoBehaviour
     public static FightManager Instance { get; private set; }
     [Header("FightVariables")]
     public List<TurnLogic> PlayerAttacks = new List<TurnLogic>();
+    [SerializeField] private bool canPassTurn;
     [Header("EnemysVariables")]
     public List<EnemyHealth> enemies = new List<EnemyHealth>();
+    //[Header()]
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -21,12 +24,20 @@ public class FightManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    void OnEnable()
+    {
+        TurnLogic.turnFinished += NextTurnSetter;
+    }
+    void OnDisable()
+    {
+        TurnLogic.turnFinished -= NextTurnSetter;
+    }
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         switch (turnActual)
@@ -44,15 +55,19 @@ public class FightManager : MonoBehaviour
 
     public void PlayerTurnLogic()
     {
+        //cambiar el squema de controles a ataque
         //ir coleccionando todos los ataques hasta tener 3
         //comprobar el tipo de turno
         //ir ejecutando 1 por 1 hasta que termine la lista
         //limpiar lista
+        //lanzar evento de turno finalizado
     }
 
     public void EnemyTurnLogic()
     {
-        
+        //poner en una fila los attaques de los enemigos
+        //ir ejecutando uno por uno hasta que todos terminen
+        //lanzar el evento de turno finalizado
     }
 
     public void QueueAction(TurnLogic attackTurnToQueue)
@@ -67,5 +82,18 @@ public class FightManager : MonoBehaviour
         PlayerAttacks.RemoveAt(PlayerAttacks.Count - 1);
         //debug
         Debug.Log(PlayerAttacks.Count);
+    }
+    public IEnumerator DoTurns()
+    {
+        for (int index = 0; index < PlayerAttacks.Count; index++)
+        {
+            PlayerAttacks[index].MakeTurn();
+            yield return new WaitUntil(() => canPassTurn);
+            canPassTurn = false;
+        }
+    }
+    private void NextTurnSetter()
+    {
+        canPassTurn = true;
     }
 }

@@ -3,7 +3,7 @@
     "name": "PlayerInput",
     "maps": [
         {
-            "name": "OnWorld",
+            "name": "OnDungeon",
             "id": "adaed80a-00b4-4ca2-a867-812367c4d710",
             "actions": [
                 {
