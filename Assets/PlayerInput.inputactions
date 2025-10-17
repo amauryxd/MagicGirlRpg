@@ -42,7 +42,7 @@
                 {
                     "name": "up",
                     "id": "9140edea-e702-4d39-a09e-6d62527b425f",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -53,7 +53,7 @@
                 {
                     "name": "down",
                     "id": "b1d4e5ba-5bee-468f-8ff0-4c731dcf8bd7",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -64,7 +64,7 @@
                 {
                     "name": "left",
                     "id": "13b99628-bfb8-4d28-986f-8dde77f06e17",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -75,13 +75,103 @@
                 {
                     "name": "right",
                     "id": "46ae08cf-f934-4980-ba4f-ec8a23567265",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "OnFight",
+            "id": "de3ce710-5b5f-4c17-98db-46a0a36c8327",
+            "actions": [
+                {
+                    "name": "MoveFight",
+                    "type": "Value",
+                    "id": "158cca5d-9f72-442a-924e-c3515e89d830",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "bf91241f-b89a-4303-b3ac-5885d9d564a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Negate",
+                    "type": "Button",
+                    "id": "2009a800-fde1-4744-a49c-3f603e8df61f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "ea8f7b8f-3fdb-4ed8-b975-3c343cdeb210",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFight",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "2451df33-5495-4ce9-8c64-4a27d200fac2",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "3eb7880d-6782-4aec-a85a-621dd8f8b9db",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveFight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c2ca9a68-b053-493c-968e-74aab5872e38",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36396556-547c-4553-9417-88bb6c58947d",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Negate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
