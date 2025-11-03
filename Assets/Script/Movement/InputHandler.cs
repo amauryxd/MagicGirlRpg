@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    protected Vector2 controllerInput;
-    protected float fightMove;
-    protected bool onConfirm;
-    protected bool onNegate;
+    public Vector2 controllerInput;
+    public float fightMove;
+    public bool onConfirm;
+    public bool onNegate;
     public void OnMove(InputAction.CallbackContext context)
     {
         controllerInput = context.action.ReadValue<Vector2>();
@@ -18,9 +18,13 @@ public class InputHandler : MonoBehaviour
     public void OnConfirm(InputAction.CallbackContext context)
     {
         onConfirm = context.performed;
+        if (context.performed) ConfirmAction();
     }
     public void OnNegate(InputAction.CallbackContext context)
     {
         onNegate = context.performed;
+        if (context.performed) NegateAction();
     }
+    public virtual void ConfirmAction() { }
+    public virtual void NegateAction() {}
 }

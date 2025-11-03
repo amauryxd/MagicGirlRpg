@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class TurnLogic : MonoBehaviour
 {
-    public enum TurnType {Attack, Defense, Item, Escape}
+    public enum TurnType { Attack, Defense, Item, Escape }
     public TurnType Type;
     public int id;
     public delegate void OnTurnFinished();
     public static event OnTurnFinished turnFinished;
+    //public  player health
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class TurnLogic : MonoBehaviour
                 break;
         }
     }
-    private void OnAttackTurn()
+    public void OnAttackTurn()
     {
         Debug.Log("Atacando al enemigo con id " + id);
         turnFinished?.Invoke();
@@ -48,14 +49,14 @@ public class TurnLogic : MonoBehaviour
         //restar la vida del enemigo
         //mandar el evento de turno terminado
     }
-    private void OnDefenseTurn()
+    public void OnDefenseTurn()
     {
         Debug.Log("Defendiendo");
         turnFinished?.Invoke();
         //aumentar las estadisticas del personaje
         //observar a cuando termine el turno enemigo
     }
-    private void OnItemTurn()
+    public void OnItemTurn()
     {
         Debug.Log("Item usado en el personaje/enemigo con id" + id);
         turnFinished?.Invoke();
