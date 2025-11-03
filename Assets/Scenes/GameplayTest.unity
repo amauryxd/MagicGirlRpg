@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 698232919}
   - component: {fileID: 698232921}
   m_Layer: 5
-  m_Name: Stat1 (1)
+  m_Name: DefenceBut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -166}
+  m_AnchoredPosition: {x: -28, y: -256}
   m_SizeDelta: {x: 627.4609, y: 117.6489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698232919
@@ -484,7 +484,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698232919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2107977212}
+        m_TargetAssemblyTypeName: CanvasFIghtRef, Assembly-CSharp
+        m_MethodName: SendButtonIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &737417312
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,8 +717,10 @@ MonoBehaviour:
   partyIndex: 0
   canPassTurn: 0
   enemies: []
+  enemiesIndex: 0
   cineCamera: {fileID: 1387550165}
   canvasRef: {fileID: 2107977212}
+  selectAllysIndex: 0
 --- !u!1 &924081754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stat Ability
+  m_text: Defence
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1922,7 +1936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: 196}
+  m_AnchoredPosition: {x: -28, y: 241}
   m_SizeDelta: {x: 627.4609, y: 117.6489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425428851
@@ -2067,7 +2081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -3}
+  m_AnchoredPosition: {x: -28, y: 70}
   m_SizeDelta: {x: 627.4609, y: 117.6489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451129246
@@ -2113,7 +2127,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1451129247}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2107977212}
+        m_TargetAssemblyTypeName: CanvasFIghtRef, Assembly-CSharp
+        m_MethodName: SendButtonIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1451129247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3274,7 +3300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -166}
+  m_AnchoredPosition: {x: -28, y: -97}
   m_SizeDelta: {x: 627.4609, y: 117.6489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1783152435
@@ -3320,7 +3346,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1783152436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2107977212}
+        m_TargetAssemblyTypeName: CanvasFIghtRef, Assembly-CSharp
+        m_MethodName: SendButtonIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1977974308}
+        m_TargetAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1783152436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3878,8 +3928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.0415, y: 0}
-  m_SizeDelta: {x: 840.4603, y: 580.3773}
+  m_AnchoredPosition: {x: 130.0415, y: 16}
+  m_SizeDelta: {x: 840.4603, y: 726.9664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105049380
 MonoBehaviour:

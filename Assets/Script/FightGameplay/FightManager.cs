@@ -17,12 +17,14 @@ public class FightManager : MonoBehaviour
     [SerializeField] private bool canPassTurn;
     [Header("EnemysVariables")]
     public List<EnemyHealth> enemies = new List<EnemyHealth>();
-    private int enemiesIndex = 0;
+    public int enemiesIndex = 0;
     [Header("Camera")]
     public CinemachineCamera cineCamera;
     [Header("Canvas")]
     [SerializeField] public CanvasFIghtRef canvasRef;
     private bool canSelectEnemies = false;
+    private bool canSelectAlly = false;
+    public int selectAllysIndex = 0;
     InputHandler inputs;
     private bool canSelect = false;
 
@@ -71,6 +73,10 @@ public class FightManager : MonoBehaviour
         {
             SelectEnemy();
         }
+        if (canSelectAlly)
+        {
+            SelectAlly();
+        }
     }
 
     public void PlayerTurnLogic()
@@ -83,21 +89,18 @@ public class FightManager : MonoBehaviour
         //limpiar lista
         //lanzar evento de turno finalizado
     }
-
     public void EnemyTurnLogic()
     {
         //poner en una fila los attaques de los enemigos
         //ir ejecutando uno por uno hasta que todos terminen
         //lanzar el evento de turno finalizado
     }
-
     public void QueueAction(TurnLogic attackTurnToQueue)
     {
         PlayerAttacks.Add(attackTurnToQueue);
         //debug
         Debug.Log(PlayerAttacks.Count);
     }
-
     public void DequeueAction()
     {
         PlayerAttacks.RemoveAt(PlayerAttacks.Count - 1);
@@ -144,7 +147,7 @@ public class FightManager : MonoBehaviour
         if (inputs.onConfirm && canSelect)
         {
             canSelect = false;
-            SetTurnLogic(enemiesIndex);
+            SetTurnLogic(partyIndex+1,enemiesIndex,TurnLogic.TurnType.Attack);
             canSelectEnemies = false;
             partyIndex++;
             if (partyIndex > 2)
@@ -169,21 +172,62 @@ public class FightManager : MonoBehaviour
     }
     public void FinishTurn()
     {
+        canvasRef.canvaAbilities.enabled = false;
         DesactivateCamera();
         enemiesIndex = 0;
         partyIndex = 0;
+        selectAllysIndex = 0;
         StartCoroutine(DoTurns());
     }
     private void SelectAlly()
     {
-
+        if (!inputs.onConfirm)
+        {
+            canSelect = true;
+        }
+        selectAllysIndex = Mathf.Clamp(selectAllysIndex, 0, partyMembers.Count - 2);
+        MoveCameraTo(partyMembers[selectAllysIndex + 1].transform);
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0f;
+        if (inputs.fightMove > 0)
+        {
+            selectAllysIndex++;
+        }
+        else if (inputs.fightMove < 0)
+        {
+            selectAllysIndex--;
+        }
+        if (inputs.onConfirm && canSelect)
+        {
+            canSelect = false;
+            SetTurnLogic(partyIndex+1,selectAllysIndex,TurnLogic.TurnType.StatModif);
+            canSelectAlly = false;
+            partyIndex++;
+            if (partyIndex > 2)
+            {
+                FinishTurn();
+            }
+            else
+            {
+                MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                canvasRef.canvaAbilities.enabled = true;
+                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+            }
+        }
+        if (inputs.onNegate)
+        {
+            canvasRef.canvaAbilities.enabled = true;
+            canSelectAlly = false;
+            canSelect = false;
+            MoveCameraTo(partyMembers[partyIndex + 1].transform);
+            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+        }
     }
-    public void SetTurnLogic(int index)
+    public void SetTurnLogic(int fromWho,int index, TurnLogic.TurnType type)
     {
         TurnLogic tempLogic = new TurnLogic();
-        tempLogic = partyMembers[partyIndex+1].turns;
+        tempLogic = partyMembers[fromWho].turns;
         tempLogic.id = index;
-        tempLogic.Type = TurnLogic.TurnType.Attack;
+        tempLogic.Type = type;
         QueueAction(tempLogic);
     }
     #endregion
@@ -226,13 +270,34 @@ public class FightManager : MonoBehaviour
                 canSelectEnemies = true;
                 break;
             case 1:
-
+                SetTurnLogic(partyIndex + 1, 0, TurnLogic.TurnType.AllAttack);
+                partyIndex++;
+                if (PlayerAttacks.Count > 2)
+                {
+                    FinishTurn();
+                }
+                else
+                {
+                    MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                    canvasRef.canvaAbilities.enabled = true;
+                }
                 break;
             case 2:
-                SelectAlly();
+                selectAllysIndex = 0;
+                canSelectAlly = true;
                 break;
             case 3:
-
+                SetTurnLogic(partyIndex+1,0, TurnLogic.TurnType.Defense);
+                partyIndex++;
+                if(PlayerAttacks.Count > 2)
+                {
+                    FinishTurn();
+                }
+                else
+                {
+                    MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                    canvasRef.canvaAbilities.enabled = true;
+                }
                 break;
         }
     }

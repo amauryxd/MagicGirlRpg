@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TurnLogic : MonoBehaviour
 {
-    public enum TurnType { Attack, Defense, Item, Escape }
+    public enum TurnType { Attack, Defense, AllAttack, Escape, StatModif }
     public TurnType Type;
     public int id;
     public delegate void OnTurnFinished();
@@ -30,11 +30,14 @@ public class TurnLogic : MonoBehaviour
             case TurnType.Defense:
                 OnDefenseTurn();
                 break;
-            case TurnType.Item:
-                OnItemTurn();
+            case TurnType.AllAttack:
+                OnAllAttackTurn();
                 break;
             case TurnType.Escape:
                 OnEscapeTurn();
+                break;
+            case TurnType.StatModif:
+                OnStatModif();
                 break;
             default:
                 break;
@@ -49,6 +52,11 @@ public class TurnLogic : MonoBehaviour
         //restar la vida del enemigo
         //mandar el evento de turno terminado
     }
+    public void OnAllAttackTurn()
+    {
+        Debug.Log("Atacando a los enemigos");
+        turnFinished?.Invoke();
+    }
     public void OnDefenseTurn()
     {
         Debug.Log("Defendiendo");
@@ -56,14 +64,10 @@ public class TurnLogic : MonoBehaviour
         //aumentar las estadisticas del personaje
         //observar a cuando termine el turno enemigo
     }
-    public void OnItemTurn()
+    public void OnStatModif()
     {
-        Debug.Log("Item usado en el personaje/enemigo con id" + id);
+        Debug.Log("modificando algun stat");
         turnFinished?.Invoke();
-        //conseguir la referencia necesaria (vida, enemigo, defensa, etc)
-        //hacer la animacion de uso de item
-        //hacer la logica del item usado
-        //mandar el evento de turno terminado
     }
     private void OnEscapeTurn()
     {
