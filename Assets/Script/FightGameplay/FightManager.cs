@@ -20,11 +20,11 @@ public class FightManager : MonoBehaviour
     private int enemiesIndex = 0;
     [Header("Camera")]
     public CinemachineCamera cineCamera;
-    private int cameraIndex = 0;
     [Header("Canvas")]
     [SerializeField] public CanvasFIghtRef canvasRef;
     private bool canSelectEnemies = false;
     InputHandler inputs;
+    private bool canSelect = false;
 
     //[Header()]
     void Awake()
@@ -126,12 +126,11 @@ public class FightManager : MonoBehaviour
     }
     private void SelectEnemy()
     {
-        bool canSelect = false;
         if (!inputs.onConfirm)
         {
-            canSelect= true;
+            canSelect = true;
         }
-        Mathf.Clamp(enemiesIndex, 0, enemies.Count-1);
+        enemiesIndex = Mathf.Clamp(enemiesIndex, 0, enemies.Count - 1);
         MoveCameraTo(enemies[enemiesIndex].transform);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = -2.5f;
         if (inputs.fightMove > 0)
@@ -144,19 +143,36 @@ public class FightManager : MonoBehaviour
         }
         if (inputs.onConfirm && canSelect)
         {
+            canSelect = false;
             SetTurnLogic(enemiesIndex);
             canSelectEnemies = false;
             partyIndex++;
-            MoveCameraTo(partyMembers[partyIndex+1].transform);
-            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+            if (partyIndex > 2)
+            {
+                FinishTurn();
+            }
+            else
+            {
+                MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+                canvasRef.canvaAbilities.enabled = true;
+            }
         }
         if (inputs.onNegate)
         {
             canvasRef.canvaAbilities.enabled = true;
             canSelectEnemies = false;
-            MoveCameraTo(partyMembers[partyIndex+1].transform);
+            canSelect = false;
+            MoveCameraTo(partyMembers[partyIndex + 1].transform);
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
         }
+    }
+    public void FinishTurn()
+    {
+        DesactivateCamera();
+        enemiesIndex = 0;
+        partyIndex = 0;
+        StartCoroutine(DoTurns());
     }
     private void SelectAlly()
     {
@@ -164,8 +180,8 @@ public class FightManager : MonoBehaviour
     }
     public void SetTurnLogic(int index)
     {
-        TurnLogic tempLogic;
-        tempLogic = partyMembers[partyIndex].turns;
+        TurnLogic tempLogic = new TurnLogic();
+        tempLogic = partyMembers[partyIndex+1].turns;
         tempLogic.id = index;
         tempLogic.Type = TurnLogic.TurnType.Attack;
         QueueAction(tempLogic);
