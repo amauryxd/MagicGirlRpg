@@ -23,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
         if (actualHealth <= 0)
         {
             Debug.Log("El enemigo se murio :c");
+            gameObject.SetActive(false);
         }
     }
     void OnEnable()
