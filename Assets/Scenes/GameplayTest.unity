@@ -1517,7 +1517,7 @@ GameObject:
   - component: {fileID: 1309803402}
   - component: {fileID: 1309803403}
   m_Layer: 0
-  m_Name: PartyMember 2
+  m_Name: Yami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,7 +1571,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.167027, b: 1, a: 1}
+  m_Color: {r: 0.6559448, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1652,8 +1652,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesReference
   firstAbility: {fileID: 11400000, guid: 8ed798e622424d64887cd841b08d1629, type: 2}
+  firstAbilityDrive: {fileID: 0}
   secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
-  statAbility: {fileID: 11400000, guid: 86e89fac1adde3c4eb52e2396e8fc644, type: 2}
+  secondAbilityDrive: {fileID: 0}
+  statAbility: {fileID: 0}
 --- !u!1 &1387550162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1779,7 @@ GameObject:
   - component: {fileID: 1393092187}
   - component: {fileID: 1393092188}
   m_Layer: 0
-  m_Name: PartyMember 1
+  m_Name: Hinoka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1831,7 +1833,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.5917187, a: 1}
+  m_Color: {r: 1, g: 0.08857537, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1897,9 +1899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d644b1399dbdf224fb7a2e44bb6b308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesReference
-  firstAbility: {fileID: 11400000, guid: 8ed798e622424d64887cd841b08d1629, type: 2}
-  secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
-  statAbility: {fileID: 11400000, guid: 86e89fac1adde3c4eb52e2396e8fc644, type: 2}
+  firstAbility: {fileID: 11400000, guid: 2c2956c87ea439b43b35745622609cdd, type: 2}
+  firstAbilityDrive: {fileID: 11400000, guid: 9c2dac5347436e14bb7067f982733b1a, type: 2}
+  secondAbility: {fileID: 11400000, guid: 7c584dade597eb343af525993e813d09, type: 2}
+  secondAbilityDrive: {fileID: 11400000, guid: 9da498ecdc93c1f49b7cfac9721f9004, type: 2}
+  statAbility: {fileID: 11400000, guid: d6a9e53d695903b42b907e749e9ecd21, type: 2}
 --- !u!1 &1425428849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2595,7 @@ GameObject:
   - component: {fileID: 1613084949}
   - component: {fileID: 1613084950}
   m_Layer: 0
-  m_Name: PartyMember 3
+  m_Name: Sayo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2645,7 +2649,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.07041359, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2712,8 +2716,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesReference
   firstAbility: {fileID: 11400000, guid: 8ed798e622424d64887cd841b08d1629, type: 2}
+  firstAbilityDrive: {fileID: 0}
   secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
-  statAbility: {fileID: 11400000, guid: 86e89fac1adde3c4eb52e2396e8fc644, type: 2}
+  secondAbilityDrive: {fileID: 0}
+  statAbility: {fileID: 0}
 --- !u!1 &1623240327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2734,7 @@ GameObject:
   - component: {fileID: 1623240333}
   - component: {fileID: 1623240334}
   m_Layer: 0
-  m_Name: MainPlayer (cant attack)
+  m_Name: Nozomi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
