@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f450e915025cf45aefab42decbaf83, type: 3}
   m_Name: YamiType1First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
-  abilityName: 
-  abilityDesc: 
-  abilityAttack: 0
-  abilityCost: 0
-  abilityDrive: 0
-  abilityType: 0
+  abilityName: Pavor
+  abilityDesc: Yami sale de la paralisis para atacar a su enemigo
+  abilityAttack: 20
+  abilityCost: 15
+  abilityDrive: 20
+  abilityType: 2

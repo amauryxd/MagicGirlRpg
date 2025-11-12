@@ -18,6 +18,6 @@ public class tempLogicPlayer : MonoBehaviour
     [ContextMenu("Hacer Los ataques")]
     public void Attacar()
     {
-        StartCoroutine(FightManager.Instance.DoTurns());
+        StartCoroutine(FightManager.Instance.DoTurnsPlayer());
     }
 }

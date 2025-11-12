@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f0789b7e84d9342a02ba8565c3f619, type: 3}
   m_Name: YamiStatFirst
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesStatSOb
-  abilityName: 
-  abilityDesc: 
-  abilityStatModif: 0
-  abilityCost: 0
-  abilityDrive: 0
-  abilityType: 0
+  abilityName: Yo te cubro la espalda
+  abilityDesc: Yami protege a sus aliados de cualquier ataque
+  abilityStatModif: 5
+  abilityCost: 10
+  abilityDrive: 15
+  abilityType: 3

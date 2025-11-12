@@ -14,8 +14,8 @@ public enum AttackType
     Emocionado,
     Alegria,
     Estaciado,
-    Amor
-
+    Amor,
+    None
 }
 public enum StatType
 {
@@ -24,4 +24,14 @@ public enum StatType
     Ataque,
     Defensa,
     Drive,
+}
+public enum ResultEmotion
+{
+    Enojo,
+    DesesperacionAgresiva,
+    Tristesa,
+    ExplocionEmocional,
+    Miedo,
+    Vulnerabilidad,
+    None
 }

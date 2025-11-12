@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 
 public class FightManager : MonoBehaviour
 {
-    public enum ActualTurn { Player, Enemy }
+    public enum ActualTurn { Player, Nozomi, Enemy }
     [Header("Manage for Fight variables")]
     public ActualTurn turnActual = ActualTurn.Player;
     public static FightManager Instance { get; private set; }
@@ -63,6 +63,9 @@ public class FightManager : MonoBehaviour
             case ActualTurn.Player:
                 PlayerTurnLogic();
                 break;
+            case ActualTurn.Nozomi:
+                NozomiTurnLogic();
+                break;
             case ActualTurn.Enemy:
                 EnemyTurnLogic();
                 break;
@@ -78,7 +81,11 @@ public class FightManager : MonoBehaviour
             SelectAlly();
         }
     }
-
+    void NozomiTurnLogic()
+    {
+        partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
+        turnActual = ActualTurn.Enemy;
+    }
     public void PlayerTurnLogic()
     {
         //cambiar el squema de controles a ataque
@@ -107,7 +114,7 @@ public class FightManager : MonoBehaviour
         //debug
         Debug.Log(PlayerAttacks.Count);
     }
-    public IEnumerator DoTurns()
+    public IEnumerator DoTurnsPlayer()
     {
         for (int index = 0; index < PlayerAttacks.Count; index++)
         {
@@ -115,13 +122,14 @@ public class FightManager : MonoBehaviour
             yield return new WaitUntil(() => canPassTurn);
             canPassTurn = false;
         }
+        turnActual = ActualTurn.Nozomi;
     }
     private void NextTurnSetter()
     {
         canPassTurn = true;
     }
-    #region Turn Logic
-    private void StartTurn()
+    #region Turn Logic Player
+    private void StartTurnPlayer()
     {
         ActivateCamera();
         partyIndex = 0;
@@ -177,7 +185,7 @@ public class FightManager : MonoBehaviour
         enemiesIndex = 0;
         partyIndex = 0;
         selectAllysIndex = 0;
-        StartCoroutine(DoTurns());
+        StartCoroutine(DoTurnsPlayer());
     }
     private void SelectAlly()
     {
@@ -253,7 +261,7 @@ public class FightManager : MonoBehaviour
         switch (index)
         {
             case 0:
-                StartTurn();
+                StartTurnPlayer();
                 break;
             case 1:
                 break;

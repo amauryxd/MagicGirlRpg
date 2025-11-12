@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2107977212}
         m_TargetAssemblyTypeName: CanvasFIghtRef, Assembly-CSharp
-        m_MethodName: ManageableButtonLogic
+        m_MethodName: SendButtonLogic
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -942,7 +942,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2107977212}
         m_TargetAssemblyTypeName: CanvasFIghtRef, Assembly-CSharp
-        m_MethodName: ManageableButtonLogic
+        m_MethodName: SendButtonLogic
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1622,9 +1622,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
+  stats: {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
   id: 2
   abilites: {fileID: 1309803403}
   turns: {fileID: 1309803402}
+  nozomiTurn: {fileID: 0}
 --- !u!114 &1309803402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,6 +1641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurnLogic
   Type: 0
   id: 0
+  abilities: {fileID: 0}
 --- !u!114 &1309803403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,11 +1654,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d644b1399dbdf224fb7a2e44bb6b308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesReference
-  firstAbility: {fileID: 11400000, guid: 8ed798e622424d64887cd841b08d1629, type: 2}
-  firstAbilityDrive: {fileID: 0}
+  firstAbility: {fileID: 11400000, guid: 93ca6cbf6489c1b4caf1ec2c8af7583e, type: 2}
+  firstAbilityDrive: {fileID: 11400000, guid: e2828dc7266572e4ba3b2b8b7864d4bc, type: 2}
   secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
-  secondAbilityDrive: {fileID: 0}
-  statAbility: {fileID: 0}
+  secondAbilityDrive: {fileID: 11400000, guid: dcd723e5529ac9b40aa60d61afad9e23, type: 2}
+  statAbility: {fileID: 11400000, guid: 514dadf036f87a9409cc64036997832a, type: 2}
 --- !u!1 &1387550162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,9 +1873,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
+  stats: {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
   id: 1
   abilites: {fileID: 1393092188}
   turns: {fileID: 1393092187}
+  nozomiTurn: {fileID: 0}
 --- !u!114 &1393092187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1887,6 +1892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurnLogic
   Type: 0
   id: 0
+  abilities: {fileID: 0}
 --- !u!114 &1393092188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2686,9 +2692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
+  stats: {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
   id: 3
   abilites: {fileID: 1613084950}
   turns: {fileID: 1613084949}
+  nozomiTurn: {fileID: 0}
 --- !u!114 &1613084949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,6 +2711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurnLogic
   Type: 0
   id: 0
+  abilities: {fileID: 0}
 --- !u!114 &1613084950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2715,11 +2724,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d644b1399dbdf224fb7a2e44bb6b308e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesReference
-  firstAbility: {fileID: 11400000, guid: 8ed798e622424d64887cd841b08d1629, type: 2}
-  firstAbilityDrive: {fileID: 0}
-  secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
-  secondAbilityDrive: {fileID: 0}
-  statAbility: {fileID: 0}
+  firstAbility: {fileID: 11400000, guid: 9b89c59b4b0b9e4408cc0c2d822f8ec4, type: 2}
+  firstAbilityDrive: {fileID: 11400000, guid: bab3afe11d334364791ed6a245d977e0, type: 2}
+  secondAbility: {fileID: 11400000, guid: e25427f8c19392d49a415bd2e7861c50, type: 2}
+  secondAbilityDrive: {fileID: 11400000, guid: feb64fb3b002fd047a47a62905728665, type: 2}
+  statAbility: {fileID: 11400000, guid: eb6ac8a698cd93148852c5c966485f6f, type: 2}
 --- !u!1 &1623240327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +2738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1623240328}
+  - component: {fileID: 1623240335}
   - component: {fileID: 1623240332}
   - component: {fileID: 1623240331}
   - component: {fileID: 1623240333}
@@ -2825,9 +2835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
+  stats: {fileID: 0}
   id: 0
   abilites: {fileID: 0}
   turns: {fileID: 0}
+  nozomiTurn: {fileID: 1623240335}
 --- !u!114 &1623240333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2939,6 +2951,19 @@ MonoBehaviour:
   m_DefaultActionMap: OnFight
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1623240335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623240327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8727923213b85ac4792ab6f444af074a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NozomiTurn
+  attacksReceived: 
 --- !u!1 &1645397881
 GameObject:
   m_ObjectHideFlags: 0
