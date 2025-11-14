@@ -10,6 +10,7 @@ public class FightManager : MonoBehaviour
     [Header("Manage for Fight variables")]
     public ActualTurn turnActual = ActualTurn.Player;
     public static FightManager Instance { get; private set; }
+    private bool onEnemyTurn = false;
     [Header("PlayerVariables")]
     public List<PlayerAlliesAutoReference> partyMembers = new List<PlayerAlliesAutoReference>();
     public List<TurnLogic> PlayerAttacks = new List<TurnLogic>();
@@ -42,10 +43,12 @@ public class FightManager : MonoBehaviour
     void OnEnable()
     {
         TurnLogic.turnFinished += NextTurnSetter;
+        AttackTurnEnemy.turnFinishedEnemy += NextTurnSetter;
     }
     void OnDisable()
     {
         TurnLogic.turnFinished -= NextTurnSetter;
+        AttackTurnEnemy.turnFinishedEnemy -= NextTurnSetter;
     }
     void Start()
     {
@@ -53,6 +56,7 @@ public class FightManager : MonoBehaviour
         partyMembers = GameManager.Instance.partyMembers;
         partyIndex = 0;
         inputs = partyMembers[0].GetComponent<InputHandler>();
+        onEnemyTurn = false;
     }
 
 
@@ -67,7 +71,8 @@ public class FightManager : MonoBehaviour
                 NozomiTurnLogic();
                 break;
             case ActualTurn.Enemy:
-                EnemyTurnLogic();
+                if(!onEnemyTurn)
+                    EnemyTurnLogic();
                 break;
             default:
                 break;
@@ -98,9 +103,22 @@ public class FightManager : MonoBehaviour
     }
     public void EnemyTurnLogic()
     {
+        StartCoroutine(DoTurnsEnemies());
+        onEnemyTurn = true;
         //poner en una fila los attaques de los enemigos
         //ir ejecutando uno por uno hasta que todos terminen
         //lanzar el evento de turno finalizado
+    }
+    public IEnumerator DoTurnsEnemies()
+    {
+        for (int index = 0; index < enemies.Count; index++)
+        {
+            Debug.Log("El enemigo " + enemies[index].gameObject.name + " esta atacando.");
+            enemies[index].GetComponent<AttackTurnEnemy>().AttackTo();
+            yield return new WaitUntil(() => canPassTurn);
+            canPassTurn = false;
+        }
+        turnActual = ActualTurn.Player;
     }
     public void QueueAction(TurnLogic attackTurnToQueue)
     {

@@ -2493,6 +2493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1546356680}
   - component: {fileID: 1546356679}
+  - component: {fileID: 1546356682}
   - component: {fileID: 1546356681}
   m_Layer: 0
   m_Name: Enemy (1)
@@ -2587,6 +2588,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemyHealth: 100
+--- !u!114 &1546356682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546356676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72c162e0f7aebc46ae6ec9e0dafee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackTurnEnemy
+  attackDamage: 10
 --- !u!1 &1613084945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,6 +3073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721674834}
   - component: {fileID: 1721674833}
+  - component: {fileID: 1721674836}
   - component: {fileID: 1721674835}
   m_Layer: 0
   m_Name: Enemy
@@ -3153,6 +3168,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemyHealth: 100
+--- !u!114 &1721674836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721674830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72c162e0f7aebc46ae6ec9e0dafee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackTurnEnemy
+  attackDamage: 10
 --- !u!1 &1749458337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749458341}
   - component: {fileID: 1749458340}
+  - component: {fileID: 1749458343}
   - component: {fileID: 1749458342}
   m_Layer: 0
   m_Name: Enemy (2)
@@ -3257,6 +3286,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemyHealth: 100
+--- !u!114 &1749458343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749458337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72c162e0f7aebc46ae6ec9e0dafee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AttackTurnEnemy
+  attackDamage: 10
 --- !u!1 &1770973076
 GameObject:
   m_ObjectHideFlags: 0

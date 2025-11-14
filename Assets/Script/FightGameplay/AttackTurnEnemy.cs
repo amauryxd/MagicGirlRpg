@@ -1,0 +1,16 @@
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class AttackTurnEnemy : MonoBehaviour
+{
+    public delegate void OnTurnFinishedEnemy();
+    public static event OnTurnFinishedEnemy turnFinishedEnemy;
+    public float attackDamage;
+    public void AttackTo()
+    {
+        PlayerAlliesAutoReference plyRef = FightManager.Instance.partyMembers[Random.Range(1, FightManager.Instance.partyMembers.Count)].GetComponent<PlayerAlliesAutoReference>();
+        plyRef.stats.playerHealth -= attackDamage - plyRef.stats.playerDefensa;
+        Debug.Log("El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + attackDamage + " de daño.");
+        turnFinishedEnemy?.Invoke();
+    }
+}

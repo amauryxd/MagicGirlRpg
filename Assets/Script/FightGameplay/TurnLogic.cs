@@ -104,19 +104,19 @@ public class TurnLogic : MonoBehaviour
         switch (statType)
         {
             case StatType.Vida:
-                FightManager.Instance.partyMembers[id].stats.playerHealth += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.playerHealth += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Mana:
-                FightManager.Instance.partyMembers[id].stats.playerMana += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.playerMana += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Ataque:
-                FightManager.Instance.partyMembers[id].stats.playerAtaque += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.playerAtaque += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Defensa:
-                FightManager.Instance.partyMembers[id].stats.playerDefensa += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.playerDefensa += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Drive:
-                FightManager.Instance.partyMembers[id].stats.playerDrive += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.playerDrive += abilities.statAbility.abilityStatModif;
                 break;
             default:
                 break;
