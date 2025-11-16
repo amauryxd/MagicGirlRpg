@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class FightManager : MonoBehaviour
 {
-    public enum ActualTurn { Player, Nozomi, Enemy }
+    public enum ActualTurn { Player, Nozomi, Enemy, CheckWinnerPlayer, CheckWinnerEnemy}
     [Header("Manage for Fight variables")]
     public ActualTurn turnActual = ActualTurn.Player;
     public static FightManager Instance { get; private set; }
+    private bool onPlayerTurn = false;
     private bool onEnemyTurn = false;
+    private bool onCheckTurn = false;
     [Header("PlayerVariables")]
     public List<PlayerAlliesAutoReference> partyMembers = new List<PlayerAlliesAutoReference>();
     public List<TurnLogic> PlayerAttacks = new List<TurnLogic>();
@@ -57,6 +60,8 @@ public class FightManager : MonoBehaviour
         partyIndex = 0;
         inputs = partyMembers[0].GetComponent<InputHandler>();
         onEnemyTurn = false;
+        onCheckTurn = false;
+        onPlayerTurn = false;
     }
 
 
@@ -65,14 +70,23 @@ public class FightManager : MonoBehaviour
         switch (turnActual)
         {
             case ActualTurn.Player:
-                PlayerTurnLogic();
+                if(!onPlayerTurn)
+                    PlayerTurnLogic();
                 break;
             case ActualTurn.Nozomi:
                 NozomiTurnLogic();
                 break;
+            case ActualTurn.CheckWinnerPlayer:
+                if(!onCheckTurn)
+                    CheckWinnerPlayer();
+                break;
             case ActualTurn.Enemy:
                 if(!onEnemyTurn)
                     EnemyTurnLogic();
+                break;
+            case ActualTurn.CheckWinnerEnemy:
+                if(!onCheckTurn)
+                    CheckWinnerEnemy();
                 break;
             default:
                 break;
@@ -88,11 +102,15 @@ public class FightManager : MonoBehaviour
     }
     void NozomiTurnLogic()
     {
+        onPlayerTurn = false;
         partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
-        turnActual = ActualTurn.Enemy;
+        turnActual = ActualTurn.CheckWinnerPlayer;
     }
     public void PlayerTurnLogic()
     {
+        Debug.Log("Player Turn Started");
+        canvasRef.canvaOptions.enabled = true;
+        onPlayerTurn = true;
         //cambiar el squema de controles a ataque
         //GameManager.Instance.inputRef.SwitchCurrentActionMap("OnFight");
         //ir coleccionando todos los ataques hasta tener 3
@@ -101,6 +119,7 @@ public class FightManager : MonoBehaviour
         //limpiar lista
         //lanzar evento de turno finalizado
     }
+    #region EnemyTurnLogic
     public void EnemyTurnLogic()
     {
         StartCoroutine(DoTurnsEnemies());
@@ -113,18 +132,57 @@ public class FightManager : MonoBehaviour
     {
         for (int index = 0; index < enemies.Count; index++)
         {
-            Debug.Log("El enemigo " + enemies[index].gameObject.name + " esta atacando.");
             enemies[index].GetComponent<AttackTurnEnemy>().AttackTo();
             yield return new WaitUntil(() => canPassTurn);
             canPassTurn = false;
         }
-        turnActual = ActualTurn.Player;
+        turnActual = ActualTurn.CheckWinnerEnemy;
+    }
+    #endregion
+    public void CheckWinnerPlayer()
+    {
+        if(enemies.Count <= 0)
+        {
+            Debug.Log("You Win");
+            //Win Logic
+            onCheckTurn = false;
+            return;
+        }
+        else
+        {
+            Debug.Log("Continue Fight player");
+            turnActual = ActualTurn.Enemy;
+            onCheckTurn = false;
+            return;
+        }
+    }
+    public void CheckWinnerEnemy()
+    {
+        onEnemyTurn = false;
+        for(int index = 0; index < partyMembers.Count; index++)
+        {
+            if(partyMembers[index].name != "Nozomi"){
+                if(partyMembers[index].stats.playerHealth > 0)
+                {
+                    Debug.Log("Continue Fight enemy");
+                    onCheckTurn = false;
+                    turnActual = ActualTurn.Player;
+                    return;
+                }
+                else
+                {
+                    Debug.Log("You Lose");
+                    //Lose Logic
+                    onCheckTurn = false;
+                    return;
+                }
+            }
+        }
     }
     public void QueueAction(TurnLogic attackTurnToQueue)
     {
         PlayerAttacks.Add(attackTurnToQueue);
         //debug
-        Debug.Log(PlayerAttacks.Count);
     }
     public void DequeueAction()
     {

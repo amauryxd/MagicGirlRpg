@@ -16,7 +16,6 @@ public class NozomiTurn : MonoBehaviour
     void HandleTurnType(AttackType type)
     {
         attacksReceived.Add(type);
-        Debug.Log("Nozomi received an attack of type: " + type);
     }
     public ResultEmotion CastToCast()
     {

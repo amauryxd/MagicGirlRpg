@@ -53,6 +53,7 @@ public class TurnLogic : MonoBehaviour
         Debug.Log("Atacando al enemigo con id " + id);
         //conseguir el enemigo a atacar
         //restar la vida del enemigo
+        if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[id] != null)
         FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.playerAtaque);
         //bajar mana
         stats.playerMana -= abilities.firstAbility.abilityCost;
@@ -69,6 +70,7 @@ public class TurnLogic : MonoBehaviour
         Debug.Log("Atacando a los enemigos");
         for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
         {
+            if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
             FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbility.abilityAttack);
         }
         stats.playerMana -= abilities.secondAbility.abilityCost;
