@@ -1512,7 +1512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309803398}
   - component: {fileID: 1309803397}
-  - component: {fileID: 1309803400}
+  - component: {fileID: 1309803404}
   - component: {fileID: 1309803401}
   - component: {fileID: 1309803402}
   - component: {fileID: 1309803403}
@@ -1596,20 +1596,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1770973077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1309803400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309803396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e321c697748f8374b9da90310c2a7a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::tempLogicPlayer
-  temptest: {fileID: 0}
-  idToManage: 1
 --- !u!114 &1309803401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
-  stats: {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
+  stats: {fileID: 1309803404}
   id: 2
   abilites: {fileID: 1309803403}
   turns: {fileID: 1309803402}
@@ -1659,6 +1645,19 @@ MonoBehaviour:
   secondAbility: {fileID: 11400000, guid: 140e9d99ca8de3040954d69c07cbd7de, type: 2}
   secondAbilityDrive: {fileID: 11400000, guid: dcd723e5529ac9b40aa60d61afad9e23, type: 2}
   statAbility: {fileID: 11400000, guid: 514dadf036f87a9409cc64036997832a, type: 2}
+--- !u!114 &1309803404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309803396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36456ba008f31c44980e7a33a08ff21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
+  statsBase: {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
 --- !u!1 &1387550162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393092185}
   - component: {fileID: 1393092184}
+  - component: {fileID: 1393092189}
   - component: {fileID: 1393092186}
   - component: {fileID: 1393092187}
   - component: {fileID: 1393092188}
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
-  stats: {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
+  stats: {fileID: 1393092189}
   id: 1
   abilites: {fileID: 1393092188}
   turns: {fileID: 1393092187}
@@ -1910,6 +1910,19 @@ MonoBehaviour:
   secondAbility: {fileID: 11400000, guid: 7c584dade597eb343af525993e813d09, type: 2}
   secondAbilityDrive: {fileID: 11400000, guid: 9da498ecdc93c1f49b7cfac9721f9004, type: 2}
   statAbility: {fileID: 11400000, guid: d6a9e53d695903b42b907e749e9ecd21, type: 2}
+--- !u!114 &1393092189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393092183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36456ba008f31c44980e7a33a08ff21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
+  statsBase: {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
 --- !u!1 &1425428849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,6 +2624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613084947}
   - component: {fileID: 1613084946}
+  - component: {fileID: 1613084951}
   - component: {fileID: 1613084948}
   - component: {fileID: 1613084949}
   - component: {fileID: 1613084950}
@@ -2706,7 +2720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47adffcb21444054fbfff992d640af29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAlliesAutoReference
-  stats: {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
+  stats: {fileID: 1613084951}
   id: 3
   abilites: {fileID: 1613084950}
   turns: {fileID: 1613084949}
@@ -2743,6 +2757,19 @@ MonoBehaviour:
   secondAbility: {fileID: 11400000, guid: e25427f8c19392d49a415bd2e7861c50, type: 2}
   secondAbilityDrive: {fileID: 11400000, guid: feb64fb3b002fd047a47a62905728665, type: 2}
   statAbility: {fileID: 11400000, guid: eb6ac8a698cd93148852c5c966485f6f, type: 2}
+--- !u!114 &1613084951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613084945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36456ba008f31c44980e7a33a08ff21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
+  statsBase: {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
 --- !u!1 &1623240327
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class AttackTurnEnemy : MonoBehaviour
     public void AttackTo()
     {
         PlayerAlliesAutoReference plyRef = FightManager.Instance.partyMembers[Random.Range(1, FightManager.Instance.partyMembers.Count)].GetComponent<PlayerAlliesAutoReference>();
-        plyRef.stats.playerHealth -= attackDamage - plyRef.stats.playerDefensa;
+        plyRef.stats.statsLocal.PlayerCurrentHealth -= attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa;
         Debug.Log("El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + attackDamage + " de daño.");
         turnFinishedEnemy?.Invoke();
     }
