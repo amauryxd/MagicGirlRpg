@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     private float actualHealth;
     private void Start()
     {
+        FightManager.Instance.enemies.Add(this);
         actualHealth = enemyHealth;
     }
     public void OnHitOrDamage(float cuantity)
@@ -26,10 +27,11 @@ public class EnemyHealth : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    void OnEnable()
+    /*void OnEnable()
     {
+        Debug.Log(FightManager.Instance);
         FightManager.Instance.enemies.Add(this);
-    }
+    }*/
     void OnDisable()
     {
         FightManager.Instance.enemies.Remove(this);

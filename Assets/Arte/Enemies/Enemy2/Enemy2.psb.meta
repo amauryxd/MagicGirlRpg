@@ -1,0 +1,545 @@
+fileFormatVersion: 2
+guid: fb7b36cd223d13e4ebc34e9a63109db3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 550
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 9b9a0b332bdfe52479548797543fb6cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: pexels-ekaterinabelinskaya-4744793.jpg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2182
+      height: 2205
+    spriteID: be5036c875488344db823fcc0dce4813
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 12}
+  - name: pexels-karola-g-6757515.jpg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2194
+      y: 4
+      width: 1286
+      height: 1945
+    spriteID: 26d6b2e2aa5f60e4a963c250347f6a81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2194, y: 4}
+    spritePosition: {x: 491, y: 735}
+  - name: pexels-anniroenkae-3219954.jpg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2194
+      y: 3311
+      width: 1618
+      height: 701
+    spriteID: 63d8fea2eac89234cad0031d8a0b372a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2194, y: 3311}
+    spritePosition: {x: 356, y: 978}
+  - name: pexels-steve-1856456.jpg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2194
+      y: 1957
+      width: 1289
+      height: 1346
+    spriteID: cd46af36d42575247941d0c0c105c843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2194, y: 1957}
+    spritePosition: {x: 494, y: 259}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones:
+    - name: Base
+      guid: f57b12b8df541644cb79c43f02555a43
+      position: {x: 1167.8805, y: 638.99756, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7307208, w: 0.68267643}
+      length: 612.98
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278190335
+    - name: TenCenA
+      guid: b00981b358ce9424ebc809c5f4b44cce
+      position: {x: 1171.0824, y: 590.96893, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6739003, w: 0.7388223}
+      length: 244.37537
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    - name: TenCenB
+      guid: 148aa1aaabcebee4093b5a3df7bc713c
+      position: {x: 244.37535, y: 0.0000021432757, z: 0}
+      rotation: {x: 0, y: 0, z: -0.075229816, w: 0.9971662}
+      length: 327.1595
+      parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    - name: TenIzq1A
+      guid: 809c843859a93a540854b254b6ad8f30
+      position: {x: 1388.8124, y: 619.78613, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6710054, w: 0.74145246}
+      length: 257.43048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    - name: TenIzq1B
+      guid: 0029d2bbc5d0172468beb5dd6673731e
+      position: {x: 257.43042, y: 0.0000675914, z: 0}
+      rotation: {x: 0, y: 0, z: -0.07449734, w: 0.99722123}
+      length: 323.7891
+      parentId: 3
+      color:
+        serializedVersion: 2
+        rgba: 4294901760
+    - name: TenIzq2A
+      guid: e6441cbc587c3a4489ad114b33bfc7d0
+      position: {x: 1555.3118, y: 651.80524, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7302462, w: 0.68318415}
+      length: 288.8117
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    - name: TenIzq2B
+      guid: 3e90142239fc4114d81239d6bce6eeb8
+      position: {x: 288.81168, y: 0.0000977946, z: 0}
+      rotation: {x: 0, y: 0, z: 0.057742, w: 0.99833155}
+      length: 326.98712
+      parentId: 5
+      color:
+        serializedVersion: 2
+        rgba: 4278223103
+    - name: TenDer1A
+      guid: 9ab775ec9e0f7f54a82d6dc2f4ea18b5
+      position: {x: 1004.58295, y: 594.17084, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6894482, w: 0.724335}
+      length: 259.67096
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    - name: TenDer1B
+      guid: f43783559bef35a48b53a844c236fafa
+      position: {x: 259.671, y: 0.0000049163173, z: 0}
+      rotation: {x: 0, y: 0, z: -0.008548321, w: 0.99996346}
+      length: 297.93262
+      parentId: 7
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    - name: TenDer2A
+      guid: e6dda2ba90c079145a8662e9017818e4
+      position: {x: 812.46826, y: 642.19946, z: 0}
+      rotation: {x: 0, y: 0, z: -0.69495654, w: 0.7190518}
+      length: 281.93195
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294934528
+    - name: TenDer2B
+      guid: fbbdec9e1dcfad147b1fe374648dce4a
+      position: {x: 281.93192, y: 0.00006628661, z: 0}
+      rotation: {x: 0, y: 0, z: 0.015624223, w: 0.999878}
+      length: 343.33688
+      parentId: 9
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    - name: TenArr1A
+      guid: db5ebeafc07bcf846a02e7d5c270bf10
+      position: {x: 594.7383, y: 1048.8423, z: 0}
+      rotation: {x: 0, y: 0, z: 0.99998313, w: 0.005813284}
+      length: 275.38293
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286578943
+    - name: TenArr1B
+      guid: 602608f731be72d48bd46669f1a96b07
+      position: {x: 275.38293, y: 0.00004360527, z: 0}
+      rotation: {x: 0, y: 0, z: 0.033866536, w: 0.99942636}
+      length: 285.41943
+      parentId: 11
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    - name: TenArr2A
+      guid: 4a4fe568e6259db459fa6ee1f6b5a89f
+      position: {x: 764.43964, y: 1285.7836, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8826093, w: 0.47010726}
+      length: 223.79079
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    - name: TenArr2B
+      guid: dbc7b746e3bb71c42aad1cb5e4d7c36e
+      position: {x: 223.79076, y: -0.000044738023, z: 0}
+      rotation: {x: 0, y: 0, z: -0.016145144, w: 0.9998697}
+      length: 313.6072
+      parentId: 13
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    - name: TenArr3A
+      guid: 1326b78c4cba78348808542da615e334
+      position: {x: 1100.6403, y: 1474.6964, z: 0}
+      rotation: {x: 0, y: 0, z: 0.78569704, w: 0.6186115}
+      length: 191.04417
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901760
+    - name: TenArr3B
+      guid: 5428f5125ccbab14aa2b27b61e5c9e7a
+      position: {x: 191.04416, y: -0.000013520566, z: 0}
+      rotation: {x: 0, y: 0, z: -0.084665336, w: 0.9964095}
+      length: 285.61707
+      parentId: 15
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    - name: TenArr4A
+      guid: db32076edf28014419854869a646380f
+      position: {x: 1468.8601, y: 1346.6199, z: 0}
+      rotation: {x: 0, y: 0, z: 0.49713215, w: 0.8676748}
+      length: 215.26761
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278190335
+    - name: TenArr4B
+      guid: fa537aae9938db6428fe07d9abad07ca
+      position: {x: 215.26775, y: -0.000026189096, z: 0}
+      rotation: {x: 0, y: 0, z: -0.027190188, w: 0.9996303}
+      length: 261.0882
+      parentId: 17
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    - name: TenArr5A
+      guid: e2641eaf7005bb5419aa043af427041e
+      position: {x: 1673.7825, y: 1042.4385, z: 0}
+      rotation: {x: 0, y: 0, z: 0.032001983, w: 0.9994878}
+      length: 250.26137
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    - name: TenArr5B
+      guid: 4a9d4b8de34c16e48afb79f0b3164b12
+      position: {x: 250.26126, y: 0.000012359917, z: 0}
+      rotation: {x: 0, y: 0, z: -0.032001983, w: 0.9994878}
+      length: 198.51868
+      parentId: 19
+      color:
+        serializedVersion: 2
+        rgba: 4294934528
+    parts:
+    - spritePosition:
+        x: 0
+        y: 12
+        width: 2182
+        height: 2205
+      spriteId: acc153bdf466b1d4d94616b971a8ef5b
+      bones: 000000000f000000100000000d0000000e000000110000001200000013000000140000000b0000000c00000006000000050000000a00000009000000040000000300000008000000070000000200000001000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 491
+        y: 735
+        width: 1286
+        height: 1945
+      spriteId: 62d140747ccb7d44abf6f1e017dd04c2
+      bones: 00000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 356
+        y: 978
+        width: 1618
+        height: 701
+      spriteId: 5963297dedb1cde45b04400729301c89
+      bones: 00000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 494
+        y: 259
+        width: 1289
+        height: 1346
+      spriteId: 3dc656cc88711c04c873a4e5392077bf
+      bones: 00000000
+      parentGroup: 0
+      order: 0
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0.5, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0.5, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  generateTileAssets: 0
+  tilePaletteCellLayout: 0
+  tilePaletteHexagonLayout: 0
+  tilePaletteCellSize: {x: 1, y: 1, z: 0}
+  tilePaletteCellSizing: 0
+  transparencySortMode: 0
+  transparencySortAxis: {x: 0, y: 0, z: 1}
+  tileTemplate: {instanceID: 0}
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: pexels-ekaterinabelinskaya-4744793.jpg
+    spriteName: pexels-ekaterinabelinskaya-4744793.jpg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: be5036c875488344db823fcc0dce4813
+    layerID: 4
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pexels-karola-g-6757515.jpg
+    spriteName: pexels-karola-g-6757515.jpg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 26d6b2e2aa5f60e4a963c250347f6a81
+    layerID: 3
+    mosaicPosition: {x: 2194, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pexels-anniroenkae-3219954.jpg
+    spriteName: pexels-anniroenkae-3219954.jpg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63d8fea2eac89234cad0031d8a0b372a
+    layerID: 2
+    mosaicPosition: {x: 2194, y: 3311}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pexels-steve-1856456.jpg
+    spriteName: pexels-steve-1856456.jpg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cd46af36d42575247941d0c0c105c843
+    layerID: 1
+    mosaicPosition: {x: 2194, y: 1957}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
