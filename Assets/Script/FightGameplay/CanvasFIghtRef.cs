@@ -33,6 +33,10 @@ public class CanvasFIghtRef : MonoBehaviour
     {
         fightInstance.QueueAction(index);
     }
+    void Update()
+    {
+        PopulateAbilites();
+    }
     public void PopulateAbilites()
     {
         att1Text.SetText(FightManager.Instance.partyMembers[FightManager.Instance.partyIndex+1].abilites.firstAbility.abilityName);

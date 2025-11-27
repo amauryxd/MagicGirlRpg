@@ -104,6 +104,7 @@ public class FightManager : MonoBehaviour
     {
         onPlayerTurn = false;
         partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
+        PlayerAttacks.Clear();
         turnActual = ActualTurn.CheckWinnerPlayer;
     }
     public void PlayerTurnLogic()
@@ -210,6 +211,8 @@ public class FightManager : MonoBehaviour
         ActivateCamera();
         partyIndex = 0;
         MoveCameraTo(partyMembers[partyIndex + 1].transform);
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
     }
     private void SelectEnemy()
     {
@@ -220,6 +223,7 @@ public class FightManager : MonoBehaviour
         enemiesIndex = Mathf.Clamp(enemiesIndex, 0, enemies.Count - 1);
         MoveCameraTo(enemies[enemiesIndex].transform);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = -2.5f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 2f;
         if (inputs.fightMove > 0)
         {
             enemiesIndex++;
@@ -242,6 +246,7 @@ public class FightManager : MonoBehaviour
             {
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
                 canvasRef.canvaAbilities.enabled = true;
             }
         }
@@ -252,6 +257,8 @@ public class FightManager : MonoBehaviour
             canSelect = false;
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
+            DequeueAction();
         }
     }
     public void FinishTurn()
@@ -271,7 +278,7 @@ public class FightManager : MonoBehaviour
         }
         selectAllysIndex = Mathf.Clamp(selectAllysIndex, 0, partyMembers.Count - 2);
         MoveCameraTo(partyMembers[selectAllysIndex + 1].transform);
-        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
         if (inputs.fightMove > 0)
         {
             selectAllysIndex++;
