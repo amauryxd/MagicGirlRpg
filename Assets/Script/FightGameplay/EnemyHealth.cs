@@ -1,17 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public float enemyHealth;
     private float actualHealth;
+    public Slider healthBar;
     private void Start()
     {
         FightManager.Instance.enemies.Add(this);
         actualHealth = enemyHealth;
+        healthBar.value = actualHealth;
     }
     public void OnHitOrDamage(float cuantity)
     {
         actualHealth -= cuantity;
+        healthBar.value = actualHealth;
         IsDeadEnemy();
     }
     public void OnHealOrRevival(float cuantity)

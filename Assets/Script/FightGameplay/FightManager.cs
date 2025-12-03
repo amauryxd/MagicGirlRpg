@@ -62,6 +62,7 @@ public class FightManager : MonoBehaviour
         onEnemyTurn = false;
         onCheckTurn = false;
         onPlayerTurn = false;
+        canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
     }
 
 
@@ -110,7 +111,8 @@ public class FightManager : MonoBehaviour
     public void PlayerTurnLogic()
     {
         Debug.Log("Player Turn Started");
-        canvasRef.canvaOptions.enabled = true;
+        canvasRef.canvaOptions.SetActive(true);
+        canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
         onPlayerTurn = true;
         //cambiar el squema de controles a ataque
         //GameManager.Instance.inputRef.SwitchCurrentActionMap("OnFight");
@@ -247,12 +249,12 @@ public class FightManager : MonoBehaviour
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
-                canvasRef.canvaAbilities.enabled = true;
+                canvasRef.canvaAbilities.SetActive(true);
             }
         }
         if (inputs.onNegate)
         {
-            canvasRef.canvaAbilities.enabled = true;
+            canvasRef.canvaAbilities.SetActive(true);
             canSelectEnemies = false;
             canSelect = false;
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
@@ -263,7 +265,7 @@ public class FightManager : MonoBehaviour
     }
     public void FinishTurn()
     {
-        canvasRef.canvaAbilities.enabled = false;
+        canvasRef.canvaAbilities.SetActive(false);
         DesactivateCamera();
         enemiesIndex = 0;
         partyIndex = 0;
@@ -300,13 +302,13 @@ public class FightManager : MonoBehaviour
             else
             {
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
-                canvasRef.canvaAbilities.enabled = true;
+                canvasRef.canvaAbilities.SetActive(true);
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
             }
         }
         if (inputs.onNegate)
         {
-            canvasRef.canvaAbilities.enabled = true;
+            canvasRef.canvaAbilities.SetActive(true);
             canSelectAlly = false;
             canSelect = false;
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
@@ -370,7 +372,7 @@ public class FightManager : MonoBehaviour
                 else
                 {
                     MoveCameraTo(partyMembers[partyIndex + 1].transform);
-                    canvasRef.canvaAbilities.enabled = true;
+                    canvasRef.canvaAbilities.SetActive(true);
                 }
                 break;
             case 2:
@@ -387,7 +389,7 @@ public class FightManager : MonoBehaviour
                 else
                 {
                     MoveCameraTo(partyMembers[partyIndex + 1].transform);
-                    canvasRef.canvaAbilities.enabled = true;
+                    canvasRef.canvaAbilities.SetActive(true);
                 }
                 break;
         }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CanvasFIghtRef : MonoBehaviour
@@ -8,7 +9,7 @@ public class CanvasFIghtRef : MonoBehaviour
     public Button actionBut;
     public Button escapeBut;
     public Button itemBut;
-    public Canvas canvaOptions;
+    public GameObject canvaOptions;
     [Header("OnPlayer Select")]
     public Button att1But;
     public TextMeshProUGUI att1Text;
@@ -17,8 +18,8 @@ public class CanvasFIghtRef : MonoBehaviour
     public Button statBut;
     public TextMeshProUGUI statText;
     public Button DefenceBut;
-    public Canvas canvaAbilities;
-
+    public GameObject canvaAbilities;
+    public EventSystem eventSystem;
     private FightManager fightInstance;
 
     void Start()
