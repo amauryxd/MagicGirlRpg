@@ -12,12 +12,14 @@ public class TurnLogic : MonoBehaviour
     public static event OnTurnFinished turnFinished;
     public delegate void OnTurnTypeNozomi(AttackType type);
     public static event OnTurnTypeNozomi typeToNozomi;
+    public Animator anim;
     //public  player health
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         abilities = GetComponent<AbilitesReference>();
         stats = GetComponent<PlayerAlliesAutoReference>().stats.statsLocal;
+        anim = GetComponent<Animator>();
     }
     public void MakeTurn()
     {
@@ -42,9 +44,14 @@ public class TurnLogic : MonoBehaviour
                 break;
         }
     }
+    public void NextTurn()
+    {
+        turnFinished?.Invoke();
+    }
     public void OnAttackTurn()
     {
         Debug.Log("Atacando al enemigo con id " + id);
+        textoStatico.textoGlobal = gameObject.name + " ataca a " + FightManager.Instance.enemies[id].gameObject.name;
         //conseguir el enemigo a atacar
         //restar la vida del enemigo
         if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[id] != null)
@@ -55,13 +62,15 @@ public class TurnLogic : MonoBehaviour
         stats.PlayerDrive += abilities.firstAbility.abilityDrive;
         //mandara a nozomi q hacer
         typeToNozomi?.Invoke(abilities.firstAbility.abilityType);
+        anim.SetTrigger("Do");
         //lamar las animaciones del ataque
         //mandar el evento de turno terminado
-        turnFinished?.Invoke();
+        //turnFinished?.Invoke();
     }
     public void OnAllAttackTurn()
     {
         Debug.Log("Atacando a los enemigos");
+        textoStatico.textoGlobal = gameObject.name + " ataca a todos los enemigos!";
         for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
         {
             if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
@@ -70,29 +79,35 @@ public class TurnLogic : MonoBehaviour
         stats.PlayerCurrentMana -= abilities.secondAbility.abilityCost;
         stats.PlayerDrive += abilities.secondAbility.abilityDrive;
         typeToNozomi?.Invoke(abilities.secondAbility.abilityType);
-        turnFinished?.Invoke();
+        anim.SetTrigger("Do");
+        //turnFinished?.Invoke();
     }
     public void OnDefenseTurn()
     {
         Debug.Log("Defendiendo");
+        textoStatico.textoGlobal = gameObject.name + " se defiende!";
         stats.PlayerCurrentDefensa += stats.PlayerLvl *0.5f;
-        turnFinished?.Invoke();
-        stats.PlayerCurrentDefensa -= stats.PlayerLvl *0.5f;
+        anim.SetTrigger("Do");
+        //turnFinished?.Invoke();
+        //stats.PlayerCurrentDefensa -= stats.PlayerLvl *0.5f;
         //aumentar las estadisticas del personaje
         //observar a cuando termine el turno enemigo
     }
     public void OnStatModif()
     {
         Debug.Log("modificando "+ abilities.statAbility.abilityType +" en "+ abilities.statAbility.abilityStatModif);
+        textoStatico.textoGlobal = gameObject.name + " modifica su " + abilities.statAbility.abilityType + " a " + FightManager.Instance.partyMembers[id+1].gameObject.name;
         ApplyStatToModif(id, abilities.statAbility.abilityType);
         stats.PlayerCurrentMana -= abilities.statAbility.abilityCost;
         stats.PlayerDrive += abilities.statAbility.abilityDrive;
-        turnFinished?.Invoke();
+        anim.SetTrigger("Do");
+        //turnFinished?.Invoke();
     }
     private void OnEscapeTurn()
     {
         Debug.Log("Escapa");
-        turnFinished?.Invoke();
+        anim.SetTrigger("Do");
+        //turnFinished?.Invoke();
         //lanzar el evento de intento de escape
     }
     void ApplyStatToModif(int id, StatType statType)

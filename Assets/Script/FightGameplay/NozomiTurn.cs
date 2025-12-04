@@ -5,6 +5,7 @@ using UnityEngine;
 public class NozomiTurn : MonoBehaviour
 {
     public List<AttackType> attacksReceived = new List<AttackType>();
+    public Animator anim;
     void OnEnable()
     {
         TurnLogic.typeToNozomi += HandleTurnType;
@@ -12,6 +13,10 @@ public class NozomiTurn : MonoBehaviour
     void OnDisable()
     {
         TurnLogic.typeToNozomi -= HandleTurnType;
+    }
+    void Start()
+    {
+        anim = GetComponent<Animator>();
     }
     void HandleTurnType(AttackType type)
     {
@@ -29,11 +34,17 @@ public class NozomiTurn : MonoBehaviour
         if (type1 == AttackType.Enojo && type2 == AttackType.Tristesa) return ResultEmotion.ExplocionEmocional;
         if (type1 == AttackType.Miedo && type2 == AttackType.None) return ResultEmotion.Miedo;
         if (type1 == AttackType.Tristesa && type2 == AttackType.Miedo) return ResultEmotion.Vulnerabilidad;
-        return ResultEmotion.None;
+        return ResultEmotion.Esperanza;
     }
     public void DoTheAbilities()
     {
         Debug.Log("Nozomi attacara con la emocion: " + CastToCast());
+        anim.SetTrigger("Do");
+        textoStatico.textoGlobal = "Nozomi usa su habilidad "+ CastToCast();
         attacksReceived.Clear();
+    }
+    public void doThing()
+    {
+        FightManager.Instance.turnActual = FightManager.ActualTurn.CheckWinnerPlayer;
     }
 }

@@ -33,5 +33,5 @@ public enum ResultEmotion
     ExplocionEmocional,
     Miedo,
     Vulnerabilidad,
-    None
+    Esperanza
 }

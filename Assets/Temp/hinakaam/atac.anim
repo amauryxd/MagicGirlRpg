@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hinkaattac
+  m_Name: atac
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -44,7 +44,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10307064
+        value: 0.7028302
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -65,7 +65,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0141509175
+        value: 0.93174446
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -164,7 +164,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10307064
+        value: 0.7028302
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -185,7 +185,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0141509175
+        value: 0.93174446
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -205,7 +205,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2
-    functionName: NextTurn
+    functionName: doThing
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

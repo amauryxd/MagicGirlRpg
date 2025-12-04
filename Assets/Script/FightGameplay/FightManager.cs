@@ -4,6 +4,7 @@ using System.Data.Common;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour
 {
@@ -106,11 +107,12 @@ public class FightManager : MonoBehaviour
         onPlayerTurn = false;
         partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
         PlayerAttacks.Clear();
-        turnActual = ActualTurn.CheckWinnerPlayer;
+        //turnActual = ActualTurn.CheckWinnerPlayer;
     }
     public void PlayerTurnLogic()
     {
         Debug.Log("Player Turn Started");
+        textoStatico.textoGlobal = "Tu turno!";
         canvasRef.canvaOptions.SetActive(true);
         canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
         onPlayerTurn = true;
@@ -147,6 +149,7 @@ public class FightManager : MonoBehaviour
         if(enemies.Count <= 0)
         {
             Debug.Log("You Win");
+            textoStatico.textoGlobal = "Haz ganado el combate!";
             //Win Logic
             onCheckTurn = false;
             return;
@@ -154,6 +157,7 @@ public class FightManager : MonoBehaviour
         else
         {
             Debug.Log("Continue Fight player");
+            textoStatico.textoGlobal = "Tu turno!";
             turnActual = ActualTurn.Enemy;
             onCheckTurn = false;
             return;
@@ -175,6 +179,7 @@ public class FightManager : MonoBehaviour
                 else
                 {
                     Debug.Log("You Lose");
+                    textoStatico.textoGlobal = "Perdiste el combate...";
                     //Lose Logic
                     onCheckTurn = false;
                     return;
@@ -197,6 +202,7 @@ public class FightManager : MonoBehaviour
     {
         for (int index = 0; index < PlayerAttacks.Count; index++)
         {
+            if(enemies.Count <= 0) continue;
             PlayerAttacks[index].MakeTurn();
             yield return new WaitUntil(() => canPassTurn);
             canPassTurn = false;
@@ -218,6 +224,7 @@ public class FightManager : MonoBehaviour
     }
     private void SelectEnemy()
     {
+        textoStatico.textoGlobal = "Selecciona un enemigo";
         if (!inputs.onConfirm)
         {
             canSelect = true;
@@ -236,6 +243,7 @@ public class FightManager : MonoBehaviour
         }
         if (inputs.onConfirm && canSelect)
         {
+            textoStatico.textoGlobal = "Tu turno!";
             canSelect = false;
             SetTurnLogic(partyIndex+1,enemiesIndex,TurnLogic.TurnType.Attack);
             canSelectEnemies = false;
@@ -254,6 +262,7 @@ public class FightManager : MonoBehaviour
         }
         if (inputs.onNegate)
         {
+            textoStatico.textoGlobal = "Tu Turno!";
             canvasRef.canvaAbilities.SetActive(true);
             canSelectEnemies = false;
             canSelect = false;
@@ -274,6 +283,7 @@ public class FightManager : MonoBehaviour
     }
     private void SelectAlly()
     {
+        textoStatico.textoGlobal = "Elige a un aliado";
         if (!inputs.onConfirm)
         {
             canSelect = true;
@@ -291,6 +301,7 @@ public class FightManager : MonoBehaviour
         }
         if (inputs.onConfirm && canSelect)
         {
+            textoStatico.textoGlobal = "Tu turno!";
             canSelect = false;
             SetTurnLogic(partyIndex+1,selectAllysIndex,TurnLogic.TurnType.StatModif);
             canSelectAlly = false;
@@ -308,6 +319,7 @@ public class FightManager : MonoBehaviour
         }
         if (inputs.onNegate)
         {
+            textoStatico.textoGlobal = "Tu Turno!";
             canvasRef.canvaAbilities.SetActive(true);
             canSelectAlly = false;
             canSelect = false;
