@@ -51,6 +51,7 @@ public class TurnLogic : MonoBehaviour
     public void OnAttackTurn()
     {
         Debug.Log("Atacando al enemigo con id " + id);
+        if(FightManager.Instance.enemies[id] == null) return;
         textoStatico.textoGlobal = gameObject.name + " ataca a " + FightManager.Instance.enemies[id].gameObject.name;
         //conseguir el enemigo a atacar
         //restar la vida del enemigo

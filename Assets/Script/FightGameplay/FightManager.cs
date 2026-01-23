@@ -4,6 +4,7 @@ using System.Data.Common;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour
@@ -151,6 +152,7 @@ public class FightManager : MonoBehaviour
             Debug.Log("You Win");
             textoStatico.textoGlobal = "Haz ganado el combate!";
             //Win Logic
+            StartCoroutine(tempCHange());
             onCheckTurn = false;
             return;
         }
@@ -162,6 +164,11 @@ public class FightManager : MonoBehaviour
             onCheckTurn = false;
             return;
         }
+    }
+    public IEnumerator tempCHange()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("thxplay");
     }
     public void CheckWinnerEnemy()
     {
