@@ -4,6 +4,12 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public MenuState currentMenuState;
+    [SerializeField] private Canvas StartMenu;
+    [SerializeField] private Canvas ContinuarMenu;
+    [SerializeField] private Canvas NuevoJuegoMenu;
+    [SerializeField] private Canvas OpcionesMenu;
+    [SerializeField] private Canvas CreditosMenu;
+    [SerializeField] private Canvas SalirEffect;
     void OnEnable()
     {
         currentMenuState = MenuState.Start;
@@ -25,6 +31,7 @@ public class MenuManager : MonoBehaviour
 #region Menu States
     private void MenuStartState()
     {
+        changeAllMenus(StartMenu);
         //activar la hoja
         //cambiar el cheider
         //desactivar los demas menus
@@ -33,6 +40,7 @@ public class MenuManager : MonoBehaviour
     }
     private void MenuContinuarState()
     {
+        changeAllMenus(ContinuarMenu);
         //activar los 4 slots de guardado
         //POST> llamar a la funcion de cargar partida
         //desactivar los demas menus
@@ -41,6 +49,7 @@ public class MenuManager : MonoBehaviour
     }
     private void MenuNuevoJuegoState()
     {
+        changeAllMenus(NuevoJuegoMenu);
         //difumniar fondo
         //activar panel de juego nuevo
         //desactivar los demas menus
@@ -49,6 +58,7 @@ public class MenuManager : MonoBehaviour
     }
     private void MenuOpcionesState()
     {
+        changeAllMenus(OpcionesMenu);
         //activar panel de opciones
         //desactivar los demas menus
         //comprobar si se puede hacer la animacione de la hoja > cambiar cheider
@@ -57,6 +67,7 @@ public class MenuManager : MonoBehaviour
     }
     private void MenuCreditosState()
     {
+        changeAllMenus(CreditosMenu);
         //activar panel de creditos
         //desactivar los demas menus
         //comprobar si se puede hacer la animacione de la hoja > cambiar cheider
@@ -87,6 +98,16 @@ public class MenuManager : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void changeAllMenus(Canvas wichone)
+    {
+        StartMenu.enabled = (wichone == StartMenu);
+        ContinuarMenu.enabled = (wichone == ContinuarMenu);
+        NuevoJuegoMenu.enabled = (wichone == NuevoJuegoMenu);
+        OpcionesMenu.enabled = (wichone == OpcionesMenu);
+        CreditosMenu.enabled = (wichone == CreditosMenu);
+        SalirEffect.enabled = (wichone == SalirEffect);
+
     }
 #endregion
 }
