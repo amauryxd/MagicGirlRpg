@@ -228,6 +228,7 @@ public class FightManager : MonoBehaviour
         MoveCameraTo(partyMembers[partyIndex + 1].transform);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
+        partyMembers[0].GetComponent<NozomiTurn>().attacksReceived.Clear();
     }
     private void SelectEnemy()
     {

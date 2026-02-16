@@ -38,10 +38,11 @@ public class NozomiTurn : MonoBehaviour
     }
     public void DoTheAbilities()
     {
-        Debug.Log("Nozomi attacara con la emocion: " + CastToCast());
+        ResultEmotion nozomiEmotion = CastToCast();
+        Debug.Log("Nozomi attacara con la emocion: " + nozomiEmotion);
         anim.SetTrigger("Do");
-        textoStatico.textoGlobal = "Nozomi usa su habilidad "+ CastToCast();
-        attacksReceived.Clear();
+        textoStatico.textoGlobal = "Nozomi usa su habilidad "+ nozomiEmotion;
+        //attacksReceived.Clear();
     }
     public void doThing()
     {
