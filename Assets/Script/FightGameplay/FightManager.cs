@@ -33,6 +33,7 @@ public class FightManager : MonoBehaviour
     public int selectAllysIndex = 0;
     InputHandler inputs;
     private bool canSelect = false;
+    public Animator UIFightAnim;
 
     //[Header()]
     void Awake()
@@ -117,6 +118,7 @@ public class FightManager : MonoBehaviour
         canvasRef.canvaOptions.SetActive(true);
         canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
         onPlayerTurn = true;
+        
         //cambiar el squema de controles a ataque
         //GameManager.Instance.inputRef.SwitchCurrentActionMap("OnFight");
         //ir coleccionando todos los ataques hasta tener 3
@@ -181,6 +183,7 @@ public class FightManager : MonoBehaviour
                     Debug.Log("Continue Fight enemy");
                     onCheckTurn = false;
                     turnActual = ActualTurn.Player;
+                    UIFightAnim.SetTrigger("Show");
                     return;
                 }
                 else

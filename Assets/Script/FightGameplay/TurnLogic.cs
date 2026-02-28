@@ -67,6 +67,8 @@ public class TurnLogic : MonoBehaviour
         //lamar las animaciones del ataque
         //mandar el evento de turno terminado
         //turnFinished?.Invoke();
+        //shake
+        //CameraShaker.Instance.ShakeThisCamera(0.1f,0.2f);
     }
     public void OnAllAttackTurn()
     {
