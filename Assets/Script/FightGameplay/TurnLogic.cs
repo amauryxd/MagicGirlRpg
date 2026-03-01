@@ -46,6 +46,9 @@ public class TurnLogic : MonoBehaviour
     }
     public void NextTurn()
     {
+        //comprobar cuanto drive hay
+        //animacion de drive cargado
+        //las habilidades pasan a ser drive
         turnFinished?.Invoke();
     }
     public void OnAttackTurn()

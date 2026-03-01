@@ -154,7 +154,7 @@ public class FightManager : MonoBehaviour
             Debug.Log("You Win");
             textoStatico.textoGlobal = "Haz ganado el combate!";
             //Win Logic
-            StartCoroutine(tempCHange());
+            //StartCoroutine(tempCHange());
             onCheckTurn = false;
             return;
         }
@@ -229,6 +229,8 @@ public class FightManager : MonoBehaviour
         ActivateCamera();
         partyIndex = 0;
         MoveCameraTo(partyMembers[partyIndex + 1].transform);
+        partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+        partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
         partyMembers[0].GetComponent<NozomiTurn>().attacksReceived.Clear();
@@ -258,6 +260,7 @@ public class FightManager : MonoBehaviour
             canSelect = false;
             SetTurnLogic(partyIndex+1,enemiesIndex,TurnLogic.TurnType.Attack);
             canSelectEnemies = false;
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
             partyIndex++;
             if (partyIndex > 2)
             {
@@ -266,6 +269,8 @@ public class FightManager : MonoBehaviour
             else
             {
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
                 canvasRef.canvaAbilities.SetActive(true);
@@ -278,6 +283,8 @@ public class FightManager : MonoBehaviour
             canSelectEnemies = false;
             canSelect = false;
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
             DequeueAction();
@@ -316,6 +323,7 @@ public class FightManager : MonoBehaviour
             canSelect = false;
             SetTurnLogic(partyIndex+1,selectAllysIndex,TurnLogic.TurnType.StatModif);
             canSelectAlly = false;
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
             partyIndex++;
             if (partyIndex > 2)
             {
@@ -324,6 +332,8 @@ public class FightManager : MonoBehaviour
             else
             {
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
                 canvasRef.canvaAbilities.SetActive(true);
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
             }
@@ -335,6 +345,8 @@ public class FightManager : MonoBehaviour
             canSelectAlly = false;
             canSelect = false;
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
         }
     }
