@@ -3652,6 +3652,7 @@ MonoBehaviour:
   id: 0
   abilities: {fileID: 0}
   anim: {fileID: 0}
+  trailPrefab: {fileID: 8734536161194351918, guid: 0347ccf7b78adfa4289dd42df4eeabe7, type: 3}
 --- !u!114 &1309803403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4045,6 +4046,7 @@ MonoBehaviour:
   id: 0
   abilities: {fileID: 0}
   anim: {fileID: 0}
+  trailPrefab: {fileID: 8734536161194351918, guid: 0347ccf7b78adfa4289dd42df4eeabe7, type: 3}
 --- !u!114 &1393092188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5213,6 +5215,7 @@ MonoBehaviour:
   id: 0
   abilities: {fileID: 0}
   anim: {fileID: 0}
+  trailPrefab: {fileID: 8734536161194351918, guid: 0347ccf7b78adfa4289dd42df4eeabe7, type: 3}
 --- !u!114 &1613084950
 MonoBehaviour:
   m_ObjectHideFlags: 0

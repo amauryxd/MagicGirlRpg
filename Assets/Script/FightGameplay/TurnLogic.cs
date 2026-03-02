@@ -13,6 +13,7 @@ public class TurnLogic : MonoBehaviour
     public delegate void OnTurnTypeNozomi(AttackType type);
     public static event OnTurnTypeNozomi typeToNozomi;
     public Animator anim;
+    public GameObject trailPrefab;
     //public  player health
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,8 +59,10 @@ public class TurnLogic : MonoBehaviour
         textoStatico.textoGlobal = gameObject.name + " ataca a " + FightManager.Instance.enemies[id].gameObject.name;
         //conseguir el enemigo a atacar
         //restar la vida del enemigo
-        if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[id] != null)
+        if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[id] != null){
         FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.PlayerCurrentAtaque);
+        /*Instantiate(trailPrefab, transform.position, Quaternion.identity).GetComponent<HitEffectFollower>().setPoints(transform, FightManager.Instance.enemies[id].transform, 1f);*/
+        }
         //bajar mana
         stats.PlayerCurrentMana -= abilities.firstAbility.abilityCost;
         //subir drive

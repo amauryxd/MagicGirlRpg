@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,16 +8,37 @@ public class EnemyHealth : MonoBehaviour
     private float actualHealth;
     public Slider healthBar;
     public GameObject tempPrefab;
+    private bool canGetHit = false;
+    void OnEnable()
+    {
+        RotacionSelect.attackAnimFinished += getHitAnim;
+    }
+    void OnDisable()
+    {
+        RotacionSelect.attackAnimFinished -= getHitAnim;
+        FightManager.Instance.enemies.Remove(this);
+    }
+    private void getHitAnim()
+    {
+        canGetHit = true;
+    }
     private void Start()
     {
+        canGetHit = false;
         FightManager.Instance.enemies.Add(this);
         actualHealth = enemyHealth;
         healthBar.value = actualHealth;
     }
     public void OnHitOrDamage(float cuantity)
     {
+        StartCoroutine(waitForHitEffect(cuantity));
+    }
+    private IEnumerator waitForHitEffect(float cuantity)
+    {
+        yield return new WaitUntil(() => canGetHit);
         actualHealth -= cuantity;
         healthBar.value = actualHealth;
+        canGetHit = false;
         IsDeadEnemy();
     }
     public void OnHealOrRevival(float cuantity)
@@ -33,13 +55,5 @@ public class EnemyHealth : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    /*void OnEnable()
-    {
-        Debug.Log(FightManager.Instance);
-        FightManager.Instance.enemies.Add(this);
-    }*/
-    void OnDisable()
-    {
-        FightManager.Instance.enemies.Remove(this);
-    }
+    
 }
