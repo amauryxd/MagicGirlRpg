@@ -161,7 +161,7 @@ public class FightManager : MonoBehaviour
         else
         {
             Debug.Log("Continue Fight player");
-            textoStatico.textoGlobal = "Tu turno!";
+            //textoStatico.textoGlobal = "Tu turno!";
             turnActual = ActualTurn.Enemy;
             onCheckTurn = false;
             return;
