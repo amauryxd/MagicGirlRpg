@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     private float actualHealth;
     public Slider healthBar;
     public GameObject tempPrefab;
-    private bool canGetHit = false;
+    public bool canGetHit = false;
     void OnEnable()
     {
         RotacionSelect.attackAnimFinished += getHitAnim;

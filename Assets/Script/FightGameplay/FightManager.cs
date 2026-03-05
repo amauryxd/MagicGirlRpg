@@ -26,6 +26,7 @@ public class FightManager : MonoBehaviour
     public int enemiesIndex = 0;
     [Header("Camera")]
     public CinemachineCamera cineCamera;
+    public Animator vinegtaAnim;
     [Header("Canvas")]
     [SerializeField] public CanvasFIghtRef canvasRef;
     private bool canSelectEnemies = false;
@@ -231,7 +232,7 @@ public class FightManager : MonoBehaviour
         MoveCameraTo(partyMembers[partyIndex + 1].transform);
         partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
         partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
-        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
         partyMembers[0].GetComponent<NozomiTurn>().attacksReceived.Clear();
     }
@@ -244,7 +245,7 @@ public class FightManager : MonoBehaviour
         }
         enemiesIndex = Mathf.Clamp(enemiesIndex, 0, enemies.Count - 1);
         MoveCameraTo(enemies[enemiesIndex].transform);
-        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = -2.5f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0f;
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 2f;
         if (inputs.fightMove > 0)
         {
@@ -271,7 +272,7 @@ public class FightManager : MonoBehaviour
                 MoveCameraTo(partyMembers[partyIndex + 1].transform);
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
-                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
                 cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
                 canvasRef.canvaAbilities.SetActive(true);
             }
@@ -285,7 +286,7 @@ public class FightManager : MonoBehaviour
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
             partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
             partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
-            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
             cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 0f;
             DequeueAction();
         }
@@ -308,7 +309,7 @@ public class FightManager : MonoBehaviour
         }
         selectAllysIndex = Mathf.Clamp(selectAllysIndex, 0, partyMembers.Count - 2);
         MoveCameraTo(partyMembers[selectAllysIndex + 1].transform);
-        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+        cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
         if (inputs.fightMove > 0)
         {
             selectAllysIndex++;
@@ -335,7 +336,7 @@ public class FightManager : MonoBehaviour
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
                 canvasRef.canvaAbilities.SetActive(true);
-                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+                cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
             }
         }
         if (inputs.onNegate)
@@ -347,7 +348,7 @@ public class FightManager : MonoBehaviour
             MoveCameraTo(partyMembers[partyIndex + 1].transform);
             partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
             partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
-            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 2.5f;
+            cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
         }
     }
     public void SetTurnLogic(int fromWho,int index, TurnLogic.TurnType type)
@@ -367,10 +368,14 @@ public class FightManager : MonoBehaviour
     }
     public void ActivateCamera()
     {
+        //vinegta
+        vinegtaAnim.SetTrigger("OnSelect");
         cineCamera.gameObject.SetActive(true);
     }
     public void DesactivateCamera()
     {
+        //desactivar vinegta
+        vinegtaAnim.SetTrigger("DeSelect");
         cineCamera.gameObject.SetActive(false);
     }
     #endregion

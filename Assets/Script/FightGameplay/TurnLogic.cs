@@ -55,14 +55,15 @@ public class TurnLogic : MonoBehaviour
     public void OnAttackTurn()
     {
         Debug.Log("Atacando al enemigo con id " + id);
-        if(FightManager.Instance.enemies[id] == null) return;
-        textoStatico.textoGlobal = gameObject.name + " ataca a " + FightManager.Instance.enemies[id].gameObject.name;
+        //if(FightManager.Instance.enemies[id] == null) return;
         //conseguir el enemigo a atacar
         //restar la vida del enemigo
-        if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[id] != null){
+        if(!(FightManager.Instance.enemies.Count > 0 && id < FightManager.Instance.enemies.Count))
+            id = UnityEngine.Random.Range(0, FightManager.Instance.enemies.Count);
+
         FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.PlayerCurrentAtaque);
+        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a <color=red>" + FightManager.Instance.enemies[id].gameObject.name+"</color>";
         /*Instantiate(trailPrefab, transform.position, Quaternion.identity).GetComponent<HitEffectFollower>().setPoints(transform, FightManager.Instance.enemies[id].transform, 1f);*/
-        }
         //bajar mana
         stats.PlayerCurrentMana -= abilities.firstAbility.abilityCost;
         //subir drive
@@ -79,7 +80,7 @@ public class TurnLogic : MonoBehaviour
     public void OnAllAttackTurn()
     {
         Debug.Log("Atacando a los enemigos");
-        textoStatico.textoGlobal = gameObject.name + " ataca a todos los enemigos!";
+        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a todos los enemigos!";
         for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
         {
             if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
@@ -94,9 +95,9 @@ public class TurnLogic : MonoBehaviour
     public void OnDefenseTurn()
     {
         Debug.Log("Defendiendo");
-        textoStatico.textoGlobal = gameObject.name + " se defiende!";
+        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> se defiende!";
         stats.PlayerCurrentDefensa += stats.PlayerLvl *0.5f;
-        anim.SetTrigger("Do");
+        anim.SetTrigger("Defence");
         //turnFinished?.Invoke();
         //stats.PlayerCurrentDefensa -= stats.PlayerLvl *0.5f;
         //aumentar las estadisticas del personaje
@@ -105,11 +106,11 @@ public class TurnLogic : MonoBehaviour
     public void OnStatModif()
     {
         Debug.Log("modificando "+ abilities.statAbility.abilityType +" en "+ abilities.statAbility.abilityStatModif);
-        textoStatico.textoGlobal = gameObject.name + " modifica su " + abilities.statAbility.abilityType + " a " + FightManager.Instance.partyMembers[id+1].gameObject.name;
+        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> modifica su " + abilities.statAbility.abilityType + " a " + "<color="+getCharacterColor(FightManager.Instance.partyMembers[id+1].gameObject.name)+">"+FightManager.Instance.partyMembers[id+1].gameObject.name+"</color>";
         ApplyStatToModif(id, abilities.statAbility.abilityType);
         stats.PlayerCurrentMana -= abilities.statAbility.abilityCost;
         stats.PlayerDrive += abilities.statAbility.abilityDrive;
-        anim.SetTrigger("Do");
+        anim.SetTrigger("StatModif");
         //turnFinished?.Invoke();
     }
     private void OnEscapeTurn()
@@ -118,6 +119,20 @@ public class TurnLogic : MonoBehaviour
         anim.SetTrigger("Do");
         //turnFinished?.Invoke();
         //lanzar el evento de intento de escape
+    }
+    public string getCharacterColor(string whoName)
+    {
+        switch (whoName)
+        {
+            case "Hinoka":
+                return "red";
+            case "Yami":
+                return "orange";
+            case "Sayo":
+                return "blue";
+            default:
+                return "white";
+        }
     }
     void ApplyStatToModif(int id, StatType statType)
     {

@@ -17,7 +17,9 @@ public class AttackTurnEnemy : MonoBehaviour
         plyRef.stats.statsLocal.PlayerCurrentHealth -= attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa;
         anim.SetTrigger("AttackEn");
         Debug.Log("El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + attackDamage + " de daño.");
-        textoStatico.textoGlobal = "El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + (attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa) + " de daño.";
+        textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa) + " de daño.";
+        GetComponent<EnemyHealth>().canGetHit = false;
+         //turnFinishedEnemy?.Invoke(); 
         //turnFinishedEnemy?.Invoke();
     }
     public void FinishTurnEnemy()

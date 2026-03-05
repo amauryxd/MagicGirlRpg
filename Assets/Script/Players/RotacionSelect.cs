@@ -54,7 +54,7 @@ public class RotacionSelect : MonoBehaviour
     }
     public void SHakeCameraAttack()
     {
-        CameraShaker.Instance.ShakeThisCamera(0.2f, 0.3f);
+        CameraShaker.Instance.ShakeThisCamera(0.2f, 0.1f);
     }
     public void animRotateRef()
     {
