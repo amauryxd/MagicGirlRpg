@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6938649de432b284498fb8bd417b6c33, type: 3}
+  m_Name: Welcome
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguesSOB
+  dialoguesElements:
+  - dialogues: "Hace un tiempo recib\xED el poder de proteger a los dem\xE1s "
+    anexedText: 0
+    typingTime: 0.04
+  - dialogues: "recib\xED el poder de una chica m\xE1gica"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: sin embargo el poder..
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: '.
+
+      vino con una consecuencia'
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "perd\xED la capacidad de sentir emociones"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'Hinoka, '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: "mi compa\xF1era de clase m\xE1s tranquila,"
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "un d\xEDa explot\xF3 en rabia "
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: 'nadie se explicaba el motivo, '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: "pero yo lo pod\xEDa ver"
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: un monstruo conectado a Hinoka
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: "parec\xEDa que se alimentaba de ella"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'al tratar de atacar al monstruo '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: entre a un mundo diferente
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: 'este sitio es el Caeltheria '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: un sitio habitado por estos monstruos
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "dentro de este mundo Hinoka conoci\xF3 sus emociones"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: "y aprendi\xF3 de su emoci\xF3n m\xE1s reprimida"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: la ira
+    anexedText: 0
+    typingTime: 0.07
+  - dialogues: "el mismo destino sucedi\xF3 con Yami, "
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'con el miedo '
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: 'y Sayo, '
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: con la tristeza
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "cada una decidi\xF3 ayudarme a recuperar mis sentimientos"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'para ello hemos decidido investigar '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'Caeltheria '
+    anexedText: 0
+    typingTime: 0.05

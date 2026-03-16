@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameplayTest.unity
     guid: d1a7bf8bc5944664cb5c36ede5692f7d
   - enabled: 1
-    path: Assets/Scenes/thxplay.unity
+    path: Assets/Scenes/TempScenesOrTest/thxplay.unity
     guid: 78fe67dcec4399149a33e95f772b2c58
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 9fab09ccfb414cd4995ecf09a6b6e2f6, type: 3}

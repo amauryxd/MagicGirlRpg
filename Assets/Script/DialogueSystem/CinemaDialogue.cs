@@ -19,14 +19,14 @@ public class CinemaDialogue : MonoBehaviour
     }
     void Update()
     {
-        if (!didDialogueStart)
+        /*if (!didDialogueStart)
         {
             StartDialogue();
         }
-        else if (dialogueText.text == /*dialogues[lineIndex]*/ dialoguesSOB.dialoguesElements[lineIndex].dialogues)
+        else if (dialogueText.text ==  dialoguesSOB.dialoguesElements[lineIndex].dialogues)//dialogues[lineIndex]
         {
             NextDialogueLine();
-        }
+        }*/
     }
     [ContextMenu("EmpezarDialogoCinema")]
     public void StartDialogue()
