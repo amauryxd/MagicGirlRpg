@@ -4,12 +4,12 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public MenuState currentMenuState;
-    [SerializeField] private Canvas StartMenu;
-    [SerializeField] private Canvas ContinuarMenu;
-    [SerializeField] private Canvas NuevoJuegoMenu;
-    [SerializeField] private Canvas OpcionesMenu;
-    [SerializeField] private Canvas CreditosMenu;
-    [SerializeField] private Canvas SalirEffect;
+    [SerializeField] private GameObject StartMenu;
+    [SerializeField] private GameObject ContinuarMenu;
+    [SerializeField] private GameObject NuevoJuegoMenu;
+    [SerializeField] private GameObject OpcionesMenu;
+    [SerializeField] private GameObject CreditosMenu;
+    [SerializeField] private GameObject SalirEffect;
     void OnEnable()
     {
         currentMenuState = MenuState.Start;
@@ -99,14 +99,14 @@ public class MenuManager : MonoBehaviour
                 break;
         }
     }
-    public void changeAllMenus(Canvas wichone)
+    public void changeAllMenus(GameObject wichone)
     {
-        StartMenu.enabled = (wichone == StartMenu);
-        ContinuarMenu.enabled = (wichone == ContinuarMenu);
-        NuevoJuegoMenu.enabled = (wichone == NuevoJuegoMenu);
-        OpcionesMenu.enabled = (wichone == OpcionesMenu);
-        CreditosMenu.enabled = (wichone == CreditosMenu);
-        SalirEffect.enabled = (wichone == SalirEffect);
+        //StartMenu.SetActive(wichone == StartMenu);
+        ContinuarMenu.SetActive(wichone == ContinuarMenu);
+        NuevoJuegoMenu.SetActive(wichone == NuevoJuegoMenu);
+        OpcionesMenu.SetActive(wichone == OpcionesMenu);
+        CreditosMenu.SetActive(wichone == CreditosMenu);
+        SalirEffect.SetActive(wichone == SalirEffect);
 
     }
 #endregion

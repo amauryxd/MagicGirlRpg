@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 5a4c8cd86f438264994e098172d04df8
   - enabled: 1
+    path: Assets/Scenes/HistoryTelling.unity
+    guid: faa7e3d5ebee7a449bb653766e42ea1f
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: ec2ef7f6bd0b63f4fb178cb039244083
+  - enabled: 1
     path: Assets/Scenes/GameplayTest.unity
     guid: d1a7bf8bc5944664cb5c36ede5692f7d
-  - enabled: 1
-    path: Assets/Scenes/TempScenesOrTest/thxplay.unity
-    guid: 78fe67dcec4399149a33e95f772b2c58
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 9fab09ccfb414cd4995ecf09a6b6e2f6, type: 3}
   m_UseUCBPForAssetBundles: 0
