@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CinemaDialogue : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class CinemaDialogue : MonoBehaviour
 
     private bool didDialogueStart;
     private int lineIndex;
+
+    public UnityEvent whatToDoAfterDialogue;
 
     public bool canStartDialogue;
     void changeStartDialogue()
@@ -63,5 +66,9 @@ public class CinemaDialogue : MonoBehaviour
             yield return new WaitForSeconds(typingTime);
         }
         
+    }
+    public void InvokeWhatToDoAfterDialogue()
+    {
+        whatToDoAfterDialogue.Invoke();
     }
 }

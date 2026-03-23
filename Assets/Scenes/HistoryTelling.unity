@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hrla  cdpeeo  dupenrr o ttdieeeg m
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1490.3098, w: -153.47968}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &221140276
@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 250764938}
   - component: {fileID: 250764939}
   - component: {fileID: 250764940}
+  - component: {fileID: 250764942}
   - component: {fileID: 250764941}
   m_Layer: 0
   m_Name: CinemaTelling
@@ -305,6 +306,21 @@ MonoBehaviour:
   dialoguesSOB: {fileID: 11400000, guid: 5595e4229b81bd0419bff013758f8f6f, type: 2}
   panelDialogue: {fileID: 1369607898}
   dialogueText: {fileID: 221140275}
+  whatToDoAfterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 250764942}
+        m_TargetAssemblyTypeName: changeSceneString, Assembly-CSharp
+        m_MethodName: sceneToChange
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dungeon
+          m_BoolArgument: 0
+        m_CallState: 2
   canStartDialogue: 0
 --- !u!95 &250764940
 Animator:
@@ -344,6 +360,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 47e012672749bb2469d1d236e80ca314, type: 2}
     - {fileID: 11400000, guid: ffecae0f5cb5b8241a100cfd52ca110e, type: 2}
+    - {fileID: 11400000, guid: a8630c9e99e0e7742be95a84fc13a247, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -373,6 +390,130 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 250764939}
+          m_TargetAssemblyTypeName: CinemaDialogue, Assembly-CSharp
+          m_MethodName: InvokeWhatToDoAfterDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &250764942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250764937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775580cb7c7a476408458c5423b81829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::changeSceneString
+--- !u!1 &305711192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305711193}
+  - component: {fileID: 305711196}
+  - component: {fileID: 305711195}
+  - component: {fileID: 305711194}
+  m_Layer: 5
+  m_Name: hinoka
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &305711193
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305711192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1331350022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 750, y: 1031}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &305711194
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305711192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b8aaf8943dadeb46b2778a4889b7af8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &305711195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305711192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -813229396136262072, guid: d1b6280d8449f2042a139cda15247744, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &305711196
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305711192}
+  m_CullTransparentMesh: 1
 --- !u!1 &418812384
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +904,7 @@ RectTransform:
   m_Children:
   - {fileID: 1250880540}
   - {fileID: 418812385}
+  - {fileID: 305711193}
   - {fileID: 685465468}
   - {fileID: 1369607899}
   m_Father: {fileID: 0}
@@ -1083,6 +1225,8 @@ PlayableDirector:
     value: {fileID: 418812388}
   - key: {fileID: -8205585162992403546, guid: fabc75ed4b5667b4dac2e085f6702f54, type: 2}
     value: {fileID: 685465469}
+  - key: {fileID: -4784015013395656749, guid: fabc75ed4b5667b4dac2e085f6702f54, type: 2}
+    value: {fileID: 305711194}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1640048549
