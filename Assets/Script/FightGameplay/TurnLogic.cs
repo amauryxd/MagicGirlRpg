@@ -14,6 +14,7 @@ public class TurnLogic : MonoBehaviour
     public static event OnTurnTypeNozomi typeToNozomi;
     public Animator anim;
     public GameObject trailPrefab;
+    public GameObject[] armas;
     //public  player health
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -157,6 +158,32 @@ public class TurnLogic : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+    public void ActivarArma()
+    {
+        if(id != 99){
+        armas[id].SetActive(true);
+        }
+        else
+        {
+            foreach(GameObject arma in armas)
+            {
+                arma.SetActive(true);
+            }
+        }
+    }
+    public void DesactivarArma()
+    {
+        if(id != 99){
+        armas[id].SetActive(false);
+        }
+        else
+        {
+            foreach(GameObject arma in armas)
+            {
+                arma.SetActive(false);
+            }
         }
     }
 }

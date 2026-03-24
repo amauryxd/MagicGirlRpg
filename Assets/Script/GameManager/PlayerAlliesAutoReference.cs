@@ -7,6 +7,7 @@ public class PlayerAlliesAutoReference : MonoBehaviour
     public AbilitesReference abilites;
     public TurnLogic turns;
     public NozomiTurn nozomiTurn;
+    public GameObject particles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

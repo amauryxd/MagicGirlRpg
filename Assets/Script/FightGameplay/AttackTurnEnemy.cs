@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,15 +8,17 @@ public class AttackTurnEnemy : MonoBehaviour
     public static event OnTurnFinishedEnemy turnFinishedEnemy;
     public float attackDamage;
     private Animator anim;
+    PlayerAlliesAutoReference plyRef;
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
     public void AttackTo()
     {
-        PlayerAlliesAutoReference plyRef = FightManager.Instance.partyMembers[Random.Range(1, FightManager.Instance.partyMembers.Count)].GetComponent<PlayerAlliesAutoReference>();
+        plyRef = FightManager.Instance.partyMembers[Random.Range(1, FightManager.Instance.partyMembers.Count)].GetComponent<PlayerAlliesAutoReference>();
         plyRef.stats.statsLocal.PlayerCurrentHealth -= attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa;
         anim.SetTrigger("AttackEn");
+        //StartCoroutine(activarAttaque(plyRef));
         Debug.Log("El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + attackDamage + " de daño.");
         textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (attackDamage - plyRef.stats.statsLocal.PlayerCurrentDefensa) + " de daño.";
         GetComponent<EnemyHealth>().canGetHit = false;
@@ -25,5 +28,16 @@ public class AttackTurnEnemy : MonoBehaviour
     public void FinishTurnEnemy()
     {
         turnFinishedEnemy?.Invoke();
+        plyRef = null;
+    }
+    public void StartCorutineAttack()
+    {
+        StartCoroutine(activarAttaque(plyRef));
+    }
+    public IEnumerator activarAttaque(PlayerAlliesAutoReference plycosa)
+    {
+        plycosa.particles.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        plycosa.particles.SetActive(false);
     }
 }

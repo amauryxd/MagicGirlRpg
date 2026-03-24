@@ -677,6 +677,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
+  - time: 1.0833334
+    functionName: ActivarArma
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.5
     functionName: SHakeCameraAttack
     data: 
@@ -700,6 +707,13 @@ AnimationClip:
     messageOptions: 0
   - time: 2.2666667
     functionName: ChangeSprite
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.4166667
+    functionName: DesactivarArma
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
