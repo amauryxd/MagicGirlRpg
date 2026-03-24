@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public Slider healthBar;
     public GameObject tempPrefab;
     public bool canGetHit = false;
+    public int idLocal;
     void OnEnable()
     {
         RotacionSelect.attackAnimFinished += getHitAnim;
@@ -18,9 +19,16 @@ public class EnemyHealth : MonoBehaviour
         RotacionSelect.attackAnimFinished -= getHitAnim;
         FightManager.Instance.enemies.Remove(this);
     }
-    private void getHitAnim()
+    private void getHitAnim(int id)
     {
+        if(FightManager.Instance.enemies.IndexOf(this) == id)
+        {
         canGetHit = true;
+        }
+        if(id == 99)
+        {
+            canGetHit = true;
+        }
     }
     private void Start()
     {

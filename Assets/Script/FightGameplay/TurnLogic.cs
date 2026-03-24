@@ -80,6 +80,8 @@ public class TurnLogic : MonoBehaviour
     public void OnAllAttackTurn()
     {
         Debug.Log("Atacando a los enemigos");
+        //99 significa que ataca a todos
+        id = 99;
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a todos los enemigos!";
         for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
         {

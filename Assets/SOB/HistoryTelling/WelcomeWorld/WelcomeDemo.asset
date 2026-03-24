@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6938649de432b284498fb8bd417b6c33, type: 3}
+  m_Name: WelcomeDemo
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguesSOB
+  dialoguesElements:
+  - dialogues: "Hace un tiempo recib\xED el poder de proteger a los dem\xE1s "
+    anexedText: 0
+    typingTime: 0.04
+  - dialogues: "recib\xED el poder de una chica m\xE1gica"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: sin embargo el poder..
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: '.
+
+      vino con una consecuencia'
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "perd\xED la capacidad de sentir emociones"
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: 'Hinoka, '
+    anexedText: 0
+    typingTime: 0.05
+  - dialogues: "mi compa\xF1era de clase m\xE1s tranquila,"
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: "un d\xEDa explot\xF3 en rabia "
+    anexedText: 1
+    typingTime: 0.05
+  - dialogues: 'DevNote: Trabajo de assets visuales en progreso, pasando a la siguiente
+      parte... '
+    anexedText: 0
+    typingTime: 0.05
