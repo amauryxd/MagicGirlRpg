@@ -3849,6 +3849,7 @@ GameObject:
   - component: {fileID: 1106323334}
   - component: {fileID: 1106323333}
   - component: {fileID: 1106323335}
+  - component: {fileID: 1106323336}
   m_Layer: 0
   m_Name: pexels-dan-gold-782363-1660193_0
   m_TagString: Untagged
@@ -3938,7 +3939,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106323332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d3d4eaf6f7f186044839bcb0bb715128, type: 2}
   m_CullingMode: 0
@@ -3952,6 +3953,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1106323336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106323332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8ead2a550cf0a47ac1ff8829061271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LittleMovement
+  moveRange: 0.1
+  speed: 1
 --- !u!1 &1135251135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,7 +6452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFQu\xEDeres emepzar un juego nuevo?"
+  m_text: "\xBFQu\xEDeres empezar un juego nuevo?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: -1667187561779130985, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}

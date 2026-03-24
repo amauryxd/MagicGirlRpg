@@ -19,7 +19,7 @@ MonoBehaviour:
   - dialogues: "recib\xED el poder de una chica m\xE1gica"
     anexedText: 0
     typingTime: 0.05
-  - dialogues: sin embargo el poder..
+  - dialogues: sin embargo, el poder..
     anexedText: 0
     typingTime: 0.05
   - dialogues: '.
