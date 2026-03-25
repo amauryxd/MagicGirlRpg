@@ -9,6 +9,7 @@ public class AttackTurnEnemy : MonoBehaviour
     public float attackDamage;
     private Animator anim;
     PlayerAlliesAutoReference plyRef;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -36,8 +37,9 @@ public class AttackTurnEnemy : MonoBehaviour
     }
     public IEnumerator activarAttaque(PlayerAlliesAutoReference plycosa)
     {
-        plycosa.particles.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        plycosa.particles.SetActive(false);
+        plycosa.particles.Play();
+        plycosa.plyHealth.value = plycosa.stats.statsLocal.PlayerCurrentHealth;
+        yield return new WaitForSeconds(2.5f);
+        plycosa.particles.Stop();
     }
 }

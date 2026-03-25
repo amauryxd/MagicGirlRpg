@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5e394346c5436814aa4e5cbaf5497708
+guid: e7f65df82b8f3da479d00958c5d9cd7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2429262718677447978
-    second: barra1_0
+      213: -3587753197306472706
+    second: particle1_0
+  - first:
+      213: 4991942289611497567
+    second: particle1_1
+  - first:
+      213: -2054714148356231463
+    second: particle1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barra1_0
+      name: particle1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1525
-        height: 452
+        y: 233
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6da812b9d66894ed0800000000000000
-      internalID: -2429262718677447978
+      spriteID: ef696ccc97db53ec0800000000000000
+      internalID: -3587753197306472706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: particle1_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1
+        width: 386
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f502b8f5011f64540800000000000000
+      internalID: 4991942289611497567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: particle1_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 226
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dee1405e503c73e0800000000000000
+      internalID: -2054714148356231463
       vertices: []
       indices: 
       edges: []
@@ -148,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      barra1_0: -2429262718677447978
+      particle1_0: -3587753197306472706
+      particle1_1: 4991942289611497567
+      particle1_2: -2054714148356231463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

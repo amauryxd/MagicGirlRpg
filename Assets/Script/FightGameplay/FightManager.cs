@@ -153,7 +153,7 @@ public class FightManager : MonoBehaviour
         if(enemies.Count <= 0)
         {
             Debug.Log("You Win");
-            textoStatico.textoGlobal = "Haz ganado el combate!";
+            textoStatico.textoGlobal = "Haz ganado el combate! \nGracias por probar la demo c:";
             //Win Logic
             //StartCoroutine(tempCHange());
             onCheckTurn = false;
@@ -324,6 +324,7 @@ public class FightManager : MonoBehaviour
             canSelect = false;
             SetTurnLogic(partyIndex+1,selectAllysIndex,TurnLogic.TurnType.StatModif);
             canSelectAlly = false;
+            partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
             partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
             partyIndex++;
             if (partyIndex > 2)
@@ -404,6 +405,8 @@ public class FightManager : MonoBehaviour
                 break;
             case 1:
                 SetTurnLogic(partyIndex + 1, 0, TurnLogic.TurnType.AllAttack);
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
                 partyIndex++;
                 if (PlayerAttacks.Count > 2)
                 {
@@ -412,6 +415,8 @@ public class FightManager : MonoBehaviour
                 else
                 {
                     MoveCameraTo(partyMembers[partyIndex + 1].transform);
+                    partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+                    partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Select);
                     canvasRef.canvaAbilities.SetActive(true);
                 }
                 break;
@@ -422,6 +427,8 @@ public class FightManager : MonoBehaviour
             case 3:
                 SetTurnLogic(partyIndex+1,0, TurnLogic.TurnType.Defense);
                 partyIndex++;
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
+                partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
                 if(PlayerAttacks.Count > 2)
                 {
                     FinishTurn();

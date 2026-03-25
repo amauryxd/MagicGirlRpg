@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class TurnLogic : MonoBehaviour
@@ -14,7 +16,7 @@ public class TurnLogic : MonoBehaviour
     public static event OnTurnTypeNozomi typeToNozomi;
     public Animator anim;
     public GameObject trailPrefab;
-    public GameObject[] armas;
+    public List<GameObject> armas;
     //public  player health
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

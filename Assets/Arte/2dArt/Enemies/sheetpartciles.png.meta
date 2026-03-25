@@ -1,10 +1,49 @@
 fileFormatVersion: 2
-guid: 5e394346c5436814aa4e5cbaf5497708
+guid: 9c07ff6e4d3ab8b46a6c09b2983d5e10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2429262718677447978
-    second: barra1_0
+      213: -4825012537849637971
+    second: sheetpartciles_0
+  - first:
+      213: 8421182392881025887
+    second: sheetpartciles_1
+  - first:
+      213: -8975155217247258650
+    second: sheetpartciles_2
+  - first:
+      213: 6475512673158025882
+    second: sheetpartciles_3
+  - first:
+      213: -8075693683275945782
+    second: sheetpartciles_4
+  - first:
+      213: -7610392386888002261
+    second: sheetpartciles_5
+  - first:
+      213: -5851158112062986287
+    second: sheetpartciles_6
+  - first:
+      213: -6919457483234167185
+    second: sheetpartciles_7
+  - first:
+      213: -7951573395700681845
+    second: sheetpartciles_8
+  - first:
+      213: -6878163144445216879
+    second: sheetpartciles_9
+  - first:
+      213: 6053419635499433445
+    second: sheetpartciles_10
+  - first:
+      213: 2104404963598610348
+    second: sheetpartciles_11
+  - first:
+      213: 3795223513547996675
+    second: sheetpartciles_12
+  - first:
+      213: -8306018519729376235
+    second: sheetpartciles_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +87,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -96,40 +135,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barra1_0
+      name: sheetpartciles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1525
-        height: 452
+        width: 433
+        height: 389
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6da812b9d66894ed0800000000000000
-      internalID: -2429262718677447978
+      spriteID: da39aac29ac1a0db0800000000000000
+      internalID: -4825012537849637971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheetpartciles_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 433
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53927cd4cc0ed470800000000000000
+      internalID: 8421182392881025887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheetpartciles_2
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 0
+        width: 433
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7bbffd1e7d17380800000000000000
+      internalID: -8975155217247258650
       vertices: []
       indices: 
       edges: []
@@ -138,7 +208,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b0acc6cfd5847af469ecf1eac900bb81
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +216,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":433.0,"y":389.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      barra1_0: -2429262718677447978
+      sheetpartciles_0: -4825012537849637971
+      sheetpartciles_1: 8421182392881025887
+      sheetpartciles_2: -8975155217247258650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
