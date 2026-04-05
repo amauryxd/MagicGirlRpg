@@ -34,6 +34,7 @@ public class FightManager : MonoBehaviour
     public int selectAllysIndex = 0;
     InputHandler inputs;
     private bool canSelect = false;
+    private bool hasPlayerChangeTarget = false;
     public Animator UIFightAnim;
 
     //[Header()]
@@ -70,7 +71,7 @@ public class FightManager : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    void Update()
     {
         switch (turnActual)
         {
@@ -247,14 +248,18 @@ public class FightManager : MonoBehaviour
         MoveCameraTo(enemies[enemiesIndex].transform);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0f;
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.y = 2f;
-        if (inputs.fightMove > 0)
-        {
+        if (inputs.fightMove > 0 && !hasPlayerChangeTarget){
             enemiesIndex++;
-        }
-        else if (inputs.fightMove < 0)
-        {
+            hasPlayerChangeTarget = true;
+        }else if (inputs.fightMove < 0 && !hasPlayerChangeTarget){
             enemiesIndex--;
+            hasPlayerChangeTarget = true;
         }
+        if(inputs.fightMove == 0)
+        {
+            hasPlayerChangeTarget = false;
+        }
+
         if (inputs.onConfirm && canSelect)
         {
             textoStatico.textoGlobal = "Tu turno!";
@@ -310,13 +315,19 @@ public class FightManager : MonoBehaviour
         selectAllysIndex = Mathf.Clamp(selectAllysIndex, 0, partyMembers.Count - 2);
         MoveCameraTo(partyMembers[selectAllysIndex + 1].transform);
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
-        if (inputs.fightMove > 0)
+        if(inputs.fightMove > 0 && !hasPlayerChangeTarget)
         {
             selectAllysIndex++;
+            hasPlayerChangeTarget = true;
         }
-        else if (inputs.fightMove < 0)
+        else if (inputs.fightMove < 0 && !hasPlayerChangeTarget)
         {
             selectAllysIndex--;
+            hasPlayerChangeTarget = true;
+        }
+        if(inputs.fightMove == 0)
+        {
+            hasPlayerChangeTarget = false;
         }
         if (inputs.onConfirm && canSelect)
         {
