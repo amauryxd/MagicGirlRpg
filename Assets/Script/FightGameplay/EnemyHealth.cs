@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject tempPrefab;
     public bool canGetHit = false;
     public int idLocal;
+    public delegate void OnEnemyDeath(int id);
+    public static event OnEnemyDeath enemyDeath;
     void OnEnable()
     {
         RotacionSelect.attackAnimFinished += getHitAnim;
@@ -17,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
     void OnDisable()
     {
         RotacionSelect.attackAnimFinished -= getHitAnim;
+        enemyDeath?.Invoke(idLocal);
         FightManager.Instance.enemies.Remove(this);
     }
     private void getHitAnim(int id)

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data.Common;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -317,12 +316,12 @@ public class FightManager : MonoBehaviour
         cineCamera.GetComponent<CinemachineFollow>().FollowOffset.x = 0.8f;
         if(inputs.fightMove > 0 && !hasPlayerChangeTarget)
         {
-            selectAllysIndex++;
+            selectAllysIndex--;
             hasPlayerChangeTarget = true;
         }
         else if (inputs.fightMove < 0 && !hasPlayerChangeTarget)
         {
-            selectAllysIndex--;
+            selectAllysIndex++;
             hasPlayerChangeTarget = true;
         }
         if(inputs.fightMove == 0)
@@ -437,9 +436,9 @@ public class FightManager : MonoBehaviour
                 break;
             case 3:
                 SetTurnLogic(partyIndex+1,0, TurnLogic.TurnType.Defense);
-                partyIndex++;
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().canRotate = true;
                 partyMembers[partyIndex + 1].GetComponent<RotacionSelect>().ChangeSprite(SpriteType.Idle);
+                partyIndex++;
                 if(PlayerAttacks.Count > 2)
                 {
                     FinishTurn();

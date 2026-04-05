@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class TurnLogic : MonoBehaviour
@@ -18,7 +17,18 @@ public class TurnLogic : MonoBehaviour
     public GameObject trailPrefab;
     public List<GameObject> armas;
     //public  player health
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void OnEnable()
+    {
+        EnemyHealth.enemyDeath += ArmaDeathEnemyID;
+    }
+    void OnDisable()
+    {
+        EnemyHealth.enemyDeath -= ArmaDeathEnemyID;
+    }
+    void ArmaDeathEnemyID(int id)
+    {
+        armas.RemoveAt(id);
+    }
     void Start()
     {
         abilities = GetComponent<AbilitesReference>();
@@ -173,6 +183,13 @@ public class TurnLogic : MonoBehaviour
             {
                 arma.SetActive(true);
             }
+            /*for(int i = 0; i < FightManager.Instance.enemies.Count; i++)
+            {
+                if(FightManager.Instance.enemies[i].gameObject.activeInHierarchy)
+                {
+                    armas[i].SetActive(true);
+                }
+            }*/
         }
     }
     public void DesactivarArma()
