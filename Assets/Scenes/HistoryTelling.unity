@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97b82dde3f446a44aa31c46b78db52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CinemaDialogue
-  dialoguesSOB: {fileID: 11400000, guid: aeeba55ee7867674283e84e96806fe44, type: 2}
+  dialoguesSOB: {fileID: 11400000, guid: 5595e4229b81bd0419bff013758f8f6f, type: 2}
   panelDialogue: {fileID: 1369607898}
   dialogueText: {fileID: 221140275}
   whatToDoAfterDialogue:
