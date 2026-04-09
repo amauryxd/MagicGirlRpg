@@ -33,7 +33,7 @@ MonoBehaviour:
   - dialogues: 'Hinoka, '
     anexedText: 0
     typingTime: 0.05
-  - dialogues: "mi compa\xF1era de clase m\xE1s tranquila,"
+  - dialogues: "mi compa\xF1era de clase m\xE1s tranquila, "
     anexedText: 1
     typingTime: 0.05
   - dialogues: "un d\xEDa explot\xF3 en rabia "
@@ -90,6 +90,6 @@ MonoBehaviour:
   - dialogues: 'para ello hemos decidido investigar '
     anexedText: 0
     typingTime: 0.05
-  - dialogues: 'Caeltheria '
+  - dialogues: 'Caeltheria en busca de respuestas '
     anexedText: 0
     typingTime: 0.05
