@@ -24,6 +24,6 @@ public class NuevoJuegoManagment : MonoBehaviour
     }
     public void OnClickSi()
     {
-        SceneManager.LoadScene("HistoryTelling");
+        SceneManager.LoadScene("RealWorld");
     }
 }

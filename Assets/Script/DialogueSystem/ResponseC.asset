@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ee70a32984345439266391726f3fc7, type: 3}
+  m_Name: ResponseC
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
+  isQuestion: 1
+  dialoguesElements:
+  - dialogues: 'La locura es parte del ser humano, '
+    girlName: 0
+    girlImage: {fileID: 21300000, guid: 721ae53f71e7f674cba51264e9dae496, type: 3}
+    typingTime: 0.5
+  - dialogues: todos estamos locos, pero cuando uno esta cuerdo
+    girlName: 2
+    girlImage: {fileID: 21300000, guid: 721ae53f71e7f674cba51264e9dae496, type: 3}
+    typingTime: 0.5
+  - dialogues: a el es quien llaman loco
+    girlName: 1
+    girlImage: {fileID: 21300000, guid: b241e694912d0494fb98b148f915c96e, type: 3}
+    typingTime: 0.5
+  questionText:
+  - que profundo
+  - no me digas filosofo no
+  - me estoy tardando mas poniendo esto que en probarlo ayuda aaaaaaa
+  responsesMoreQuestions:
+  - {fileID: 11400000, guid: fdfdadb4db5a025439def97217aec3e6, type: 2}
+  - {fileID: 11400000, guid: 8af084e77c451d844a9b26f22c81c4bd, type: 2}
+  - {fileID: 11400000, guid: 33911183e1f7e7a4fad4d7f05f46caae, type: 2}
