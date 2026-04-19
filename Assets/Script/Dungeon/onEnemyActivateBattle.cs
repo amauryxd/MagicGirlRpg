@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class onEnemyActivateBattle : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other);
         if(other.tag == "Player")
         {
+            //animacion de entrar a combate
             SceneManager.LoadScene("GameplayTest");
         }
     }

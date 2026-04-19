@@ -8,7 +8,7 @@ public class TurnLogic : MonoBehaviour
     public TurnType Type;
     public int id;
     [SerializeField] private AbilitesReference abilities;
-    private PlayerStatsLocal stats;
+    private PlayerStatsSOB stats;
     public delegate void OnTurnFinished();
     public static event OnTurnFinished turnFinished;
     public delegate void OnTurnTypeNozomi(AttackType type);
@@ -32,7 +32,7 @@ public class TurnLogic : MonoBehaviour
     void Start()
     {
         abilities = GetComponent<AbilitesReference>();
-        stats = GetComponent<PlayerAlliesAutoReference>().stats.statsLocal;
+        stats = GetComponent<PlayerAlliesAutoReference>().stats.statsBase;
         anim = GetComponent<Animator>();
     }
     public void MakeTurn()
@@ -74,13 +74,13 @@ public class TurnLogic : MonoBehaviour
         if(!(FightManager.Instance.enemies.Count > 0 && id < FightManager.Instance.enemies.Count))
             id = UnityEngine.Random.Range(0, FightManager.Instance.enemies.Count);
 
-        FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.PlayerCurrentAtaque);
+        FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.playerCurrentAtaque);
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a <color=red>" + FightManager.Instance.enemies[id].gameObject.name+"</color>";
         /*Instantiate(trailPrefab, transform.position, Quaternion.identity).GetComponent<HitEffectFollower>().setPoints(transform, FightManager.Instance.enemies[id].transform, 1f);*/
         //bajar mana
-        stats.PlayerCurrentMana -= abilities.firstAbility.abilityCost;
+        //stats.playerCurrentMana -= abilities.firstAbility.abilityCost;
         //subir drive
-        stats.PlayerDrive += abilities.firstAbility.abilityDrive;
+        stats.playerDrive += abilities.firstAbility.abilityDrive;
         //mandara a nozomi q hacer
         typeToNozomi?.Invoke(abilities.firstAbility.abilityType);
         anim.SetTrigger("Do");
@@ -99,10 +99,10 @@ public class TurnLogic : MonoBehaviour
         for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
         {
             if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
-            FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbility.abilityAttack+ stats.PlayerCurrentAtaque);
+            FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbility.abilityAttack+ stats.playerCurrentAtaque);
         }
-        stats.PlayerCurrentMana -= abilities.secondAbility.abilityCost;
-        stats.PlayerDrive += abilities.secondAbility.abilityDrive;
+        //stats.PlayerCurrentMana -= abilities.secondAbility.abilityCost;
+        stats.playerDrive += abilities.secondAbility.abilityDrive;
         typeToNozomi?.Invoke(abilities.secondAbility.abilityType);
         anim.SetTrigger("Do");
         //turnFinished?.Invoke();
@@ -111,7 +111,7 @@ public class TurnLogic : MonoBehaviour
     {
         Debug.Log("Defendiendo");
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> se defiende!";
-        stats.PlayerCurrentDefensa += stats.PlayerLvl *0.5f;
+        stats.playerCurrentDefensa += stats.playerLvl *0.5f;
         anim.SetTrigger("Defence");
         //turnFinished?.Invoke();
         //stats.PlayerCurrentDefensa -= stats.PlayerLvl *0.5f;
@@ -123,8 +123,8 @@ public class TurnLogic : MonoBehaviour
         Debug.Log("modificando "+ abilities.statAbility.abilityType +" en "+ abilities.statAbility.abilityStatModif);
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> modifica su " + abilities.statAbility.abilityType + " a " + "<color="+getCharacterColor(FightManager.Instance.partyMembers[id+1].gameObject.name)+">"+FightManager.Instance.partyMembers[id+1].gameObject.name+"</color>";
         ApplyStatToModif(id, abilities.statAbility.abilityType);
-        stats.PlayerCurrentMana -= abilities.statAbility.abilityCost;
-        stats.PlayerDrive += abilities.statAbility.abilityDrive;
+        stats.playerCurrentMana -= abilities.statAbility.abilityCost;
+        stats.playerDrive += abilities.statAbility.abilityDrive;
         anim.SetTrigger("StatModif");
         //turnFinished?.Invoke();
     }
@@ -154,19 +154,19 @@ public class TurnLogic : MonoBehaviour
         switch (statType)
         {
             case StatType.Vida:
-                FightManager.Instance.partyMembers[id+1].stats.statsLocal.PlayerCurrentHealth += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentHealth += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Mana:
-                FightManager.Instance.partyMembers[id+1].stats.statsLocal.PlayerCurrentMana += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentMana += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Ataque:
-                FightManager.Instance.partyMembers[id+1].stats.statsLocal.PlayerCurrentAtaque += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentAtaque += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Defensa:
-                FightManager.Instance.partyMembers[id+1].stats.statsLocal.PlayerCurrentDefensa += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentDefensa += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Drive:
-                FightManager.Instance.partyMembers[id+1].stats.statsLocal.PlayerDrive += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].stats.statsBase.playerDrive += abilities.statAbility.abilityStatModif;
                 break;
             default:
                 break;

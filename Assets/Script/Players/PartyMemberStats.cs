@@ -3,8 +3,8 @@ using UnityEngine;
 public class PartyMemberStats : MonoBehaviour
 {
     public PlayerStatsSOB statsBase;
-    public PlayerStatsLocal statsLocal = new PlayerStatsLocal();
-    void Awake()
+    //public PlayerStatsLocal statsLocal = new PlayerStatsLocal();
+    /*void Awake()
     {
         statsLocal.PlayerLvl = statsBase.playerLvl;
         statsLocal.PlayerMaxHealth = statsBase.playerHealth;
@@ -19,11 +19,11 @@ public class PartyMemberStats : MonoBehaviour
         statsLocal.PlayerCurrentMana = statsLocal.PlayerMaxMana;
         statsLocal.PlayerCurrentAtaque = statsLocal.PlayerAtaque;
         statsLocal.PlayerCurrentDefensa = statsLocal.PlayerDefensa;
-    }
+    }*/
 
 
 }
-[System.Serializable]
+/*[System.Serializable]
 public class PlayerStatsLocal
 {
     public int PlayerLvl;
@@ -36,4 +36,4 @@ public class PlayerStatsLocal
     public float PlayerDefensa;
     public float PlayerCurrentDefensa;
     public float PlayerDrive;
-}
+}*/

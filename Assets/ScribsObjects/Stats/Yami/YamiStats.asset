@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cca6a3315f61f44d8ca4ddfb4c322d1, type: 3}
   m_Name: YamiStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsSOB
-  playerLvl: 0
+  playerLvl: 21
   playerHealth: 100
   playerMana: 100
   playerAtaque: 4
   playerDefensa: 4
   playerDrive: 0
+  plyName: Yami
+  plyImage: {fileID: 21300000, guid: 48d78e5cac880044bada7bb3a3e6fb29, type: 3}

@@ -179,7 +179,7 @@ public class FightManager : MonoBehaviour
         for(int index = 0; index < partyMembers.Count; index++)
         {
             if(partyMembers[index].name != "Nozomi"){
-                if(partyMembers[index].stats.statsLocal.PlayerCurrentHealth > 0)
+                if(partyMembers[index].stats.statsBase.playerCurrentHealth > 0)
                 {
                     Debug.Log("Continue Fight enemy");
                     onCheckTurn = false;

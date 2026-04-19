@@ -40,7 +40,7 @@ public class CanvasFIghtRef : MonoBehaviour
     }
     public void PopulateAbilites()
     {
-        if(fightInstance.partyMembers[fightInstance.partyIndex+1].stats.statsLocal.PlayerDrive >= 100)
+        if(fightInstance.partyMembers[fightInstance.partyIndex+1].stats.statsBase.playerDrive >= 100)
         {
             att1Text.SetText(FightManager.Instance.partyMembers[FightManager.Instance.partyIndex+1].abilites.firstAbilityDrive.abilityName);
             att2Text.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbilityDrive.abilityName);

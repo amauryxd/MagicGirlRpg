@@ -3,9 +3,15 @@ using UnityEngine;
 public class PlayerStatsSOB : ScriptableObject
 {
     public int playerLvl;
-    public float playerHealth;
-    public float playerMana;
-    public float playerAtaque;
-    public float playerDefensa;
+    public float playerMaxHealth;
+    public float playerCurrentHealth;
+    public float playerMaxMana;
+    public float playerCurrentMana;
+    public float playerAtaqueBase;
+    public float playerCurrentAtaque;
+    public float playerDefensaBase;
+    public float playerCurrentDefensa;
     public float playerDrive;
+    public string plyName;
+    public Sprite plyImage;
 }
