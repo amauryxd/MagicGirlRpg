@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueWithResponse : MonoBehaviour
 {
-    [SerializeField] private DialogueResponse dialoguesSOB;
+    [SerializeField] public DialogueResponse dialoguesSOB;
     [SerializeField] private GameObject panelDialogue;
     [SerializeField] private TextMeshProUGUI[] responseButtons;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -37,7 +37,7 @@ public class DialogueWithResponse : MonoBehaviour
         }*/
     }
     [ContextMenu("EmpezarDialogo")]
-    void StartDialogue()
+    public void StartDialogue()
     {
         didDialogueStart = true;
         panelDialogue.SetActive(true);
@@ -77,6 +77,10 @@ public class DialogueWithResponse : MonoBehaviour
             {
                 didDialogueStart = false;
                 panelDialogue.SetActive(false);
+                if(dialoguesSOB.doSomethingAtEnd)
+                {
+                    InvokeWhatToDoAfterDialogue();
+                }
             }
         }
     }

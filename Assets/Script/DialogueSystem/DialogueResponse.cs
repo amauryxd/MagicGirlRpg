@@ -4,6 +4,7 @@ using UnityEngine;
 public class DialogueResponse : ScriptableObject
 {
     public bool isQuestion;
+    public bool doSomethingAtEnd;
     public DialoguesElementsResponses[] dialoguesElements;
     public string[] questionText;
     public DialogueResponse[] responsesMoreQuestions;
