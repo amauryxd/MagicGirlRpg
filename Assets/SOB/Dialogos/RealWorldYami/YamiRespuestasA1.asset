@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ee70a32984345439266391726f3fc7, type: 3}
+  m_Name: YamiRespuestasA1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
+  isQuestion: 0
+  doSomethingAtEnd: 1
+  dialoguesElements:
+  - dialogues: "A cierto, hinoka me hab\xEDa hablado algo de eso"
+    girlName: 2
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "si ma\xF1ana puedo sin problema"
+    girlName: 2
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "genial entonces, nos vemos ma\xF1ana"
+    girlName: 2
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  questionText: []
+  responsesMoreQuestions: []

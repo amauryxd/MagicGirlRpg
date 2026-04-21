@@ -87,9 +87,15 @@ MonoBehaviour:
   - dialogues: "cada una decidi\xF3 ayudarme a recuperar mis sentimientos"
     anexedText: 0
     typingTime: 0.05
-  - dialogues: 'para ello hemos decidido investigar '
+  - dialogues: 'para ello hemos decidido adentrarnos a Caeltheria '
     anexedText: 0
     typingTime: 0.05
-  - dialogues: 'Caeltheria en busca de respuestas '
+  - dialogues: 'En busca de respuestas '
     anexedText: 0
     typingTime: 0.05
+  - dialogues: 'Aunque no estoy segura '
+    anexedText: 0
+    typingTime: 2
+  - dialogues: "si todav\xEDa quiero seguir\u2026 "
+    anexedText: 0
+    typingTime: 5

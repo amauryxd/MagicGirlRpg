@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ee70a32984345439266391726f3fc7, type: 3}
+  m_Name: IntroHinoka
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
+  isQuestion: 1
+  doSomethingAtEnd: 0
+  dialoguesElements:
+  - dialogues: "Te quer\xEDa recordar de que le preguntes a las dem\xE1s si pueden
+      ir ma\xF1ana"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "A ese sitio que tiene la distorsi\xF3n"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "Se que eres nueva en esto de la tecnolog\xEDa pero recuerda lo que
+      te dije"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "Tienes que desbloquear tu tel\xE9fono"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: Luego selecciona contactos, no te distraigas con los jueguitos que
+      ya te conozco
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: Y solo selecciona a quien quieras llamar
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "Yo de una vez te digo que yo s\xED puedo"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  - dialogues: "Entonces, \xBFQuedamos?"
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
+  questionText:
+  - Quedamos, gracias hinoka
+  - "\xBFMe puedes repetir como era para llamar?"
+  - "\xBFQuedamos?"
+  responsesMoreQuestions:
+  - {fileID: 11400000, guid: 2e472df776403cb4f867266fdcd0372d, type: 2}
+  - {fileID: 11400000, guid: 3201f4f458c0c374fa5ea85c2e9378eb, type: 2}
+  - {fileID: 11400000, guid: 067f4ef2dce6e494f8b93dee51336ecb, type: 2}

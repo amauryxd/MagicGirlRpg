@@ -16,7 +16,7 @@ public class DialoguesElementsResponses
     [TextArea(2,4)]public string dialogues;
     public GirlNames girlName;
     public Sprite girlImage;
-    public float typingTime;
+    public float typingTime = 0.05f;
 }
 [System.Serializable]
 public enum GirlNames
@@ -24,5 +24,6 @@ public enum GirlNames
     Nozomi,
     Hinoka,
     Yami,
-    Sayo
+    Sayo,
+    Desconozido
 }
