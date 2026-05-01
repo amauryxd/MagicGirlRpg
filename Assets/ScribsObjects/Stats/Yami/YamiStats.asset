@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: YamiStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsSOB
   playerLvl: 21
-  playerHealth: 100
-  playerMana: 100
-  playerAtaque: 4
-  playerDefensa: 4
+  playerMaxHealth: 100
+  playerCurrentHealth: 0
+  playerMaxMana: 100
+  playerCurrentMana: 0
+  playerAtaqueBase: 4
+  playerCurrentAtaque: 0
+  playerDefensaBase: 4
+  playerCurrentDefensa: 0
   playerDrive: 0
   plyName: Yami
   plyImage: {fileID: 21300000, guid: 48d78e5cac880044bada7bb3a3e6fb29, type: 3}

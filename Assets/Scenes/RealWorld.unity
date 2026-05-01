@@ -733,7 +733,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.504717, b: 0.90766346, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -748,7 +748,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 391855548}
   m_OnClick:
     m_PersistentCalls:
@@ -756,6 +756,18 @@ MonoBehaviour:
       - m_Target: {fileID: 391855550}
         m_TargetAssemblyTypeName: onEventGetResponseIndex, Assembly-CSharp
         m_MethodName: getClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -831,7 +843,7 @@ GameObject:
   - component: {fileID: 423559620}
   - component: {fileID: 423559623}
   m_Layer: 5
-  m_Name: Button
+  m_Name: HinokaContactes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,7 +894,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.3160377, b: 0.8542059, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -901,7 +913,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 423559621}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 423559623}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: SetDialogueToStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1782696056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &423559621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,9 +1000,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f356b250af454fbea3b58dfd2d106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogosHolder
-  dialogue: {fileID: 0}
-  newDialogueToSet: {fileID: 0}
+  idToIdentify: 1
+  dialogue: {fileID: 11400000, guid: dfca5abc9e442e54d8a231ccd4f6902c, type: 2}
+  newDialogueToSet: {fileID: 11400000, guid: b959c31659be80844b1dc3a6d7934602, type: 2}
   changeThisDialogue: 1
+  toDoAfterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 423559623}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: ChangeThisDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &423935787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,6 +2198,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d1824b3d-08c4-440a-9e1a-13207681856b
     m_ActionName: 'OnDungeon/Pause[/XInputControllerWindows/start,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 919f1509-2126-468c-90d7-6bdfedb35c2d
+    m_ActionName: 'OnDungeon/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec9409d1-76b1-4462-bf2e-7048f145e07b
+    m_ActionName: 'OnFight/Point[/Mouse/position]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: OnDungeon
@@ -2634,7 +2706,7 @@ GameObject:
   - component: {fileID: 1063858454}
   - component: {fileID: 1063858457}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: MamaContactos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2685,7 +2757,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.514151, b: 0.8249108, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2704,7 +2776,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063858455}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1063858457}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: SetDialogueToStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1782696056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1063858455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,9 +2851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f356b250af454fbea3b58dfd2d106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogosHolder
-  dialogue: {fileID: 0}
+  idToIdentify: 4
+  dialogue: {fileID: 11400000, guid: 97d9cde8fae86134ea1ca0a06ccbfe9a, type: 2}
   newDialogueToSet: {fileID: 0}
   changeThisDialogue: 0
+  toDoAfterDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1114812520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,6 +2869,7 @@ GameObject:
   - component: {fileID: 1114812521}
   - component: {fileID: 1114812522}
   - component: {fileID: 1114812523}
+  - component: {fileID: 1114812524}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -2829,6 +2930,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManagerSetter
   dialResp: {fileID: 1114812522}
+--- !u!114 &1114812524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114812520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f198a16d6337624ca869516e2cae7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventSystemObjectChanger
+  buttonToChage: {fileID: 1441496325}
+  eventSystem: {fileID: 555426081}
 --- !u!1 &1144869323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,7 +3698,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.43867922, b: 0.8616775, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3598,7 +3713,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1441496328}
   m_OnClick:
     m_PersistentCalls:
@@ -3606,6 +3721,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1441496330}
         m_TargetAssemblyTypeName: onEventGetResponseIndex, Assembly-CSharp
         m_MethodName: getClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4285,7 +4412,7 @@ GameObject:
   - component: {fileID: 1740420545}
   - component: {fileID: 1740420548}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: YamiContactos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4336,7 +4463,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.3915094, b: 0.7857691, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4355,7 +4482,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1740420546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740420548}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: SetDialogueToStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1782696056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1740420546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4406,9 +4569,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f356b250af454fbea3b58dfd2d106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogosHolder
-  dialogue: {fileID: 0}
-  newDialogueToSet: {fileID: 0}
+  idToIdentify: 2
+  dialogue: {fileID: 11400000, guid: 1c322ce90bc37a248ba6dfd62e908b88, type: 2}
+  newDialogueToSet: {fileID: 11400000, guid: 4667a0010b63ffe4696b6caab148a94b, type: 2}
   changeThisDialogue: 1
+  toDoAfterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1740420548}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: ChangeThisDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1751744635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,7 +5045,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.504717, b: 0.87101966, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4881,7 +5060,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1900166718}
   m_OnClick:
     m_PersistentCalls:
@@ -4889,6 +5068,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1900166720}
         m_TargetAssemblyTypeName: onEventGetResponseIndex, Assembly-CSharp
         m_MethodName: getClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5266,6 +5457,7 @@ GameObject:
   - component: {fileID: 2004631987}
   - component: {fileID: 2004631986}
   - component: {fileID: 2004631985}
+  - component: {fileID: 2004631988}
   m_Layer: 5
   m_Name: ContactosButton
   m_TagString: Untagged
@@ -5361,6 +5553,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2004631988}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2004631986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5399,6 +5603,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004631983}
   m_CullTransparentMesh: 1
+--- !u!114 &2004631988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004631983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f198a16d6337624ca869516e2cae7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventSystemObjectChanger
+  buttonToChage: {fileID: 423559618}
+  eventSystem: {fileID: 555426081}
 --- !u!1 &2087681173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,7 +5631,7 @@ GameObject:
   - component: {fileID: 2087681175}
   - component: {fileID: 2087681178}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: SayoContactos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5464,7 +5682,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.4669811, b: 0.79045314, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5483,7 +5701,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087681176}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2087681178}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: SetDialogueToStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1782696056}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1114812524}
+        m_TargetAssemblyTypeName: EventSystemObjectChanger, Assembly-CSharp
+        m_MethodName: ChangeSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087681176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5534,9 +5788,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f356b250af454fbea3b58dfd2d106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogosHolder
-  dialogue: {fileID: 0}
-  newDialogueToSet: {fileID: 0}
+  idToIdentify: 3
+  dialogue: {fileID: 11400000, guid: c4d0a7152d4284c48aac6878394e406d, type: 2}
+  newDialogueToSet: {fileID: 11400000, guid: 3d4cb6c708c06254c90fa6707b09e84a, type: 2}
   changeThisDialogue: 1
+  toDoAfterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2087681178}
+        m_TargetAssemblyTypeName: DialogosHolder, Assembly-CSharp
+        m_MethodName: ChangeThisDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

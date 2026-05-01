@@ -27,7 +27,7 @@ MonoBehaviour:
     girlName: 3
     girlImage: {fileID: 0}
     typingTime: 0.05
-  - dialogues: "Como estas, \xBFya te acostumbraste a tu nuevo tel\xE9fono?"
+  - dialogues: "\xBFC\xF3mo est\xE1s?, \xBFya te acostumbraste a tu nuevo tel\xE9fono?"
     girlName: 3
     girlImage: {fileID: 0}
     typingTime: 0.05

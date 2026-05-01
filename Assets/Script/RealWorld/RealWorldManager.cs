@@ -15,6 +15,14 @@ public class RealWorldManager : MonoBehaviour
     {
         Instance = this;
     }
+    void OnEnable()
+    {
+        DialogueWithResponse.onDialogueFinish += DialogueFinGetter;
+    }
+    void OnDisable()
+    {
+        DialogueWithResponse.onDialogueFinish -= DialogueFinGetter;
+    }
     void Start()
     {
         currentState = RealWorldState.normal;
@@ -24,7 +32,7 @@ public class RealWorldManager : MonoBehaviour
         switch(currentState)
         {
             case RealWorldState.normal:
-
+                plyMov.speed = 5;
                 break;
             case RealWorldState.inPhone:
 
@@ -33,6 +41,25 @@ public class RealWorldManager : MonoBehaviour
                 dialogueWithResponse.NextDialogueLine();
                 break;
         }
+    }
+    void FixedUpdate()
+    {
+        switch(currentState)
+        {
+            case RealWorldState.normal:
+                plyMov.speed = 5;
+                break;
+            case RealWorldState.inPhone:
+
+                break;
+            case RealWorldState.inDialogue:
+                
+                break;
+        }
+    }
+    void DialogueFinGetter(int id,bool doSomethingAtEnd)
+    {
+        currentState = RealWorldState.normal;
     }
     public void MenuChanger()
     {

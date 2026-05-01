@@ -10,7 +10,7 @@ public class DialogueManagerSetter : MonoBehaviour
     {
         Instance = this;
     }
-    public void SetDialogueAndStart(DialogueResponse newDialogue, GameObject objectToHide = null)
+    public void SetDialogueAndStart(DialogueResponse newDialogue, GameObject objectToHide = null, int id=0)
     {
         if(objectToHide != null)
         {

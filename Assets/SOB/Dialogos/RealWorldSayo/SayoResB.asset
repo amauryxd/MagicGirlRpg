@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ee70a32984345439266391726f3fc7, type: 3}
   m_Name: SayoResB
   m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
-  isQuestion: 0
+  isQuestion: 1
   doSomethingAtEnd: 0
   dialoguesElements:
   - dialogues: Bueeeno

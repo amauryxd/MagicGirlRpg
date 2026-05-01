@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,9 +15,11 @@ public class DialogueWithResponse : MonoBehaviour
     [SerializeField] private Image girlImage;
     private bool onSelectionState;
     private float typingTime = 0.05f;
-
+    private int idLocal;
     private bool didDialogueStart;
     private int lineIndex;
+
+    public static event Action<int,bool> onDialogueFinish;
 
     public UnityEvent whatToDoAfterDialogue;
 
@@ -37,7 +40,7 @@ public class DialogueWithResponse : MonoBehaviour
         }*/
     }
     [ContextMenu("EmpezarDialogo")]
-    public void StartDialogue()
+    public void StartDialogue(int id=0)
     {
         didDialogueStart = true;
         panelDialogue.SetActive(true);
@@ -45,7 +48,7 @@ public class DialogueWithResponse : MonoBehaviour
         girlImage.color = Color.white;
         nameText.text = dialoguesSOB.dialoguesElements[0].girlName.ToString();
         girlImage.sprite = dialoguesSOB.dialoguesElements[0].girlImage;
-
+        idLocal = id;
         StartCoroutine(ShowLine());
     }
     public void NextDialogueLine()
@@ -70,6 +73,7 @@ public class DialogueWithResponse : MonoBehaviour
                     girlImage.color = Color.grey;
                     responseButtons[i].text = dialoguesSOB.questionText[i];
                     responseButtons[i].transform.parent.gameObject.SetActive(true);
+                    StartCoroutine(WaitButtons());
                 }
                 onSelectionState = true;
             }
@@ -77,12 +81,21 @@ public class DialogueWithResponse : MonoBehaviour
             {
                 didDialogueStart = false;
                 panelDialogue.SetActive(false);
+                //RealWorldManager.Instance.currentState = RealWorldState.normal;
                 if(dialoguesSOB.doSomethingAtEnd)
                 {
                     InvokeWhatToDoAfterDialogue();
                 }
+                onDialogueFinish?.Invoke(idLocal, dialoguesSOB.doSomethingAtEnd);
             }
         }
+    }
+    public IEnumerator WaitButtons()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        responseButtons[0].GetComponentInParent<Button>().interactable = true;
+        responseButtons[1].GetComponentInParent<Button>().interactable = true;
+        responseButtons[2].GetComponentInParent<Button>().interactable = true;
     }
     private IEnumerator ShowLine()
     {
@@ -100,6 +113,7 @@ public class DialogueWithResponse : MonoBehaviour
         //responseButtons[0].SetActive(false);
         for(int i = 0; i < responseButtons.Length; i++)
         {
+            responseButtons[i].GetComponentInParent<Button>().interactable = false;
             responseButtons[i].transform.parent.gameObject.SetActive(false);
         }
         onSelectionState = false;
