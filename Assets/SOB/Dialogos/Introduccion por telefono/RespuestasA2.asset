@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RespuestasA2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
   isQuestion: 0
-  doSomethingAtEnd: 0
+  doSomethingAtEnd: 1
   dialoguesElements:
   - dialogues: "Primero desbloqueas el tel\xE9fono"
     girlName: 1

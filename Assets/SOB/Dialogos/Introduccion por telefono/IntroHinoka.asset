@@ -15,6 +15,10 @@ MonoBehaviour:
   isQuestion: 1
   doSomethingAtEnd: 0
   dialoguesElements:
+  - dialogues: Buenas noches Nozomi!
+    girlName: 1
+    girlImage: {fileID: 0}
+    typingTime: 0.05
   - dialogues: "Te quer\xEDa recordar de que le preguntes a las dem\xE1s si pueden
       ir ma\xF1ana"
     girlName: 1

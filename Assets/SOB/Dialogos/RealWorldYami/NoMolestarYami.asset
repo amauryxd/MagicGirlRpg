@@ -15,11 +15,11 @@ MonoBehaviour:
   isQuestion: 0
   doSomethingAtEnd: 0
   dialoguesElements:
-  - dialogues: "Demsiada energ\xEDa"
+  - dialogues: Tengo miedo de hablarle...
     girlName: 0
     girlImage: {fileID: 0}
     typingTime: 0.05
-  - dialogues: Mejor lo hablo en otro momento
+  - dialogues: Creo mejor no le hablo
     girlName: 0
     girlImage: {fileID: 0}
     typingTime: 0.05

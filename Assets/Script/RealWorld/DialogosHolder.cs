@@ -20,9 +20,9 @@ public class DialogosHolder : MonoBehaviour
     public void SetDialogueToStart()
     {
         DialogueManagerSetter.Instance.SetDialogueAndStart(dialogue,null,idToIdentify);
+        RealWorldManager.Instance.currentState = RealWorldState.inDialogue;
         if (changeThisDialogue)
         {
-            RealWorldManager.Instance.currentState = RealWorldState.inDialogue;
             dialogue = newDialogueToSet;
         }
     }

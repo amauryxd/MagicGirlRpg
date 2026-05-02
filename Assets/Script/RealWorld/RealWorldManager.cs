@@ -8,6 +8,7 @@ public class RealWorldManager : MonoBehaviour
     public GameObject phoneFirstButton;
     public DialogueWithResponse dialogueWithResponse;
     public Movement plyMov;
+    public PlayerInteract playerInteract;
     public EventSystem eventListener;
 
     public RealWorldState currentState;
@@ -32,7 +33,7 @@ public class RealWorldManager : MonoBehaviour
         switch(currentState)
         {
             case RealWorldState.normal:
-                plyMov.speed = 5;
+                playerInteract.TryToIntaract();
                 break;
             case RealWorldState.inPhone:
 
@@ -50,10 +51,10 @@ public class RealWorldManager : MonoBehaviour
                 plyMov.speed = 5;
                 break;
             case RealWorldState.inPhone:
-
+                plyMov.speed = 0;
                 break;
             case RealWorldState.inDialogue:
-                
+                plyMov.speed = 0;
                 break;
         }
     }
@@ -68,7 +69,6 @@ public class RealWorldManager : MonoBehaviour
         {
             phoneCanvas.gameObject.SetActive(true);
             currentState = RealWorldState.inPhone;
-            plyMov.speed = 0;
             eventListener.firstSelectedGameObject = phoneFirstButton;
             eventListener.SetSelectedGameObject(phoneFirstButton);
             return;
@@ -77,7 +77,6 @@ public class RealWorldManager : MonoBehaviour
         {
             currentState = RealWorldState.normal;
             phoneCanvas.gameObject.SetActive(false);
-            plyMov.speed = 5;
         }
     }
 
