@@ -25,5 +25,5 @@ public enum GirlNames
     Hinoka,
     Yami,
     Sayo,
-    Desconozido
+    Desconocido
 }

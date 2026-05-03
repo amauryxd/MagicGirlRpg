@@ -27,7 +27,11 @@ public class PlayerInteract : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        hitInfoObj = null;
-        canIntaract = true;
+        if(hitInfoObj == null) return;
+        if(collision.gameObject == hitInfoObj.gameObject)
+        {
+            hitInfoObj = null;
+            canIntaract = true;
+        }
     }
 }

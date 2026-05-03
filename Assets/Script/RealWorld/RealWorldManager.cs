@@ -48,7 +48,7 @@ public class RealWorldManager : MonoBehaviour
         switch(currentState)
         {
             case RealWorldState.normal:
-                plyMov.speed = 5;
+                plyMov.speed = 10;
                 break;
             case RealWorldState.inPhone:
                 plyMov.speed = 0;
