@@ -7,18 +7,15 @@ public class PlayerInteract : MonoBehaviour
     private bool canIntaract;
     public void TryToIntaract()
     {
-        Debug.Log("tratando de ahacer algo");
         if (hitInfoObj != null && canIntaract)
         {
             canIntaract = false;
             hitInfoObj.GetInteracted();
-            Debug.Log("interactuando pero player");
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("colisionando con algo");
         if(collision.TryGetComponent<CaseIntaruactable>(out CaseIntaruactable caseIntaruactable))
         {
             hitInfoObj = caseIntaruactable;

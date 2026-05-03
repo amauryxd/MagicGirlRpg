@@ -26,7 +26,7 @@ public class RealWorldManager : MonoBehaviour
     }
     void Start()
     {
-        currentState = RealWorldState.normal;
+        currentState = RealWorldState.onCinematic;
     }
     public void DoOnConfirm()
     {
@@ -41,6 +41,9 @@ public class RealWorldManager : MonoBehaviour
             case RealWorldState.inDialogue:
                 dialogueWithResponse.NextDialogueLine();
                 break;
+            case RealWorldState.onCinematic:
+
+                break;
         }
     }
     void FixedUpdate()
@@ -48,12 +51,15 @@ public class RealWorldManager : MonoBehaviour
         switch(currentState)
         {
             case RealWorldState.normal:
-                plyMov.speed = 10;
+                plyMov.speed = 8;
                 break;
             case RealWorldState.inPhone:
                 plyMov.speed = 0;
                 break;
             case RealWorldState.inDialogue:
+                plyMov.speed = 0;
+                break;
+            case RealWorldState.onCinematic:
                 plyMov.speed = 0;
                 break;
         }
@@ -85,5 +91,6 @@ public enum RealWorldState
 {
     normal,
     inPhone,
-    inDialogue
+    inDialogue,
+    onCinematic
 }

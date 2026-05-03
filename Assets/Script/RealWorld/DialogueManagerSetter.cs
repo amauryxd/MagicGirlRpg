@@ -17,7 +17,7 @@ public class DialogueManagerSetter : MonoBehaviour
             objectToHide.SetActive(false);
         }
         dialResp.dialoguesSOB = newDialogue;
-        dialResp.StartDialogue();
+        dialResp.StartDialogue(id);
     }
     public void SetDialogueOnly(DialogueResponse newDialogue, GameObject objectToHide = null)
     {

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : InputHandler
 {
     [SerializeField] public float speed;
-    void Update()
+    void FixedUpdate()
     {
         MovePlayer();
     }
