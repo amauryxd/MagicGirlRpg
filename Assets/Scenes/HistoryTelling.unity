@@ -906,6 +906,56 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &459387074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459387076}
+  - component: {fileID: 459387075}
+  m_Layer: 0
+  m_Name: SOBSReset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &459387075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459387074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0d5713ae1787b44b6af71f081ef601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetSobs
+  allPlayerToReset:
+  - {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
+  - {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
+  - {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
+  checkPointsSOB: {fileID: 11400000, guid: 8834a504b40def44b97aeebb742a1c48, type: 2}
+  enemysSOBActivate: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
+--- !u!4 &459387076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459387074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1030.5465, y: 791.4069, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685465467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,3 +2166,4 @@ SceneRoots:
   - {fileID: 1790318552}
   - {fileID: 1655747898}
   - {fileID: 1372820611}
+  - {fileID: 459387076}

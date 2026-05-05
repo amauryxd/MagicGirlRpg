@@ -17,11 +17,11 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: Esta es mi cama...
     girlName: 0
-    girlImage: {fileID: 21300000, guid: 562e82acadc1b304486225f80a4cf88d, type: 3}
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.5
   - dialogues: "Aunque tenga sue\xF1o tengo que terminar de hablar con las demas"
     girlName: 0
-    girlImage: {fileID: 21300000, guid: 48d78e5cac880044bada7bb3a3e6fb29, type: 3}
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.5
   questionText: []
   responsesMoreQuestions: []

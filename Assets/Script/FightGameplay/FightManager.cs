@@ -35,6 +35,10 @@ public class FightManager : MonoBehaviour
     private bool canSelect = false;
     private bool hasPlayerChangeTarget = false;
     public Animator UIFightAnim;
+    public EnemysSOBActivate enemysSob;
+
+    private bool winONce;
+    private bool loseOnce;
 
     //[Header()]
     void Awake()
@@ -67,6 +71,8 @@ public class FightManager : MonoBehaviour
         onCheckTurn = false;
         onPlayerTurn = false;
         canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
+        winONce = true;
+        loseOnce = true;
     }
 
 
@@ -150,12 +156,14 @@ public class FightManager : MonoBehaviour
     #endregion
     public void CheckWinnerPlayer()
     {
-        if(enemies.Count <= 0)
+        if(enemies.Count <= 0 && winONce)
         {
+            winONce = false;
             Debug.Log("You Win");
-            textoStatico.textoGlobal = "Haz ganado el combate! \nGracias por probar la demo c:";
+            textoStatico.textoGlobal = "Haz ganado el combate!";
             //Win Logic
             //StartCoroutine(tempCHange());
+            StartCoroutine(PlayerWinEnd());
             onCheckTurn = false;
             return;
         }
@@ -189,10 +197,15 @@ public class FightManager : MonoBehaviour
                 }
                 else
                 {
+                    if (loseOnce)
+                    {
+                    loseOnce = false;   
                     Debug.Log("You Lose");
                     textoStatico.textoGlobal = "Perdiste el combate...";
+                    StartCoroutine(EnemyWinEnd());
                     //Lose Logic
                     onCheckTurn = false;
+                    }
                     return;
                 }
             }
@@ -453,5 +466,37 @@ public class FightManager : MonoBehaviour
     }
     
     #endregion
+    #region CorutinesToFinish
+    public IEnumerator PlayerWinEnd()
+    {
+        yield return new WaitForSeconds(5f);
+        switch (enemysSob.wichEnemyNow)
+        {
+            case 0:
+                enemysSob.enemy1Active = false;
+                break;
+            case 1:
+                enemysSob.enemy2Active = false;
+                break;
+            case 2:
+                enemysSob.enemy3Active = false;
+                break;
+            case 3:
+                enemysSob.enemy4Active = false;
+                break;
+            case 4:
+                Debug.LogWarning("Enemy not selected, no desactivar ninguno");
+                break;
+        }
 
+        SceneManager.LoadScene("Dungeon");
+    }
+    public IEnumerator EnemyWinEnd()
+    {
+        yield return new WaitForSeconds(5f);
+
+        enemysSob.wichEnemyNow = 0;
+        SceneManager.LoadScene("Dungeon");
+    }
+    #endregion
 }

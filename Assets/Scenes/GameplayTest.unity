@@ -17773,6 +17773,7 @@ MonoBehaviour:
   canvasRef: {fileID: 2107977212}
   selectAllysIndex: 0
   UIFightAnim: {fileID: 927752338}
+  enemysSob: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
 --- !u!1 &798297306
 GameObject:
   m_ObjectHideFlags: 0
@@ -20625,17 +20626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
   statsBase: {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
-  statsLocal:
-    PlayerLvl: 0
-    PlayerMaxHealth: 0
-    PlayerCurrentHealth: 0
-    PlayerMaxMana: 0
-    PlayerCurrentMana: 0
-    PlayerAtaque: 0
-    PlayerCurrentAtaque: 0
-    PlayerDefensa: 0
-    PlayerCurrentDefensa: 0
-    PlayerDrive: 0
 --- !u!95 &1309803405
 Animator:
   serializedVersion: 7
@@ -21033,17 +21023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
   statsBase: {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
-  statsLocal:
-    PlayerLvl: 0
-    PlayerMaxHealth: 0
-    PlayerCurrentHealth: 0
-    PlayerMaxMana: 0
-    PlayerCurrentMana: 0
-    PlayerAtaque: 0
-    PlayerCurrentAtaque: 0
-    PlayerDefensa: 0
-    PlayerCurrentDefensa: 0
-    PlayerDrive: 0
 --- !u!95 &1393092190
 Animator:
   serializedVersion: 7
@@ -22718,17 +22697,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PartyMemberStats
   statsBase: {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
-  statsLocal:
-    PlayerLvl: 0
-    PlayerMaxHealth: 0
-    PlayerCurrentHealth: 0
-    PlayerMaxMana: 0
-    PlayerCurrentMana: 0
-    PlayerAtaque: 0
-    PlayerCurrentAtaque: 0
-    PlayerDefensa: 0
-    PlayerCurrentDefensa: 0
-    PlayerDrive: 0
 --- !u!95 &1613084952
 Animator:
   serializedVersion: 7

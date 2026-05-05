@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPointLoader : MonoBehaviour
 {
     public Transform player;
     public CheckPointsSOB chpoIndex;
-    public Transform[] checkpoints;
+    public List<Transform> checkpoints;
 
     void Awake()
     {
