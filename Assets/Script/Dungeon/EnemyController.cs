@@ -7,21 +7,21 @@ public class EnemyController : MonoBehaviour
     public EnemysSOBActivate enemysSOBActivate;
     void Start()
     {
-        if(enemysSOBActivate.enemy1Active)
+        if(!enemysSOBActivate.enemy1Active)
         {
-            enemys[0].SetActive(true);
+            enemys[0].SetActive(false);
         }
-        if(enemysSOBActivate.enemy2Active)
+        if(!enemysSOBActivate.enemy2Active)
         {
-            enemys[1].SetActive(true);
+            enemys[1].SetActive(false);
         }
-        if(enemysSOBActivate.enemy3Active)
+        if(!enemysSOBActivate.enemy3Active)
         {
-            enemys[2].SetActive(true);
+            enemys[2].SetActive(false);
         }
-        if(enemysSOBActivate.enemy4Active)
+        if(!enemysSOBActivate.enemy4Active)
         {
-            enemys[3].SetActive(true);
+            enemys[3].SetActive(false);
         }
     }
 }

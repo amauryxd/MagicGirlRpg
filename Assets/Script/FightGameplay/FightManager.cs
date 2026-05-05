@@ -156,8 +156,9 @@ public class FightManager : MonoBehaviour
     #endregion
     public void CheckWinnerPlayer()
     {
-        if(enemies.Count <= 0 && winONce)
+        if(enemies.Count <= 0)
         {
+            if(winONce){
             winONce = false;
             Debug.Log("You Win");
             textoStatico.textoGlobal = "Haz ganado el combate!";
@@ -166,6 +167,7 @@ public class FightManager : MonoBehaviour
             StartCoroutine(PlayerWinEnd());
             onCheckTurn = false;
             return;
+            }
         }
         else
         {
@@ -205,8 +207,8 @@ public class FightManager : MonoBehaviour
                     StartCoroutine(EnemyWinEnd());
                     //Lose Logic
                     onCheckTurn = false;
-                    }
                     return;
+                    }
                 }
             }
         }
