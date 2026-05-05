@@ -49,7 +49,7 @@ public class FightManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     void OnEnable()
     {
@@ -185,31 +185,35 @@ public class FightManager : MonoBehaviour
     }
     public void CheckWinnerEnemy()
     {
+        int allysDead = 0;
         onEnemyTurn = false;
         for(int index = 0; index < partyMembers.Count; index++)
         {
             if(partyMembers[index].name != "Nozomi"){
-                if(partyMembers[index].stats.statsBase.playerCurrentHealth > 0)
+                if(!(partyMembers[index].stats.statsBase.playerCurrentHealth > 0))
                 {
-                    Debug.Log("Continue Fight enemy");
-                    onCheckTurn = false;
-                    turnActual = ActualTurn.Player;
-                    UIFightAnim.SetTrigger("Show");
-                    return;
+                    Debug.Log("sumando un ally muerto: "+partyMembers[index].stats.statsBase.name+" tiene: "+partyMembers[index].stats.statsBase.playerCurrentHealth);
+                    allysDead++;
                 }
-                else
-                {
-                    if (loseOnce)
-                    {
-                    loseOnce = false;   
-                    Debug.Log("You Lose");
-                    textoStatico.textoGlobal = "Perdiste el combate...";
-                    StartCoroutine(EnemyWinEnd());
-                    //Lose Logic
-                    onCheckTurn = false;
-                    return;
-                    }
-                }
+            }
+        }
+        if(allysDead < partyMembers.Count - 1)
+        {
+            Debug.Log("Continue Fight enemy");
+            onCheckTurn = false;
+            turnActual = ActualTurn.Player;
+            UIFightAnim.SetTrigger("Show");
+        }
+        else
+        {
+            if (loseOnce)
+            {
+            loseOnce = false;   
+            Debug.Log("You Lose");
+            textoStatico.textoGlobal = "Perdiste el combate...";
+            StartCoroutine(EnemyWinEnd());
+            //Lose Logic
+            onCheckTurn = false;
             }
         }
     }

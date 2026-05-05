@@ -22,5 +22,6 @@ public class ResetSobs : MonoBehaviour
         enemysSOBActivate.enemy2Active = true;
         enemysSOBActivate.enemy3Active = true;
         enemysSOBActivate.enemy4Active = true;
+        HasBeenDungeon.hasBeen = false;
     }
 }

@@ -7,6 +7,7 @@ public class SignalReciverDungeon : MonoBehaviour
 
     void Start()
     {
+        if(!HasBeenDungeon.hasBeen)
         movement.speed = 0;
     }
 
