@@ -73,17 +73,29 @@ public class TurnLogic : MonoBehaviour
         //restar la vida del enemigo
         if(!(FightManager.Instance.enemies.Count > 0 && id < FightManager.Instance.enemies.Count))
             id = UnityEngine.Random.Range(0, FightManager.Instance.enemies.Count);
-
-        FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.playerCurrentAtaque);
-        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a <color=red>" + FightManager.Instance.enemies[id].gameObject.name+"</color>";
         /*Instantiate(trailPrefab, transform.position, Quaternion.identity).GetComponent<HitEffectFollower>().setPoints(transform, FightManager.Instance.enemies[id].transform, 1f);*/
         //bajar mana
         //stats.playerCurrentMana -= abilities.firstAbility.abilityCost;
         //subir drive
-        stats.playerDrive += abilities.firstAbility.abilityDrive;
         //mandara a nozomi q hacer
-        typeToNozomi?.Invoke(abilities.firstAbility.abilityType);
-        anim.SetTrigger("Do");
+        if(stats.playerDrive < 100)
+        {   
+            FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbility.abilityAttack+ stats.playerCurrentAtaque);
+            textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a <color=red>" + FightManager.Instance.enemies[id].gameObject.name+"</color>";
+            stats.playerDrive += abilities.firstAbility.abilityDrive;
+            typeToNozomi?.Invoke(abilities.firstAbility.abilityType);
+            //Do es animacion normal
+            anim.SetTrigger("Do");
+        }
+        else
+        {
+            FightManager.Instance.enemies[id].OnHitOrDamage(abilities.firstAbilityDrive.abilityAttack+ stats.playerCurrentAtaque);
+            textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> Desborda sus emociones en <color=red>" + FightManager.Instance.enemies[id].gameObject.name+"</color>";
+            stats.playerDrive -= abilities.firstAbilityDrive.abilityCost;
+            typeToNozomi?.Invoke(abilities.firstAbility.abilityType);
+            //anim de 1 enemigo drive
+            anim.SetTrigger("Do");
+        }
         //lamar las animaciones del ataque
         //mandar el evento de turno terminado
         //turnFinished?.Invoke();
@@ -95,16 +107,31 @@ public class TurnLogic : MonoBehaviour
         Debug.Log("Atacando a los enemigos");
         //99 significa que ataca a todos
         id = 99;
-        textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a todos los enemigos!";
-        for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
-        {
-            if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
-            FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbility.abilityAttack+ stats.playerCurrentAtaque);
-        }
         //stats.PlayerCurrentMana -= abilities.secondAbility.abilityCost;
-        stats.playerDrive += abilities.secondAbility.abilityDrive;
-        typeToNozomi?.Invoke(abilities.secondAbility.abilityType);
-        anim.SetTrigger("Do");
+        if(stats.playerDrive < 100)
+        {   
+            typeToNozomi?.Invoke(abilities.secondAbility.abilityType);
+            for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
+            {
+                if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
+                FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbility.abilityAttack+ stats.playerCurrentAtaque);
+            }
+            textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a todos los enemigos!";
+            stats.playerDrive += abilities.secondAbility.abilityDrive;
+            anim.SetTrigger("Do");
+        }
+        else
+        {
+            typeToNozomi?.Invoke(abilities.secondAbility.abilityType);
+            for (int indexAttack = 0; indexAttack < FightManager.Instance.enemies.Count; indexAttack++)
+            {
+                if(FightManager.Instance.enemies.Count > 0 && FightManager.Instance.enemies[indexAttack] != null)
+                FightManager.Instance.enemies[indexAttack].OnHitOrDamage(abilities.secondAbilityDrive.abilityAttack+ stats.playerCurrentAtaque);
+            }
+            textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> ataca a todos los enemigos!";
+            stats.playerDrive -= abilities.secondAbilityDrive.abilityCost;
+            anim.SetTrigger("Do");
+        }
         //turnFinished?.Invoke();
     }
     public void OnDefenseTurn()
@@ -123,7 +150,7 @@ public class TurnLogic : MonoBehaviour
         Debug.Log("modificando "+ abilities.statAbility.abilityType +" en "+ abilities.statAbility.abilityStatModif);
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> modifica su " + abilities.statAbility.abilityType + " a " + "<color="+getCharacterColor(FightManager.Instance.partyMembers[id+1].gameObject.name)+">"+FightManager.Instance.partyMembers[id+1].gameObject.name+"</color>";
         ApplyStatToModif(id, abilities.statAbility.abilityType);
-        stats.playerCurrentMana -= abilities.statAbility.abilityCost;
+        //stats.playerCurrentMana -= abilities.statAbility.abilityCost;
         stats.playerDrive += abilities.statAbility.abilityDrive;
         anim.SetTrigger("StatModif");
         //turnFinished?.Invoke();

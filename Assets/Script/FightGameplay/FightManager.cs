@@ -39,6 +39,7 @@ public class FightManager : MonoBehaviour
 
     private bool winONce;
     private bool loseOnce;
+    public bool nozomiOnce;
 
     //[Header()]
     void Awake()
@@ -73,6 +74,7 @@ public class FightManager : MonoBehaviour
         canvasRef.eventSystem.SetSelectedGameObject(canvasRef.actionBut.gameObject);
         winONce = true;
         loseOnce = true;
+        nozomiOnce = true;
     }
 
 
@@ -113,9 +115,13 @@ public class FightManager : MonoBehaviour
     }
     void NozomiTurnLogic()
     {
-        onPlayerTurn = false;
-        partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
         PlayerAttacks.Clear();
+        onPlayerTurn = false;
+        if (nozomiOnce)
+        {
+            nozomiOnce = false;
+            partyMembers[0].GetComponent<NozomiTurn>().DoTheAbilities();
+        }
         //turnActual = ActualTurn.CheckWinnerPlayer;
     }
     public void PlayerTurnLogic()

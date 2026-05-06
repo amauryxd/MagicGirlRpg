@@ -15,10 +15,12 @@ public class EnemyHealth : MonoBehaviour
     void OnEnable()
     {
         RotacionSelect.attackAnimFinished += getHitAnim;
+        NozomiTurn.nozomiFinishedAttackAnim += getHitAnim;
     }
     void OnDisable()
     {
         RotacionSelect.attackAnimFinished -= getHitAnim;
+        NozomiTurn.nozomiFinishedAttackAnim -= getHitAnim;
         enemyDeath?.Invoke(idLocal);
         FightManager.Instance.enemies.Remove(this);
     }

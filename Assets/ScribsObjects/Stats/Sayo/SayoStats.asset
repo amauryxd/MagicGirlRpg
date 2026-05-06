@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsSOB
   playerLvl: 20
   playerMaxHealth: 100
-  playerCurrentHealth: 0
+  playerCurrentHealth: 100
   playerMaxMana: 100
-  playerCurrentMana: 0
+  playerCurrentMana: 100
   playerAtaqueBase: 3
-  playerCurrentAtaque: 0
+  playerCurrentAtaque: 3
   playerDefensaBase: 5
-  playerCurrentDefensa: 0
-  playerDrive: 0
+  playerCurrentDefensa: 5
+  playerDrive: 200
   plyName: Sayo
   plyImage: {fileID: 21300000, guid: eb63eaf6b5745c44fb3f6fd65f3aa45b, type: 3}

@@ -14,4 +14,5 @@ public class PlayerStatsSOB : ScriptableObject
     public float playerDrive;
     public string plyName;
     public Sprite plyImage;
+
 }

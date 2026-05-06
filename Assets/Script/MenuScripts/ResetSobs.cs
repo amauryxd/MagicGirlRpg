@@ -7,6 +7,11 @@ public class ResetSobs : MonoBehaviour
     public EnemysSOBActivate enemysSOBActivate;
     void Awake()
     {
+        ThingsToReset();
+    }
+    [ContextMenu("ResetThingsPls")]
+    public void ThingsToReset()
+    {
         for(int index = 0; index < allPlayerToReset.Length; index++)
         {
             allPlayerToReset[index].playerCurrentHealth = allPlayerToReset[index].playerMaxHealth;

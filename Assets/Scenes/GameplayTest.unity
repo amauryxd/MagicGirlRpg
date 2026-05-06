@@ -17774,6 +17774,7 @@ MonoBehaviour:
   selectAllysIndex: 0
   UIFightAnim: {fileID: 927752338}
   enemysSob: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
+  nozomiOnce: 0
 --- !u!1 &798297306
 GameObject:
   m_ObjectHideFlags: 0
@@ -22960,6 +22961,30 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2009a800-fde1-4744-a49c-3f603e8df61f
     m_ActionName: 'OnFight/Negate[/Keyboard/x]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70a40254-1e72-40be-9011-b45a135d7012
+    m_ActionName: 'OnDungeon/Interact[/Keyboard/z,/XInputControllerWindows/buttonSouth,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b11e631-118f-40bc-8994-cc618309cb26
+    m_ActionName: 'OnDungeon/CloseInteract[/Keyboard/x,/XInputControllerWindows/buttonEast,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f2fd37dd-3f1a-4490-9d48-c75b9a64f287
+    m_ActionName: 'OnDungeon/Menu[/Keyboard/c,/XInputControllerWindows/buttonWest,/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d1824b3d-08c4-440a-9e1a-13207681856b
+    m_ActionName: 'OnDungeon/Pause[/XInputControllerWindows/start,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 919f1509-2126-468c-90d7-6bdfedb35c2d
+    m_ActionName: 'OnDungeon/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ec9409d1-76b1-4462-bf2e-7048f145e07b
+    m_ActionName: 'OnFight/Point[/Mouse/position]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: OnFight
@@ -29191,7 +29216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72c162e0f7aebc46ae6ec9e0dafee52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackTurnEnemy
-  attackDamage: 10
+  attackDamage: 20
 --- !u!114 &8618937299566439440
 MonoBehaviour:
   m_ObjectHideFlags: 0
