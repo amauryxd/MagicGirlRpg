@@ -17,23 +17,23 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: "Primero desbloqueas el tel\xE9fono"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: Luego ve a contactos
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "Y por \xFAltimo selecciona a quien quieras llamar"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "bueno me voy que mi mam\xE1 me esta llamando"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "Nos vemos ma\xF1ana"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 3551874597600280549, guid: 7a226e16e47b35a4c80f77cd5ae7dc42, type: 3}
     typingTime: 0.05
   questionText: []
   responsesMoreQuestions: []

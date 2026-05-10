@@ -17,31 +17,31 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: "\xA1Claro! Es que hoy com\xED hot-cakes para cenar"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4270126398125041595, guid: 7c2365359c901f94c932d82de373011e, type: 3}
     typingTime: 0.05
   - dialogues: Desayune y cene al mismo tiempo
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4270126398125041595, guid: 7c2365359c901f94c932d82de373011e, type: 3}
     typingTime: 0.05
   - dialogues: "es como\u2026 "
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFceyuno?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFTiene sentido eso?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFno?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFC\xF3mo te ayudo?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}
     typingTime: 0.05
   questionText:
   - "La distorsi\xF3n"

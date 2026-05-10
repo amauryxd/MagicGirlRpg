@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: testDialgoues
   m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
   isQuestion: 1
+  doSomethingAtEnd: 0
   dialoguesElements:
   - dialogues: Hola como estas
     girlName: 0
     girlImage: {fileID: 21300000, guid: b241e694912d0494fb98b148f915c96e, type: 3}
-    typingTime: 0
+    typingTime: 1
   - dialogues: Respondeme xd
     girlName: 1
     girlImage: {fileID: 21300000, guid: eb63eaf6b5745c44fb3f6fd65f3aa45b, type: 3}
-    typingTime: 0
+    typingTime: 1
   - dialogues: otro mas pa que me de tiempo de reaccionar
     girlName: 3
     girlImage: {fileID: -8551218213140717231, guid: 1b46bf99633d3624f834c1a5572c8e53, type: 3}
-    typingTime: 0
+    typingTime: 1
   questionText:
   - Bien bien bien
   - bien, creo...

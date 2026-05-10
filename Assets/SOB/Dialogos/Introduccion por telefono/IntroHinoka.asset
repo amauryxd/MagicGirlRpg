@@ -17,42 +17,45 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: Buenas noches Nozomi!
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 3551874597600280549, guid: 7a226e16e47b35a4c80f77cd5ae7dc42, type: 3}
     typingTime: 0.05
   - dialogues: "Te quer\xEDa recordar de que le preguntes a las dem\xE1s si pueden
       ir ma\xF1ana"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "A ese sitio que tiene la distorsi\xF3n"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "Se que eres nueva en esto de la tecnolog\xEDa pero recuerda lo que
       te dije"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "Tienes que desbloquear tu tel\xE9fono"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
-  - dialogues: Luego selecciona contactos, no te distraigas con los jueguitos que
-      ya te conozco
+  - dialogues: 'Luego selecciona contactos... '
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
+    typingTime: 0.05
+  - dialogues: No te distraigas con los jueguitos que ya te conozco
+    girlName: 1
+    girlImage: {fileID: -4145229081023907216, guid: d43a1220114e0dc409aa7cf08e053cc3, type: 3}
     typingTime: 0.05
   - dialogues: Y solo selecciona a quien quieras llamar
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   - dialogues: "Yo de una vez te digo que yo s\xED puedo"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 3551874597600280549, guid: 7a226e16e47b35a4c80f77cd5ae7dc42, type: 3}
     typingTime: 0.05
   - dialogues: "Entonces, \xBFQuedamos?"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
   questionText:
   - Quedamos, gracias hinoka

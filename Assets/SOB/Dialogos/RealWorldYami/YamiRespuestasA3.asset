@@ -17,11 +17,11 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: Ay nozomi
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -4541812918945944788, guid: 05576abdf0daf7d48a2afbef83e467b8, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFNo tiene que ver con algo de las dem\xE1s chicas?"
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
     typingTime: 0.05
   questionText:
   - "La distorsi\xF3n"

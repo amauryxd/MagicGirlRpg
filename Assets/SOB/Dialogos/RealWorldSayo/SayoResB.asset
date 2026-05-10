@@ -17,15 +17,15 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: Bueeeno
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
     typingTime: 0.05
   - dialogues: Nozooooomi
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFSi est\xE1 en llamada esta cosa?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
     typingTime: 0.05
   questionText:
   - "La distorsi\xF3n"

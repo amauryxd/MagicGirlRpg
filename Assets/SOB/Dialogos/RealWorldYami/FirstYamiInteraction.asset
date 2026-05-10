@@ -17,23 +17,23 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: ...
     girlName: 4
-    girlImage: {fileID: 0}
-    typingTime: 5
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.5
   - dialogues: ...
     girlName: 4
-    girlImage: {fileID: 0}
-    typingTime: 5
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.5
   - dialogues: Nozomi, que sorpresa
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
     typingTime: 0.05
   - dialogues: "Es raro escucharte por aqu\xED"
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
     typingTime: 0.05
   - dialogues: "Dime, \xBFque necesitas?"
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
     typingTime: 0.05
   questionText:
   - "Es por lo de la distorsi\xF3n"

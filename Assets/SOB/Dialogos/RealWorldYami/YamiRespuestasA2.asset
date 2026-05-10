@@ -17,11 +17,11 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: Muy bien, gracias por preguntar
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -7722098449307511267, guid: 5eccf63a040fed047803761473ced31e, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFSolo era eso, o era algo m\xE1s?"
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
     typingTime: 0.05
   questionText:
   - "Era por lo de la distorsi\xF3n"

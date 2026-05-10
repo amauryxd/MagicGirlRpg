@@ -1964,7 +1964,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -582.0889, y: 240.9432}
-  m_SizeDelta: {x: 670.3923, y: 856.6182}
+  m_SizeDelta: {x: 449, y: 888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496717832
 MonoBehaviour:
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 48d78e5cac880044bada7bb3a3e6fb29, type: 3}
+  m_Sprite: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3065,8 +3065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.912842, y: 354.98303}
-  m_SizeDelta: {x: 445.52515, y: 816.46124}
+  m_AnchoredPosition: {x: -26.326477, y: 353.3796}
+  m_SizeDelta: {x: 618.6917, y: 935.1121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &856187563
 BoxCollider:

@@ -17,7 +17,7 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: "\xBFSegura?"
     girlName: 2
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -4541812918945944788, guid: 05576abdf0daf7d48a2afbef83e467b8, type: 3}
     typingTime: 0.05
   questionText:
   - "La distorsi\xF3n"

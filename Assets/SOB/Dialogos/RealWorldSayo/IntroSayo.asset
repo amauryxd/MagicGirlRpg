@@ -17,23 +17,23 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: ...
     girlName: 4
-    girlImage: {fileID: 0}
-    typingTime: 5
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.5
   - dialogues: ...
     girlName: 4
-    girlImage: {fileID: 0}
-    typingTime: 5
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.5
   - dialogues: Hola Nozomi!!!
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4270126398125041595, guid: 7c2365359c901f94c932d82de373011e, type: 3}
     typingTime: 0.05
   - dialogues: "\xBFC\xF3mo est\xE1s?, \xBFya te acostumbraste a tu nuevo tel\xE9fono?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}
     typingTime: 0.05
   - dialogues: "Dime, dime, \xBFc\xF3mo te ayudo?"
     girlName: 3
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 4270126398125041595, guid: 7c2365359c901f94c932d82de373011e, type: 3}
     typingTime: 0.05
   questionText:
   - "Es la distorsi\xF3n"

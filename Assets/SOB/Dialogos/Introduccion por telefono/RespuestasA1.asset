@@ -17,7 +17,7 @@ MonoBehaviour:
   dialoguesElements:
   - dialogues: "Perfecto, nos vemos ma\xF1ana"
     girlName: 1
-    girlImage: {fileID: 0}
+    girlImage: {fileID: 3551874597600280549, guid: 7a226e16e47b35a4c80f77cd5ae7dc42, type: 3}
     typingTime: 0.05
   questionText: []
   responsesMoreQuestions: []

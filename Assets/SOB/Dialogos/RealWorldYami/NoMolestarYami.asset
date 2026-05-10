@@ -15,13 +15,13 @@ MonoBehaviour:
   isQuestion: 0
   doSomethingAtEnd: 0
   dialoguesElements:
-  - dialogues: Tengo miedo de hablarle...
+  - dialogues: Muy imponente...
     girlName: 0
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.05
-  - dialogues: Creo mejor no le hablo
+  - dialogues: Mejor en otro momento...
     girlName: 0
-    girlImage: {fileID: 0}
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.05
   questionText: []
   responsesMoreQuestions: []

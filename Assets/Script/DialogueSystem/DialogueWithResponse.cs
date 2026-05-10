@@ -48,7 +48,9 @@ public class DialogueWithResponse : MonoBehaviour
         girlImage.color = Color.white;
         nameText.text = dialoguesSOB.dialoguesElements[0].girlName.ToString();
         girlImage.sprite = dialoguesSOB.dialoguesElements[0].girlImage;
+        girlImage.SetNativeSize();
         idLocal = id;
+        typingTime = dialoguesSOB.dialoguesElements[0].typingTime;
         StartCoroutine(ShowLine());
     }
     public void NextDialogueLine()
@@ -63,6 +65,8 @@ public class DialogueWithResponse : MonoBehaviour
         {
             nameText.text = dialoguesSOB.dialoguesElements[lineIndex].girlName.ToString();
             girlImage.sprite = dialoguesSOB.dialoguesElements[lineIndex].girlImage;
+            girlImage.SetNativeSize();
+            typingTime = dialoguesSOB.dialoguesElements[lineIndex].typingTime;
             StartCoroutine(ShowLine());
         }
         else
