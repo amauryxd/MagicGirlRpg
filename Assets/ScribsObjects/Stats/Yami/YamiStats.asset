@@ -21,6 +21,6 @@ MonoBehaviour:
   playerCurrentAtaque: 4
   playerDefensaBase: 4
   playerCurrentDefensa: 4
-  playerDrive: 200
+  playerDrive: 1000
   plyName: Yami
   plyImage: {fileID: 21300000, guid: 48d78e5cac880044bada7bb3a3e6fb29, type: 3}

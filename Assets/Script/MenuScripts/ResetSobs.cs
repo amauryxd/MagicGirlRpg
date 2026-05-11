@@ -27,5 +27,7 @@ public class ResetSobs : MonoBehaviour
         enemysSOBActivate.enemy4Active = true;
         HasBeenDungeon.hasBeen = false;
         CheckPointLoader.checkPointIndex = 0;
+        DungeonManager.Door1 = true;
+        DungeonManager.Door2 = true;
     }
 }

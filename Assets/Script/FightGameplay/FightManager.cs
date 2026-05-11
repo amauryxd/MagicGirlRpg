@@ -482,6 +482,7 @@ public class FightManager : MonoBehaviour
     public IEnumerator PlayerWinEnd()
     {
         yield return new WaitForSeconds(5f);
+        DungeonManager.HasLost = false;
         switch (enemysSob.wichEnemyNow)
         {
             case 0:
@@ -506,7 +507,7 @@ public class FightManager : MonoBehaviour
     public IEnumerator EnemyWinEnd()
     {
         yield return new WaitForSeconds(5f);
-
+        DungeonManager.HasLost = true;
         enemysSob.wichEnemyNow = 0;
         SceneManager.LoadScene("Dungeon");
     }

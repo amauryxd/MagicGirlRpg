@@ -7,13 +7,20 @@ public class SignalReciverDungeon : MonoBehaviour
 
     void Start()
     {
-        if(!HasBeenDungeon.hasBeen)
-        movement.speed = 0;
+        if (!HasBeenDungeon.hasBeen)
+        {
+            DungeonManager.Instance.dungeonStates = DungeonStates.cinematic;
+        }
+        else
+        {
+            DungeonManager.Instance.dungeonStates = DungeonStates.Normal;
+            audiosc.Play();
+        }
     }
 
     public void DoOnComand()
     {
-        movement.speed = 7;
+        DungeonManager.Instance.dungeonStates = DungeonStates.Normal;
         audiosc.Play();
     }
 }

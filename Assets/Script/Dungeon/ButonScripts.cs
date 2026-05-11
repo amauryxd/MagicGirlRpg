@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class ButonScripts : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public SpriteRenderer sprite;
+    public void ChangeColor()
     {
-        
+        sprite.color = Color.grey;
+    }
+    public void ChangeStateToCinematic()
+    {
+        DungeonManager.Instance.dungeonStates = DungeonStates.cinematic;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -7,8 +7,17 @@ public class CheckPointLoader : MonoBehaviour
     public static int checkPointIndex;
     public List<Transform> checkpoints;
 
-    void Awake()
+    void Start()
     {
-        player.position = checkpoints[checkPointIndex].position;
+        if(DungeonManager.HasLost)
+        {
+            player.position = checkpoints[checkPointIndex].position;
+            DungeonManager.HasLost = false;
+        }
+        else
+        {
+            player.position = DungeonManager.playerLastPos;
+            DungeonManager.HasLost = false;
+        }
     }
 }

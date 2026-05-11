@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 0.33
   intensity:
     m_OverrideState: 1
-    m_Value: 2.49
+    m_Value: 14.5
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.72
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -65,7 +65,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Dungeon
+  m_Name: DungeonFight
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
   - {fileID: 1541224917644130315}
@@ -102,10 +102,10 @@ MonoBehaviour:
     m_Value: 3
   intensity:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 1
   response:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.49
+    m_Value: 0.617
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
@@ -152,7 +152,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -1
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
