@@ -4,11 +4,11 @@ using UnityEngine;
 public class CheckPointLoader : MonoBehaviour
 {
     public Transform player;
-    public CheckPointsSOB chpoIndex;
+    public static int checkPointIndex;
     public List<Transform> checkpoints;
 
     void Awake()
     {
-        player.position = checkpoints[chpoIndex.checkPointIndex].position;
+        player.position = checkpoints[checkPointIndex].position;
     }
 }

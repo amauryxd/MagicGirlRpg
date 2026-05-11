@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class CHangeCheckPoint : MonoBehaviour
 {
-    public CheckPointsSOB chpoIndex;
     public int localIndex;
 
     public void onInteractCheckPoint()
     {
-        if(chpoIndex.checkPointIndex < localIndex)
+        if(CheckPointLoader.checkPointIndex < localIndex)
         {
-            chpoIndex.checkPointIndex = localIndex;
+            CheckPointLoader.checkPointIndex = localIndex;
             Debug.Log("Checkpoint " + localIndex + " reached");
         }
     }
