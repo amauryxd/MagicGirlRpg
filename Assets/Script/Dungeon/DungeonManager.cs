@@ -42,18 +42,22 @@ public class DungeonManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        switch(dungeonStates)        {
+        switch(dungeonStates){
             case DungeonStates.Normal:
                 playerMv.speed = 7;
+                MenuCanvasDungeon.canOpenMenu = true;
                 break;
             case DungeonStates.OnMenuSelect:
                 playerMv.speed = 0;
+                MenuCanvasDungeon.canOpenMenu = true;
                 break;
             case DungeonStates.OnPause:
                 playerMv.speed = 0;
+                MenuCanvasDungeon.canOpenMenu = false;
                 break;
             case DungeonStates.cinematic:
                 playerMv.speed = 0;
+                MenuCanvasDungeon.canOpenMenu = false;
                 break;
         }
     }

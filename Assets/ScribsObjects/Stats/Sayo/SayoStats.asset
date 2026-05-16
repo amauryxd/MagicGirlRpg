@@ -23,4 +23,4 @@ MonoBehaviour:
   playerCurrentDefensa: 5
   playerDrive: 1000
   plyName: Sayo
-  plyImage: {fileID: 21300000, guid: eb63eaf6b5745c44fb3f6fd65f3aa45b, type: 3}
+  plyImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}

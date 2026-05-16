@@ -15,6 +15,7 @@ public class CanvasInfoPopulate : MonoBehaviour
     public void PopulateInfoCanvas()
     {
         plySprite.sprite = plyStats.plyImage;
+        plySprite.SetNativeSize();
         nombreText.text = plyStats.plyName;
         nivelText.text = "Nivel: " + plyStats.playerLvl.ToString();
         vidaText.text = "Vida: " + plyStats.playerCurrentHealth.ToString();
