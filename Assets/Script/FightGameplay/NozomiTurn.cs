@@ -69,7 +69,7 @@ public class NozomiTurn : MonoBehaviour
                 tempid = UnityEngine.Random.Range(1, FightManager.Instance.partyMembers.Count);
                 ApplyStatToModifNozomi(tempid, StatType.Vida, 8);
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> curando a un aliado";
-                anim.SetTrigger("Do");
+                anim.SetTrigger("Same");
                 break;
             case ResultEmotion.ExplocionEmocional:
                 //cura a todas y hace dano a todo
@@ -83,15 +83,15 @@ public class NozomiTurn : MonoBehaviour
                     }
                     textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> curando aliados y atacando enemigos";
                     tempid = 99;
-                anim.SetTrigger("Do");
+                anim.SetTrigger("ExpEmo");
                 break;
             case ResultEmotion.Miedo:
                 //sube 1 defenza al azar
                 tempid = UnityEngine.Random.Range(1, FightManager.Instance.partyMembers.Count);
-                ApplyStatToModifNozomi(tempid, StatType.Defensa, 8);
+                ApplyStatToModifNozomi(tempid, StatType.Defensa, 1);
                 FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("DBuff");
-                textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> subiendo al defensa a un aliado";
-                anim.SetTrigger("Do");
+                textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> subiendo la defensa a un aliado";
+                anim.SetTrigger("Same");
                 break;
             case ResultEmotion.Vulnerabilidad:
                 //sube el ataque de todas, baja la defenza de todas
@@ -105,7 +105,7 @@ public class NozomiTurn : MonoBehaviour
                 ApplyStatToModifNozomi(3, StatType.Defensa, -1f);
                 FightManager.Instance.partyMembers[3].GetComponent<RotacionSelect>().PlayStatsAnim("DDuff");
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> bajando la defensa pero subiendo el ataque a todas";
-                anim.SetTrigger("Do");
+                anim.SetTrigger("Same");
                 break;
             case ResultEmotion.Esperanza:
                 //el caso default, cura a todo
@@ -113,7 +113,7 @@ public class NozomiTurn : MonoBehaviour
                 ApplyStatToModifNozomi(2, StatType.Vida, 5);
                 ApplyStatToModifNozomi(3, StatType.Vida, 5);
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> curando a todas";
-                anim.SetTrigger("Do");
+                anim.SetTrigger("Same");
                 break;
             default:
                 //no deberiamos llegar aqui
@@ -138,14 +138,14 @@ public class NozomiTurn : MonoBehaviour
         {
             case StatType.Vida:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentHealth += cuantity;
-                FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("HBuff");
+                FightManager.Instance.partyMembers[id].GetComponent<RotacionSelect>().PlayStatsAnim("HBuff");
                 break;
             case StatType.Mana:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentMana += cuantity;
                 break;
             case StatType.Ataque:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentAtaque += cuantity;
-                FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("ABuff");
+                FightManager.Instance.partyMembers[id].GetComponent<RotacionSelect>().PlayStatsAnim("ABuff");
                 break;
             case StatType.Defensa:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentDefensa += cuantity;

@@ -138,7 +138,7 @@ public class TurnLogic : MonoBehaviour
     {
         Debug.Log("Defendiendo");
         textoStatico.textoGlobal = "<color="+getCharacterColor(gameObject.name)+">"+gameObject.name + "</color> se defiende!";
-        stats.playerCurrentDefensa += stats.playerLvl *0.5f;
+        stats.playerCurrentDefensa += stats.playerLvl *0.1f;
         anim.SetTrigger("Defence");
         //turnFinished?.Invoke();
         //stats.PlayerCurrentDefensa -= stats.PlayerLvl *0.5f;
