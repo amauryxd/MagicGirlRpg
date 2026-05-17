@@ -19,7 +19,7 @@ public class NozomiTurn : MonoBehaviour
     }
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
     void HandleTurnType(AttackType type)
     {

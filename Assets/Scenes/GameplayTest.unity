@@ -41179,6 +41179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431442370}
   - component: {fileID: 1431442371}
+  - component: {fileID: 1431442372}
   m_Layer: 0
   m_Name: AtacksHolder
   m_TagString: Untagged
@@ -41199,6 +41200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2008703732}
   - {fileID: 1095748629}
   - {fileID: 711629567}
   m_Father: {fileID: 1623240328}
@@ -41225,6 +41227,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1431442372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431442369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cd83a884ef0024db8e9beeb547db49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConectNozomiGetters
+  nozTurn: {fileID: 1623240335}
+  toRotacion: {fileID: 2008703731}
+  duracion: 5
+  anguloMaximo: 0
+  exponente: 3
+  canRotate: 1
 --- !u!1 &1436243079
 GameObject:
   m_ObjectHideFlags: 0
@@ -42593,7 +42613,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2008703732}
   - {fileID: 1431442370}
   m_Father: {fileID: 1770973077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54392,12 +54411,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008703731}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.40000004, y: 0.40000004, z: 0.40000004}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1623240328}
+  m_Father: {fileID: 1431442370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2008703733
 SpriteRenderer:

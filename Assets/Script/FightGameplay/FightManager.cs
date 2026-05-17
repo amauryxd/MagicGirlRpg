@@ -184,11 +184,6 @@ public class FightManager : MonoBehaviour
             return;
         }
     }
-    public IEnumerator tempCHange()
-    {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("thxplay");
-    }
     public void CheckWinnerEnemy()
     {
         int allysDead = 0;
@@ -483,6 +478,15 @@ public class FightManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         DungeonManager.HasLost = false;
+        foreach(var ally in GameManager.Instance.partyMembers)
+        {
+            if(ally.stats != null)
+            {
+            ally.stats.statsBase.playerCurrentAtaque = ally.stats.statsBase.playerAtaqueBase;
+            ally.stats.statsBase.playerCurrentDefensa = ally.stats.statsBase.playerDefensaBase;
+            ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
+            }
+        }
         switch (enemysSob.wichEnemyNow)
         {
             case 0:
@@ -508,6 +512,15 @@ public class FightManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         DungeonManager.HasLost = true;
+        foreach(var ally in GameManager.Instance.partyMembers)
+        {
+            if(ally.stats != null)
+            {
+            ally.stats.statsBase.playerCurrentAtaque = ally.stats.statsBase.playerAtaqueBase;
+            ally.stats.statsBase.playerCurrentDefensa = ally.stats.statsBase.playerDefensaBase;
+            ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
+            }
+        }
         enemysSob.wichEnemyNow = 0;
         SceneManager.LoadScene("Dungeon");
     }
