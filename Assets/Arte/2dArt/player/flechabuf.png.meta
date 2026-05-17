@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 612dc9b18e4f9bf4b8905c2f84a6142c
+guid: 1da4914bdd2445049a469419a7d8229d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4117779272378001346
-    second: pie_0
+      213: -7405970865701220835
+    second: flechabuf_0
+  - first:
+      213: -8068533227111572166
+    second: flechabuf_1
+  - first:
+      213: 6465799992665448881
+    second: flechabuf_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pie_0
+      name: flechabuf_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 324
-        height: 771
+        x: 12
+        y: 452
+        width: 617
+        height: 514
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3851769195bad6c0800000000000000
-      internalID: -4117779272378001346
+      spriteID: d1e8cf47cb4b83990800000000000000
+      internalID: -7405970865701220835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flechabuf_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 186
+        width: 291
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d149367cfc60090800000000000000
+      internalID: -8068533227111572166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flechabuf_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 12
+        width: 291
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b12c8706d22bb950800000000000000
+      internalID: 6465799992665448881
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pie_0: -4117779272378001346
+      flechabuf_0: -7405970865701220835
+      flechabuf_1: -8068533227111572166
+      flechabuf_2: 6465799992665448881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

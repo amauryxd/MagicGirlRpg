@@ -50,7 +50,7 @@ public class NozomiTurn : MonoBehaviour
                 tempid = UnityEngine.Random.Range(0, FightManager.Instance.enemies.Count);
                 FightManager.Instance.enemies[tempid].OnHitOrDamage(15);
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> golpeando a "+FightManager.Instance.enemies[tempid].name;
-                anim.SetTrigger("Do");
+                anim.SetTrigger("Enojo");
                 break;
             case ResultEmotion.DesesperacionAgresiva:
                 //ataca a todos los enemigos
@@ -62,7 +62,7 @@ public class NozomiTurn : MonoBehaviour
                     Debug.Log("Ataco");
                     textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> atacando a todos los enemigos";
                     tempid = 99;
-                anim.SetTrigger("Do");
+                anim.SetTrigger("DesAgr");
                 break;
             case ResultEmotion.Tristesa:
                 //cura a 1 aliado
@@ -89,6 +89,7 @@ public class NozomiTurn : MonoBehaviour
                 //sube 1 defenza al azar
                 tempid = UnityEngine.Random.Range(1, FightManager.Instance.partyMembers.Count);
                 ApplyStatToModifNozomi(tempid, StatType.Defensa, 8);
+                FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("DBuff");
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> subiendo al defensa a un aliado";
                 anim.SetTrigger("Do");
                 break;
@@ -96,10 +97,13 @@ public class NozomiTurn : MonoBehaviour
                 //sube el ataque de todas, baja la defenza de todas
                 ApplyStatToModifNozomi(1, StatType.Ataque, 2);
                 ApplyStatToModifNozomi(1, StatType.Defensa, -1f);
+                FightManager.Instance.partyMembers[1].GetComponent<RotacionSelect>().PlayStatsAnim("DDuff");
                 ApplyStatToModifNozomi(2, StatType.Ataque, 2);
                 ApplyStatToModifNozomi(2, StatType.Defensa, -1f);
+                FightManager.Instance.partyMembers[2].GetComponent<RotacionSelect>().PlayStatsAnim("DDuff");
                 ApplyStatToModifNozomi(3, StatType.Ataque, 2);
                 ApplyStatToModifNozomi(3, StatType.Defensa, -1f);
+                FightManager.Instance.partyMembers[3].GetComponent<RotacionSelect>().PlayStatsAnim("DDuff");
                 textoStatico.textoGlobal = "<color=#FF87F5>Nozomi</color> usa <color=#FF87F5>"+ nozomiEmotion+"</color> bajando la defensa pero subiendo el ataque a todas";
                 anim.SetTrigger("Do");
                 break;
@@ -134,12 +138,14 @@ public class NozomiTurn : MonoBehaviour
         {
             case StatType.Vida:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentHealth += cuantity;
+                FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("HBuff");
                 break;
             case StatType.Mana:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentMana += cuantity;
                 break;
             case StatType.Ataque:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentAtaque += cuantity;
+                FightManager.Instance.partyMembers[tempid].GetComponent<RotacionSelect>().PlayStatsAnim("ABuff");
                 break;
             case StatType.Defensa:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentDefensa += cuantity;

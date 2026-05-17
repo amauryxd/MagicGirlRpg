@@ -182,15 +182,18 @@ public class TurnLogic : MonoBehaviour
         {
             case StatType.Vida:
                 FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentHealth += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].GetComponent<RotacionSelect>().PlayStatsAnim("HBuff");
                 break;
             case StatType.Mana:
                 FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentMana += abilities.statAbility.abilityStatModif;
                 break;
             case StatType.Ataque:
                 FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentAtaque += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].GetComponent<RotacionSelect>().PlayStatsAnim("ABuff");
                 break;
             case StatType.Defensa:
                 FightManager.Instance.partyMembers[id+1].stats.statsBase.playerCurrentDefensa += abilities.statAbility.abilityStatModif;
+                FightManager.Instance.partyMembers[id+1].GetComponent<RotacionSelect>().PlayStatsAnim("DBuff");
                 break;
             case StatType.Drive:
                 FightManager.Instance.partyMembers[id+1].stats.statsBase.playerDrive += abilities.statAbility.abilityStatModif;

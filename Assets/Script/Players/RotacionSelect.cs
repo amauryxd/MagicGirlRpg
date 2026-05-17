@@ -11,6 +11,7 @@ public class RotacionSelect : MonoBehaviour
     private float tiempo = 0f;
     public SpriteRenderer actualSprite;
     public List<Sprite> sprites;
+    public Animator statsAnims;
     public delegate void OnAttackAnimFinished(int id);
     public static event OnAttackAnimFinished attackAnimFinished;
 
@@ -63,6 +64,10 @@ public class RotacionSelect : MonoBehaviour
     public void OnAttackAnimFinishedRef()
     {
         attackAnimFinished?.Invoke(GetComponent<TurnLogic>().id);
+    }
+    public void PlayStatsAnim(string name)
+    {
+        statsAnims.SetTrigger(name);
     }
 }
 public enum SpriteType

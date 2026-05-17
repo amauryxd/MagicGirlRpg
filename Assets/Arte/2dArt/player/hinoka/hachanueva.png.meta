@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 612dc9b18e4f9bf4b8905c2f84a6142c
+guid: d1dde29b297816e4c8e9d96dc39882b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4117779272378001346
-    second: pie_0
+      213: -6593207443564519444
+    second: hachanueva_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pie_0
+      name: hachanueva_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 324
-        height: 771
+        x: 0
+        y: 0
+        width: 395
+        height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3851769195bad6c0800000000000000
-      internalID: -4117779272378001346
+      spriteID: cef10eb23c83084a0800000000000000
+      internalID: -6593207443564519444
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pie_0: -4117779272378001346
+      hachanueva_0: -6593207443564519444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
