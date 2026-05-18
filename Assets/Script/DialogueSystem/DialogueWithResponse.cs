@@ -24,20 +24,10 @@ public class DialogueWithResponse : MonoBehaviour
     public UnityEvent whatToDoAfterDialogue;
 
     public bool canStartDialogue = false;
+    public GameObject nextDialogueVisual;
     void changeStartDialogue()
     {
         canStartDialogue = !canStartDialogue;
-    }
-    void Update()
-    {
-        /*if (!didDialogueStart)
-        {
-            StartDialogue();
-        }
-        else if (dialogueText.text ==  dialoguesSOB.dialoguesElements[lineIndex].dialogues)//dialogues[lineIndex]
-        {
-            NextDialogueLine();
-        }*/
     }
     [ContextMenu("EmpezarDialogo")]
     public void StartDialogue(int id=0)
@@ -55,9 +45,10 @@ public class DialogueWithResponse : MonoBehaviour
     }
     public void NextDialogueLine()
     {
+        nextDialogueVisual.SetActive(false);
         if (onSelectionState || !(dialogueText.text ==  dialoguesSOB.dialoguesElements[lineIndex].dialogues))
         {
-
+            
             return;
         }
         lineIndex++;
@@ -72,6 +63,7 @@ public class DialogueWithResponse : MonoBehaviour
         else
         {
             if(dialoguesSOB.isQuestion){
+                nextDialogueVisual.SetActive(false);
                 for(int i = 0; i < responseButtons.Length; i++)
                 {
                     girlImage.color = Color.grey;
@@ -110,7 +102,7 @@ public class DialogueWithResponse : MonoBehaviour
             dialogueText.text += ch;
             yield return new WaitForSeconds(typingTime);
         }
-        
+        nextDialogueVisual.SetActive(true);
     }
     public void buttonIndexChanger(int indexGetter)
     {

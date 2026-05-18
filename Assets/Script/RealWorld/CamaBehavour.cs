@@ -51,4 +51,8 @@ public class CamaBehavour : MonoBehaviour
         yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(SceneToLoad);
     }
+    public void changeToCinematic()
+    {
+        RealWorldManager.Instance.currentState = RealWorldState.onCinematic;
+    }
 }

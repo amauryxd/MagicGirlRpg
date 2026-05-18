@@ -5984,6 +5984,11 @@ MonoBehaviour:
   nuevoJuegoButton: {fileID: 686460814}
   noButton: {fileID: 388218537}
   anim: {fileID: 1431411148}
+  theOthers:
+  - {fileID: 686460817}
+  - {fileID: 962842910}
+  - {fileID: 86284303}
+  - {fileID: 1188749315}
 --- !u!95 &1431411148
 Animator:
   serializedVersion: 7
