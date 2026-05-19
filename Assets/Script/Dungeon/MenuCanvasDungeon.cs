@@ -10,6 +10,8 @@ public class MenuCanvasDungeon : MonoBehaviour
     private bool isMenuOpen = false;
     public void OpenMenuDungeon()
     {
+        if(!canOpenMenu)
+            return;
         if(isMenuOpen)
         {
             menuCanvas.SetActive(false);

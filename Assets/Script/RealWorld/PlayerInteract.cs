@@ -33,6 +33,7 @@ public class PlayerInteract : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
+        if(activeCoroutine != null)
         StopCoroutine(activeCoroutine);
         if(hitInfoObj == null) return;
         if(collision.gameObject == hitInfoObj.gameObject)

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Dungeon.unity
     guid: ec2ef7f6bd0b63f4fb178cb039244083
   - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: 42b3c7dd4859d8948aa07af37374b641
+  - enabled: 1
     path: Assets/Scenes/GameplayTest.unity
     guid: d1a7bf8bc5944664cb5c36ede5692f7d
   m_configObjects:
