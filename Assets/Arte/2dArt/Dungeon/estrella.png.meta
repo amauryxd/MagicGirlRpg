@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: 5619aea933bb45442ba2b32dc5baab98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3220710757660816405
+    second: estrella_0
+  - first:
+      213: -8601346270770458069
+    second: estrella_1
+  - first:
+      213: -6500056035129749253
+    second: estrella_2
+  - first:
+      213: 2071311505149298846
+    second: estrella_3
+  - first:
+      213: 1219756465401393441
+    second: estrella_4
+  - first:
+      213: 6787968836415574997
+    second: estrella_5
+  - first:
+      213: -7394064030297932563
+    second: estrella_6
+  - first:
+      213: 1617296089502026325
+    second: estrella_7
+  - first:
+      213: 8111693679735536761
+    second: estrella_8
+  - first:
+      213: 5648178271023610076
+    second: estrella_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: estrella_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 949
+        height: 886
+      alignment: 9
+      pivot: {x: 0.52329844, y: 0.4869283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22989c7321e1a880800000000000000
+      internalID: -8601346270770458069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: estrella_2
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 122
+        width: 836
+        height: 782
+      alignment: 9
+      pivot: {x: 0.51385367, y: 0.48922905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf015fd89792bc5a0800000000000000
+      internalID: -6500056035129749253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: estrella_3
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 214
+        width: 593
+        height: 555
+      alignment: 9
+      pivot: {x: 0.52435064, y: 0.4726809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e988a93f6d6cebc10800000000000000
+      internalID: 2071311505149298846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: estrella_5
+      rect:
+        serializedVersion: 2
+        x: 3355
+        y: 212
+        width: 543
+        height: 585
+      alignment: 9
+      pivot: {x: 0.49202204, y: 0.47531602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3d8f841b5b33e50800000000000000
+      internalID: 6787968836415574997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: estrella_6
+      rect:
+        serializedVersion: 2
+        x: 4011
+        y: 57
+        width: 755
+        height: 859
+      alignment: 9
+      pivot: {x: 0.51147556, y: 0.5285775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec399b90f1036990800000000000000
+      internalID: -7394064030297932563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: estrella_7
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 319
+        width: 384
+        height: 381
+      alignment: 9
+      pivot: {x: 0.535724, y: 0.4715746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a856f793ac17610800000000000000
+      internalID: 1617296089502026325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8180accca47a7894c9db21eb4d6c3d80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      estrella_0: 3220710757660816405
+      estrella_1: -8601346270770458069
+      estrella_2: -6500056035129749253
+      estrella_3: 2071311505149298846
+      estrella_4: 1219756465401393441
+      estrella_5: 6787968836415574997
+      estrella_6: -7394064030297932563
+      estrella_7: 1617296089502026325
+      estrella_8: 8111693679735536761
+      estrella_9: 5648178271023610076
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

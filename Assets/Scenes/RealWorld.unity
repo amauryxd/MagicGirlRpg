@@ -6246,6 +6246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
   hitInfoObj: {fileID: 0}
+  canIntaract: 0
 --- !u!58 &1549817749
 CircleCollider2D:
   m_ObjectHideFlags: 0
