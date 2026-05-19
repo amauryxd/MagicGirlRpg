@@ -14,10 +14,15 @@ public class ResetSobs : MonoBehaviour
         for(int index = 0; index < allPlayerToReset.Length; index++)
         {
             allPlayerToReset[index].playerCurrentHealth = allPlayerToReset[index].playerMaxHealth;
+            Debug.Log(allPlayerToReset[index].name +" reseteo: este dato a"+ allPlayerToReset[index].playerCurrentHealth);
             allPlayerToReset[index].playerCurrentMana = allPlayerToReset[index].playerMaxMana;
+            Debug.Log(allPlayerToReset[index].name +" reseteo este dato a: "+ allPlayerToReset[index].playerCurrentMana);
             allPlayerToReset[index].playerCurrentAtaque = allPlayerToReset[index].playerAtaqueBase;
+            Debug.Log(allPlayerToReset[index].name +" reseteo este dato a: "+ allPlayerToReset[index].playerCurrentAtaque);
             allPlayerToReset[index].playerCurrentDefensa = allPlayerToReset[index].playerDefensaBase;
+            Debug.Log(allPlayerToReset[index].name +" reseteo este dato a: "+ allPlayerToReset[index].playerCurrentDefensa);
             allPlayerToReset[index].playerDrive = 0;
+            Debug.Log(allPlayerToReset[index].name +" reseteo este dato a: "+ allPlayerToReset[index].playerDrive);
             Debug.Log("Player " + allPlayerToReset[index].name + " reseted");
         }
         enemysSOBActivate.wichEnemyNow = 0;

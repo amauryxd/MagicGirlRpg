@@ -15,6 +15,8 @@ public class DungeonManager : MonoBehaviour
     public List<GameObject> doorsList;
     public List<GameObject> ButtonsList;
     public static Vector2 playerLastPos;
+    public PlayerInteract plyInter;
+    public DialogueWithResponse dialogues;
     public static bool HasLost = false;
 
     void Awake()
@@ -25,18 +27,31 @@ public class DungeonManager : MonoBehaviour
     {
         CheckDoors();
     }
+    void OnEnable()
+    {
+        DialogueWithResponse.onDialogueFinish += TheDialogueFinished;
+    }
+    void OnDisable()
+    {
+        DialogueWithResponse.onDialogueFinish -= TheDialogueFinished;
+    }
     public void DoOnConfirm()
     {
         switch (dungeonStates)
         {
             case DungeonStates.Normal:
             //interactplayer
+                plyInter.TryToIntaract();
                 break;
             case DungeonStates.OnMenuSelect:
                 break;
             case DungeonStates.OnPause:
                 break;
             case DungeonStates.cinematic:
+                break;
+            case DungeonStates.OnDialogue:
+                //nextdialogue
+                dialogues.NextDialogueLine();
                 break;
         }
     }
@@ -56,6 +71,10 @@ public class DungeonManager : MonoBehaviour
                 MenuCanvasDungeon.canOpenMenu = false;
                 break;
             case DungeonStates.cinematic:
+                playerMv.speed = 0;
+                MenuCanvasDungeon.canOpenMenu = false;
+                break;
+            case DungeonStates.OnDialogue:
                 playerMv.speed = 0;
                 MenuCanvasDungeon.canOpenMenu = false;
                 break;
@@ -98,6 +117,10 @@ public class DungeonManager : MonoBehaviour
             ButtonsList[1].GetComponent<CaseIntaruactable>().enabled = false;
         }
     }
+    void TheDialogueFinished(int id, bool doSomethingAtEnd)
+    {
+        ChangeToNormal();
+    }
 }
 [Serializable]
 public enum DungeonStates
@@ -105,5 +128,6 @@ public enum DungeonStates
     Normal,
     OnMenuSelect,
     OnPause,
-    cinematic
+    cinematic,
+    OnDialogue
 }

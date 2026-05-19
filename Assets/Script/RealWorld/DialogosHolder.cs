@@ -20,7 +20,13 @@ public class DialogosHolder : MonoBehaviour
     public void SetDialogueToStart()
     {
         DialogueManagerSetter.Instance.SetDialogueAndStart(dialogue,null,idToIdentify);
+        
+        if(RealWorldManager.Instance != null)
         RealWorldManager.Instance.currentState = RealWorldState.inDialogue;
+
+        if(DungeonManager.Instance != null)
+        DungeonManager.Instance.dungeonStates = DungeonStates.OnDialogue;
+
         if (changeThisDialogue)
         {
             dialogue = newDialogueToSet;
