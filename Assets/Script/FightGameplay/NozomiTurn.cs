@@ -43,6 +43,10 @@ public class NozomiTurn : MonoBehaviour
     {
         ResultEmotion nozomiEmotion = CastToCast();
         Debug.Log("Nozomi attacara con la emocion: " + nozomiEmotion);
+        if(FightManager.Instance.enemies.Count <= 0)
+        {
+            return;
+        }
         switch (nozomiEmotion)
         {
             case ResultEmotion.Enojo:

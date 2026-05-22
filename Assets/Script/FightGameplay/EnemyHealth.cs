@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,10 @@ public class EnemyHealth : MonoBehaviour
     public int idLocal;
     public delegate void OnEnemyDeath(int id);
     public static event OnEnemyDeath enemyDeath;
+    public bool isBossHealth;
+    public bool isBossHand;
+    public BossBehaviour bossVariables;
+    public Animator anim;
     void OnEnable()
     {
         RotacionSelect.attackAnimFinished += getHitAnim;
@@ -26,13 +31,31 @@ public class EnemyHealth : MonoBehaviour
     }
     private void getHitAnim(int id)
     {
-        if(FightManager.Instance.enemies.IndexOf(this) == id)
-        {
-        canGetHit = true;
+        if(!isBossHealth || isBossHand){
+            if(FightManager.Instance.enemies.IndexOf(this) == id)
+            {
+                canGetHit = true;
+            }
+            if(id == 99)
+            {
+                canGetHit = true;
+            }
+            return;
         }
-        if(id == 99)
+        if(isBossHealth && bossVariables.CheckHandDestroyed())
         {
-            canGetHit = true;
+            if(FightManager.Instance.enemies.IndexOf(this) == id)
+            {
+                canGetHit = true;
+            }
+            if(id == 99)
+            {
+                canGetHit = true;
+            }
+        }
+        else
+        {
+            anim.SetTrigger("NullDamage");
         }
     }
     private void Start()
@@ -41,6 +64,7 @@ public class EnemyHealth : MonoBehaviour
         FightManager.Instance.enemies.Add(this);
         actualHealth = enemyHealth;
         healthBar.value = actualHealth;
+        bossVariables = GetComponent<BossBehaviour>();
     }
     public void OnHitOrDamage(float cuantity)
     {
@@ -63,6 +87,15 @@ public class EnemyHealth : MonoBehaviour
     {
         if (actualHealth <= 0)
         {
+            if(isBossHealth)
+            {
+                anim.SetTrigger("DeathBoss");
+                return;
+            }
+            if (isBossHand)
+            {
+                bossVariables.handsDestroyed++;
+            }
             Instantiate(tempPrefab,transform.position, Quaternion.identity);
             Debug.Log("El enemigo se murio :c");
             gameObject.SetActive(false);
