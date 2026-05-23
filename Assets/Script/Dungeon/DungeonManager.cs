@@ -18,6 +18,7 @@ public class DungeonManager : MonoBehaviour
     public PlayerInteract plyInter;
     public DialogueWithResponse dialogues;
     public static bool HasLost = false;
+    public TutorialDungeon tuto;
 
     void Awake()
     {
@@ -53,6 +54,9 @@ public class DungeonManager : MonoBehaviour
                 //nextdialogue
                 dialogues.NextDialogueLine();
                 break;
+            case DungeonStates:
+                tuto.NextThing();
+                break;
         }
     }
     void FixedUpdate()
@@ -75,6 +79,10 @@ public class DungeonManager : MonoBehaviour
                 MenuCanvasDungeon.canOpenMenu = false;
                 break;
             case DungeonStates.OnDialogue:
+                playerMv.speed = 0;
+                MenuCanvasDungeon.canOpenMenu = false;
+                break;
+            case DungeonStates.OnTutorial:
                 playerMv.speed = 0;
                 MenuCanvasDungeon.canOpenMenu = false;
                 break;
@@ -129,5 +137,6 @@ public enum DungeonStates
     OnMenuSelect,
     OnPause,
     cinematic,
-    OnDialogue
+    OnDialogue,
+    OnTutorial
 }

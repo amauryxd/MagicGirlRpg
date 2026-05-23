@@ -45,6 +45,8 @@ public class NozomiTurn : MonoBehaviour
         Debug.Log("Nozomi attacara con la emocion: " + nozomiEmotion);
         if(FightManager.Instance.enemies.Count <= 0)
         {
+            FightManager.Instance.turnActual = FightManager.ActualTurn.CheckWinnerPlayer;
+            FightManager.Instance.nozomiOnce = true;
             return;
         }
         switch (nozomiEmotion)

@@ -12,6 +12,7 @@ public class RealWorldManager : MonoBehaviour
     public EventSystem eventListener;
 
     public RealWorldState currentState;
+    public TutorialEnabler tutorialThing;
     void Awake()
     {
         Instance = this;
@@ -44,6 +45,14 @@ public class RealWorldManager : MonoBehaviour
             case RealWorldState.onCinematic:
 
                 break;
+            case RealWorldState.OnTutorial:
+                //apagar la cosa esa despues de un tiemp
+                if(tutorialThing.canDesactivate)
+                {
+                    tutorialThing.gameObject.SetActive(false);
+                    currentState = RealWorldState.normal;
+                }
+                break;
         }
     }
     void FixedUpdate()
@@ -60,6 +69,9 @@ public class RealWorldManager : MonoBehaviour
                 plyMov.speed = 0;
                 break;
             case RealWorldState.onCinematic:
+                plyMov.speed = 0;
+                break;
+            case RealWorldState.OnTutorial:
                 plyMov.speed = 0;
                 break;
         }
@@ -92,5 +104,6 @@ public enum RealWorldState
     normal,
     inPhone,
     inDialogue,
-    onCinematic
+    onCinematic,
+    OnTutorial
 }

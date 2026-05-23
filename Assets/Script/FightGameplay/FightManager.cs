@@ -41,6 +41,9 @@ public class FightManager : MonoBehaviour
     private bool loseOnce;
     public bool nozomiOnce;
 
+    [Header("DungeonCosas")]
+    public string wichDungeon;
+
     //[Header()]
     void Awake()
     {
@@ -506,7 +509,7 @@ public class FightManager : MonoBehaviour
                 break;
         }
 
-        SceneManager.LoadScene("Dungeon");
+        SceneManager.LoadScene(wichDungeon);
     }
     public IEnumerator EnemyWinEnd()
     {
@@ -522,7 +525,7 @@ public class FightManager : MonoBehaviour
             }
         }
         enemysSob.wichEnemyNow = 0;
-        SceneManager.LoadScene("Dungeon");
+        SceneManager.LoadScene(wichDungeon);
     }
     #endregion
 }

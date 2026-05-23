@@ -42583,6 +42583,7 @@ MonoBehaviour:
   UIFightAnim: {fileID: 927752338}
   enemysSob: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
   nozomiOnce: 0
+  wichDungeon: Dungeon2
 --- !u!1 &783709374
 GameObject:
   m_ObjectHideFlags: 0

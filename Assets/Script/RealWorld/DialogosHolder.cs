@@ -20,7 +20,7 @@ public class DialogosHolder : MonoBehaviour
     public void SetDialogueToStart()
     {
         DialogueManagerSetter.Instance.SetDialogueAndStart(dialogue,null,idToIdentify);
-        
+
         if(RealWorldManager.Instance != null)
         RealWorldManager.Instance.currentState = RealWorldState.inDialogue;
 

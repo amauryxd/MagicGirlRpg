@@ -42108,6 +42108,7 @@ MonoBehaviour:
   UIFightAnim: {fileID: 927752338}
   enemysSob: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
   nozomiOnce: 0
+  wichDungeon: Dungeon
 --- !u!1 &783709374
 GameObject:
   m_ObjectHideFlags: 0
@@ -43358,6 +43359,7 @@ GameObject:
   - component: {fileID: 993705241}
   - component: {fileID: 993705240}
   - component: {fileID: 993705239}
+  - component: {fileID: 993705242}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -43448,6 +43450,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &993705242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993705237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad0be4ace2b8d4db18cdf5e2255805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActualizarCanvasVida
+  vidaRef: {fileID: 2104712768}
+  statsRef: {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
 --- !u!1 &1005807303
 GameObject:
   m_ObjectHideFlags: 0
@@ -47125,6 +47141,7 @@ GameObject:
   - component: {fileID: 1578816306}
   - component: {fileID: 1578816305}
   - component: {fileID: 1578816304}
+  - component: {fileID: 1578816307}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -47215,6 +47232,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1578816307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578816302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad0be4ace2b8d4db18cdf5e2255805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActualizarCanvasVida
+  vidaRef: {fileID: 2077205806}
+  statsRef: {fileID: 11400000, guid: d4099eb7b9b640146a0b6a46c4603f9d, type: 2}
 --- !u!1 &1597216995
 GameObject:
   m_ObjectHideFlags: 0
@@ -47791,6 +47822,7 @@ GameObject:
   - component: {fileID: 1640912131}
   - component: {fileID: 1640912130}
   - component: {fileID: 1640912129}
+  - component: {fileID: 1640912132}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -47881,6 +47913,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1640912132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640912127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bad0be4ace2b8d4db18cdf5e2255805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActualizarCanvasVida
+  vidaRef: {fileID: 884712510}
+  statsRef: {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
 --- !u!1 &1645397881
 GameObject:
   m_ObjectHideFlags: 0
