@@ -487,7 +487,7 @@ public class FightManager : MonoBehaviour
             {
             ally.stats.statsBase.playerCurrentAtaque = ally.stats.statsBase.playerAtaqueBase;
             ally.stats.statsBase.playerCurrentDefensa = ally.stats.statsBase.playerDefensaBase;
-            ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
+            //ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
             }
         }
         switch (enemysSob.wichEnemyNow)
@@ -521,7 +521,7 @@ public class FightManager : MonoBehaviour
             {
             ally.stats.statsBase.playerCurrentAtaque = ally.stats.statsBase.playerAtaqueBase;
             ally.stats.statsBase.playerCurrentDefensa = ally.stats.statsBase.playerDefensaBase;
-            ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
+            //ally.stats.statsBase.playerCurrentHealth = ally.stats.statsBase.playerMaxHealth;
             }
         }
         enemysSob.wichEnemyNow = 0;
