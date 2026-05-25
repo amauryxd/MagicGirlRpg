@@ -54,7 +54,7 @@ public class DungeonManager : MonoBehaviour
                 //nextdialogue
                 dialogues.NextDialogueLine();
                 break;
-            case DungeonStates:
+            case DungeonStates.OnTutorial:
                 tuto.NextThing();
                 break;
         }
@@ -112,17 +112,20 @@ public class DungeonManager : MonoBehaviour
         }
     }
     public void CheckDoors(){
-        if(!Door1)
+        if (doorsList != null)
         {
-            doorsList[0].SetActive(false);
-            ButtonsList[0].GetComponentInChildren<SpriteRenderer>().color = Color.grey;
-            ButtonsList[0].GetComponent<CaseIntaruactable>().enabled = false;
-        }
-        if(!Door2)
-        {
-            doorsList[1].SetActive(false);
-            ButtonsList[1].GetComponentInChildren<SpriteRenderer>().color = Color.grey;
-            ButtonsList[1].GetComponent<CaseIntaruactable>().enabled = false;
+            if (!Door1)
+            {
+                doorsList[0].SetActive(false);
+                ButtonsList[0].GetComponentInChildren<SpriteRenderer>().color = Color.grey;
+                ButtonsList[0].GetComponent<CaseIntaruactable>().enabled = false;
+            }
+            if (!Door2)
+            {
+                doorsList[1].SetActive(false);
+                ButtonsList[1].GetComponentInChildren<SpriteRenderer>().color = Color.grey;
+                ButtonsList[1].GetComponent<CaseIntaruactable>().enabled = false;
+            }
         }
     }
     void TheDialogueFinished(int id, bool doSomethingAtEnd)

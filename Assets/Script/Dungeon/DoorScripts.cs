@@ -20,5 +20,6 @@ public class DoorScripts : MonoBehaviour
         public void ChangeToNormal()
     {
         DungeonManager.Instance.dungeonStates = DungeonStates.Normal;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }
