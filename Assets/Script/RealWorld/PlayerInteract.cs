@@ -6,6 +6,7 @@ public class PlayerInteract : MonoBehaviour
     public CaseIntaruactable hitInfoObj;
     public bool canIntaract;
     public Coroutine activeCoroutine;
+    public AnimationReference animsDungeon;
     void OnEnable()
     {
         DialogueWithResponse.onDialogueFinish += ReactivateInteract;
@@ -20,6 +21,10 @@ public class PlayerInteract : MonoBehaviour
         {
             canIntaract = false;
             hitInfoObj.GetInteracted();
+            if(animsDungeon != null )
+            {
+                animsDungeon.animsInteract();
+            }
         }
     }
 

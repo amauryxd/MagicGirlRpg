@@ -3,43 +3,56 @@ using UnityEngine;
 
 public class TutorialDungeon : MonoBehaviour
 {
+    public GameObject FirstObject;
     public GameObject SecondImage;
     public GameObject ThirdImage;
     public GameObject ForuthImage;
     public bool canPassNext= false;
+    public GameObject AAButon;
+    public int CountWich;
     private void OnEnable()
     {
         StartCoroutine(ChangeThisState());
         StartCoroutine(CanPassChanger());
+        CountWich = 0;
     }
     public void NextThing()
     {
-        if(SecondImage.activeInHierarchy == false && canPassNext)
-        {
-            SecondImage.SetActive(true);
-            canPassNext = false;
-            StartCoroutine(CanPassChanger());
-            return;
-        }
-        if(ThirdImage.activeInHierarchy == false && canPassNext)
-        {
-            ThirdImage.SetActive(true);
-            canPassNext = false;
-            StartCoroutine(CanPassChanger());
-            return;
-        }
-        if(ForuthImage.activeInHierarchy == false && canPassNext)
-        {
-            ForuthImage.SetActive(true);
-            canPassNext = false;
-            StartCoroutine(CanPassChanger());
-            return;
-        }
         if (canPassNext)
         {
-            DungeonManager.Instance.dungeonStates = DungeonStates.Normal;
-            gameObject.SetActive(false);
+            switch (CountWich)
+            {
+            case 0:
+                FirstObject.SetActive(false);
+                SecondImage.SetActive(true);
+                AAButon.SetActive(false);
+                canPassNext = false;
+                StartCoroutine(CanPassChanger());
+                CountWich++;
+                break;
+            case 1:
+                SecondImage.SetActive(false);
+                ThirdImage.SetActive(true);
+                AAButon.SetActive(false);
+                canPassNext = false;
+                StartCoroutine(CanPassChanger());
+                CountWich++;
+                break;
+            case 2:
+                ThirdImage.SetActive(false);
+                ForuthImage.SetActive(true);
+                AAButon.SetActive(false);
+                canPassNext = false;
+                StartCoroutine(CanPassChanger());
+                CountWich++;
+                break;
+            case 3:
+                DungeonManager.Instance.dungeonStates = DungeonStates.Normal;
+                gameObject.SetActive(false);
+                break;
+            }
         }
+
     }
     public IEnumerator ChangeThisState()
     {
@@ -49,6 +62,7 @@ public class TutorialDungeon : MonoBehaviour
     public IEnumerator CanPassChanger()
     {
         yield return new WaitForSeconds(1.5f);
+        AAButon.SetActive(true);
         canPassNext = true;
     }
 }
