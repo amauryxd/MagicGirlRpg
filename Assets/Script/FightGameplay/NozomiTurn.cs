@@ -144,6 +144,7 @@ public class NozomiTurn : MonoBehaviour
         {
             case StatType.Vida:
                 FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentHealth += cuantity;
+                FightManager.Instance.partyMembers[id].plyHealth.value = FightManager.Instance.partyMembers[id].stats.statsBase.playerCurrentHealth;
                 FightManager.Instance.partyMembers[id].GetComponent<RotacionSelect>().PlayStatsAnim("HBuff");
                 break;
             case StatType.Mana:

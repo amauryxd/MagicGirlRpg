@@ -18,9 +18,9 @@ MonoBehaviour:
   playerMaxMana: 100
   playerCurrentMana: 100
   playerAtaqueBase: 3
-  playerCurrentAtaque: 3
+  playerCurrentAtaque: 1
   playerDefensaBase: 5
   playerCurrentDefensa: 5
-  playerDrive: 0
+  playerDrive: 115
   plyName: Sayo
   plyImage: {fileID: 8555284411522656241, guid: aa92408783a84b341b27051495d6f3b2, type: 3}

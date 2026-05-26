@@ -425,6 +425,7 @@ public class FightManager : MonoBehaviour
             case 1:
                 break;
             case 2:
+                StartCoroutine(CheckIfScape());
                 break;
         }
     }
@@ -528,4 +529,24 @@ public class FightManager : MonoBehaviour
         SceneManager.LoadScene(wichDungeon);
     }
     #endregion
+    public IEnumerator CheckIfScape()
+    {
+        UIFightAnim.SetTrigger("Hide");
+        textoStatico.textoGlobal = "¡Tratando de escapar!";
+        yield return new WaitForSeconds(0.5f);
+        int rng = Random.Range(0, 100);
+        if(rng < 70)
+        {
+            //fallo la cosa
+            textoStatico.textoGlobal = "¡No pudiste escapar!";
+            yield return new WaitForSeconds(1f);
+            turnActual = ActualTurn.Enemy;
+        }
+        else
+        {
+            //se escapo la cosa
+            textoStatico.textoGlobal = "¡Escapaste!";
+            StartCoroutine(EnemyWinEnd());
+        }
+    }
 }

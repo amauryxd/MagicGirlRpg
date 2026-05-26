@@ -13,9 +13,11 @@ public class AttackTurnEnemy : MonoBehaviour
     public EnemyHealth healthForBoss;
     public bool canAttackBoss = false;
     public bool isBossHand;
-    private PlayerAlliesAutoReference HinokaRef;
-    private PlayerAlliesAutoReference YamiRef;
-    private PlayerAlliesAutoReference SayoRef;
+    public ParticleSystem cargar;
+    public PlayerAlliesAutoReference HinokaRef;
+    public PlayerAlliesAutoReference YamiRef;
+    public PlayerAlliesAutoReference SayoRef;
+
 
     private void Start()
     {
@@ -47,14 +49,16 @@ public class AttackTurnEnemy : MonoBehaviour
                     HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
                     YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
                     SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;
-                    anim.SetTrigger("AttackPhase1");
-                    textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (attackDamage - plyRef.stats.statsBase.playerCurrentDefensa) + " de daño.";
+                    anim.SetTrigger("AttackPhase2");
+                    textoStatico.textoGlobal = "<color=red>" + gameObject.name + "</color> ataca a todas";
                     healthForBoss.canGetHit = false;
                     canAttackBoss = false;
                 }
                 else
                 {
-                    anim.SetTrigger("Preparar");
+                    //anim.SetTrigger("Preparar");
+                    cargar.Play();
+                    StartCoroutine(FinishMovement());
                     textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> esta preparando su ataque";
                     healthForBoss.canGetHit = false;
                     canAttackBoss = true;
@@ -62,11 +66,12 @@ public class AttackTurnEnemy : MonoBehaviour
             }
             else
             {
+                cargar.Pause();
                 HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
                 YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
                 SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;
                 anim.SetTrigger("AttackPhase2");
-                textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (attackDamage - plyRef.stats.statsBase.playerCurrentDefensa) + " de daño.";
+                textoStatico.textoGlobal = "<color=red>" + gameObject.name + "</color> ataca a todas";
                 healthForBoss.canGetHit = false;
             }
         }
@@ -116,7 +121,12 @@ public class AttackTurnEnemy : MonoBehaviour
         HinokaRef.plyHealth.value = HinokaRef.stats.statsBase.playerCurrentHealth;
         YamiRef.plyHealth.value = YamiRef.stats.statsBase.playerCurrentHealth;
         SayoRef.plyHealth.value = SayoRef.stats.statsBase.playerCurrentHealth;
-        CameraShaker.Instance.ShakeThisCamera(0.5f, 0.08f);
+        CameraShaker.Instance.ShakeThisCamera(2f, 0.8f);
+    }
+    public IEnumerator FinishMovement()
+    {
+        yield return new WaitForSeconds(3);
+        FinishTurnEnemy();
     }
 
     #endregion
