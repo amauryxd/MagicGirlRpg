@@ -9,13 +9,13 @@ public class CHangeCheckPoint : MonoBehaviour
 
     public void onInteractCheckPoint()
     {
-        if(CheckPointLoader.checkPointIndex < localIndex)
+        if(CheckPointLoader.checkPointIndex != localIndex)
         {
             CheckPointLoader.checkPointIndex = localIndex;
             Debug.Log("Checkpoint " + localIndex + " reached");
-            hinokastats.playerCurrentHealth = hinokastats.playerMaxHealth;
-            yamistats.playerCurrentHealth = yamistats.playerMaxHealth;
-            sayostats.playerCurrentHealth = sayostats.playerMaxHealth;
         }
+        hinokastats.playerCurrentHealth = hinokastats.playerMaxHealth;
+        yamistats.playerCurrentHealth = yamistats.playerMaxHealth;
+        sayostats.playerCurrentHealth = sayostats.playerMaxHealth;
     }
 }

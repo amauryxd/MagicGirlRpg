@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: SayoDrive1First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
   abilityName: Desolacion Total
-  abilityDesc: Sayo arremete contra un enemigo
+  abilityDesc: Sayo arremete contra un enemigo (Gasta 100 de drive)
   abilityAttack: 30
   abilityCost: 100
   abilityDrive: 0
   abilityType: 5
+  TipoImg: {fileID: 1864891906596426585, guid: 3e67d16692b505b45875db65240f088e, type: 3}
+  TextColor: {r: 0, g: 0, b: 1, a: 1}

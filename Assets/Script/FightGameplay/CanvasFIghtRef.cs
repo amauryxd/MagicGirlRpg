@@ -24,6 +24,7 @@ public class CanvasFIghtRef : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
     public Image iconDown;
+    public Sprite NullIcon;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class CanvasFIghtRef : MonoBehaviour
             att1Text.SetText(FightManager.Instance.partyMembers[FightManager.Instance.partyIndex+1].abilites.firstAbilityDrive.abilityName);
             att2Text.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbilityDrive.abilityName);
             statText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityName);
+
         }else{
             att1Text.SetText(FightManager.Instance.partyMembers[FightManager.Instance.partyIndex+1].abilites.firstAbility.abilityName);
             att2Text.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbility.abilityName);
@@ -72,37 +74,52 @@ public class CanvasFIghtRef : MonoBehaviour
                 if (isDrivenCharacter())
                 {
                     titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbilityDrive.abilityName);
+                    titleText.color = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.firstAbilityDrive.TextColor;
                     descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbilityDrive.abilityDesc);
-                    //iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbilityDrive.abilityIcon;
+                    iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbilityDrive.TipoImg;
+                    iconDown.SetNativeSize();
                 }
                 else
                 {
                     titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbility.abilityName);
+                    titleText.color = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.firstAbility.TextColor;
                     descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.firstAbility.abilityDesc);
+                    iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.firstAbility.TipoImg;
+                    iconDown.SetNativeSize();
                 }
                 break;
             case "ButAt2":
                 if (isDrivenCharacter())
                 {
                     titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbilityDrive.abilityName);
+                    titleText.color = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.secondAbilityDrive.TextColor;
                     descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbilityDrive.abilityDesc);
-                    //iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex+1].abilites..abilityIcon;
+                    iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.secondAbilityDrive.TipoImg;
+                    iconDown.SetNativeSize();
                 }
                 else
                 {
                     titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbility.abilityName);
+                    titleText.color = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.secondAbility.TextColor;
                     descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbility.abilityDesc);
+                    iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex + 1].abilites.secondAbility.TipoImg;
+                    iconDown.SetNativeSize();
                 }
                 break;
             case "ButStat":
-                    titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityName);
-                    descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityDesc);
-                    //iconDown.sprite = fightInstance.partyMembers[fightInstance.partyIndex+1].abilites..abilityIcon;
+                titleText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityName);
+                titleText.color = Color.black;
+                descriptionText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityDesc);
+                iconDown.sprite = NullIcon;
+                iconDown.SetNativeSize();
                 break;
             case "ButDef":
                 titleText.SetText("¡Protégete!");
+                titleText.color = Color.black;
                 descriptionText.SetText("Toma una posición defensiva y reduce el daño recibido en el siguiente turno.");
-            break;
+                iconDown.sprite = NullIcon;
+                iconDown.SetNativeSize();
+                break;
             default:
             break;
         }

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: HinokaDrive2First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
   abilityName: Ofuscado
-  abilityDesc: Ataca a todos los enemigos con la ira contenida de Hinoka
+  abilityDesc: Ataca a todos los enemigos con la ira contenida de Hinoka (Gasta 100
+    de drive)
   abilityAttack: 30
   abilityCost: 100
   abilityDrive: 0
   abilityType: 1
+  TipoImg: {fileID: 4719897667208090860, guid: 051e406e9ce0ce74c98c1a03af379845, type: 3}
+  TextColor: {r: 1, g: 0, b: 0, a: 1}

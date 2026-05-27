@@ -64,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
         FightManager.Instance.enemies.Add(this);
         actualHealth = enemyHealth;
         healthBar.value = actualHealth;
-        bossVariables = GetComponent<BossBehaviour>();
+        //bossVariables = GetComponent<BossBehaviour>();
     }
     public void OnHitOrDamage(float cuantity)
     {

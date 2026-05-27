@@ -18,9 +18,9 @@ MonoBehaviour:
   playerMaxMana: 100
   playerCurrentMana: 100
   playerAtaqueBase: 4
-  playerCurrentAtaque: 1
+  playerCurrentAtaque: 4
   playerDefensaBase: 4
-  playerCurrentDefensa: 4
-  playerDrive: 60
+  playerCurrentDefensa: 6.1
+  playerDrive: 100
   plyName: Yami
   plyImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}

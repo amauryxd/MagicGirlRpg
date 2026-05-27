@@ -5,6 +5,7 @@ public class TutoButonBehva : MonoBehaviour
 {
     public GameObject FirstObject;
     public GameObject nextImage;
+    public GameObject LastImage;
     public GameObject toDesactivate;
     public int count;
     public bool canChange;
@@ -16,7 +17,7 @@ public class TutoButonBehva : MonoBehaviour
     }
     public void DoSomethingThisButton()
     {
-        Debug.Log("ayishbdas");
+        
         if(count == 0)
         {
             FirstObject.SetActive(false);
@@ -24,16 +25,27 @@ public class TutoButonBehva : MonoBehaviour
             AAButon.SetActive(false);
             count++;
             StartCoroutine(WaitALittle());
+            Debug.Log("ayishbdas");
         }
         if(count == 1 && canChange)
         {
+            nextImage.SetActive(false);
+            LastImage.SetActive(true);
+            AAButon.SetActive(false);
+            canChange = false;
+            count++;
+            StartCoroutine(WaitALittle()); Debug.Log("B");
+        }
+        if( count == 2 && canChange)
+        {
+            Debug.Log("c");
             toDesactivate.SetActive(false);
         }
     }
     public IEnumerator WaitALittle()
     {
         yield return new WaitForSeconds(1f);
-        AAButon.SetActive(true);
         canChange = true;
+        AAButon.SetActive(true);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,6 +50,7 @@ public class NozomiTurn : MonoBehaviour
             FightManager.Instance.nozomiOnce = true;
             return;
         }
+        StartCoroutine(WaitForAnim(true));
         switch (nozomiEmotion)
         {
             case ResultEmotion.Enojo:
@@ -137,6 +139,21 @@ public class NozomiTurn : MonoBehaviour
     public void doDamageNozomi()
     {
         nozomiFinishedAttackAnim?.Invoke(tempid);
+        StartCoroutine(WaitForAnim(false));
+        
+    }
+    public IEnumerator WaitForAnim(bool wich)
+    {
+        if (wich)
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            anim.SetBool("IsAttack", true);
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            anim.SetBool("IsAttack", false);
+        }
     }
     void ApplyStatToModifNozomi(int id, StatType statType,float cuantity)
     {

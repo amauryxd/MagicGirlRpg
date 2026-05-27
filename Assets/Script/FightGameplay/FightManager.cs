@@ -540,7 +540,7 @@ public class FightManager : MonoBehaviour
             //fallo la cosa
             textoStatico.textoGlobal = "¡No pudiste escapar!";
             yield return new WaitForSeconds(1f);
-            turnActual = ActualTurn.Enemy;
+            turnActual = ActualTurn.Nozomi;
         }
         else
         {

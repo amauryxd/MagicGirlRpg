@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: YamiDrive1First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
   abilityName: Pavor mortifera
-  abilityDesc: Yami sale de la paralisis para atacar a su enemigo
+  abilityDesc: Yami sale de la paralisis para atacar a su enemigo (Gasta 100 de drive)
   abilityAttack: 40
   abilityCost: 100
   abilityDrive: 0
   abilityType: 3
+  TipoImg: {fileID: -381122128452666831, guid: 81fe1077a48d6af4580e0f1b3b2395ab, type: 3}
+  TextColor: {r: 1, g: 0.46427232, b: 0, a: 1}

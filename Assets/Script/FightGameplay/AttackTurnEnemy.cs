@@ -45,7 +45,8 @@ public class AttackTurnEnemy : MonoBehaviour
             if (!NextPhaseBoss())
             {
                 if (canAttackBoss)
-                {    
+                {
+                    cargar.Stop();
                     HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
                     YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
                     SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;
@@ -66,7 +67,7 @@ public class AttackTurnEnemy : MonoBehaviour
             }
             else
             {
-                cargar.Pause();
+                cargar.Stop();
                 HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
                 YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
                 SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;

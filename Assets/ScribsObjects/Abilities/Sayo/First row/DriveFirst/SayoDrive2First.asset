@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: SayoDrive2First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
   abilityName: Llanto de lastima
-  abilityDesc: Sayo deja fluir sus emociones atacando a todos los enemigos
+  abilityDesc: Sayo deja fluir sus emociones atacando a todos los enemigos (Gasta
+    100 de drive)
   abilityAttack: 25
   abilityCost: 100
   abilityDrive: 0
   abilityType: 5
+  TipoImg: {fileID: 1864891906596426585, guid: 3e67d16692b505b45875db65240f088e, type: 3}
+  TextColor: {r: 0, g: 0, b: 1, a: 1}

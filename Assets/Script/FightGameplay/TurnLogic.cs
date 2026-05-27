@@ -64,6 +64,20 @@ public class TurnLogic : MonoBehaviour
         //animacion de drive cargado
         //las habilidades pasan a ser drive
         turnFinished?.Invoke();
+        CheckWing();
+    }
+    void CheckWing()
+    {
+        if(anim != null) { 
+            if(GetComponent<PartyMemberStats>().statsBase.playerDrive > 100)
+            {
+                anim.SetBool("ShowWing", true);
+            }
+            else
+            {
+                anim.SetBool("ShowWing", false);
+            }
+        }
     }
     public void OnAttackTurn()
     {

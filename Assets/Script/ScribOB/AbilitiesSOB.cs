@@ -8,6 +8,7 @@ public class AbilitiesSOB : ScriptableObject
     public float abilityCost;
     public float abilityDrive;
     public AttackType abilityType;
-
+    public Sprite TipoImg;
+    public Color TextColor;
 }
 

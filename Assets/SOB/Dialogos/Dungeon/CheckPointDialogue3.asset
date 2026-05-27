@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ee70a32984345439266391726f3fc7, type: 3}
+  m_Name: CheckPointDialogue3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
+  isQuestion: 0
+  doSomethingAtEnd: 1
+  dialoguesElements:
+  - dialogues: Sigue la pelea...
+    girlName: 0
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.05
+  - dialogues: "<i>Punto de aparici\xF3n determinantemente establecido</i>"
+    girlName: 4
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.02
+  - dialogues: <i>Vida de las aliadas determinantemente restaurada</i>
+    girlName: 4
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.02
+  questionText: []
+  responsesMoreQuestions: []

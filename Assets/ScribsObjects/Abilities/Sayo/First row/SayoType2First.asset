@@ -18,3 +18,5 @@ MonoBehaviour:
   abilityCost: 15
   abilityDrive: 20
   abilityType: 4
+  TipoImg: {fileID: 1864891906596426585, guid: 3e67d16692b505b45875db65240f088e, type: 3}
+  TextColor: {r: 0, g: 0, b: 0, a: 1}

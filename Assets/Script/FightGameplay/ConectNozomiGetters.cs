@@ -32,6 +32,10 @@ public class ConectNozomiGetters : MonoBehaviour
     {
         canRotate = true;
     }
+    public void ChangeCanRotate()
+    {
+        canRotate = true;
+    }
     public void RotateCosa()
     {
         tiempo += Time.deltaTime;

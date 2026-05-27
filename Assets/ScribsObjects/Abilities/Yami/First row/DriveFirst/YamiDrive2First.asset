@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: YamiDrive2First
   m_EditorClassIdentifier: Assembly-CSharp::AbilitiesSOB
   abilityName: Desconfianza total
-  abilityDesc: Yami ataca a todos los enemigos con el miedo a fallar
+  abilityDesc: Yami ataca a todos los enemigos con el miedo a fallar (Gasta 100 de
+    drive)
   abilityAttack: 25
   abilityCost: 100
   abilityDrive: 0
   abilityType: 3
+  TipoImg: {fileID: -381122128452666831, guid: 81fe1077a48d6af4580e0f1b3b2395ab, type: 3}
+  TextColor: {r: 1, g: 0.46666667, b: 0, a: 1}

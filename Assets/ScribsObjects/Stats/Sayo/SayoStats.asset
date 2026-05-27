@@ -18,7 +18,7 @@ MonoBehaviour:
   playerMaxMana: 100
   playerCurrentMana: 100
   playerAtaqueBase: 3
-  playerCurrentAtaque: 1
+  playerCurrentAtaque: 3
   playerDefensaBase: 5
   playerCurrentDefensa: 5
   playerDrive: 115
