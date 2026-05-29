@@ -14,6 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueResponse
   isQuestion: 0
   doSomethingAtEnd: 0
-  dialoguesElements: []
+  dialoguesElements:
+  - dialogues: "Otra vez aqu\xED"
+    girlName: 2
+    girlImage: {fileID: -3721210488497001945, guid: 48986e4002d1e514fb03422babcbf25d, type: 3}
+    typingTime: 0.05
+  - dialogues: "\xBFAs\xED que este es el nido del que me hablaban?"
+    girlName: 3
+    girlImage: {fileID: 4816797671222539444, guid: eac56e624c16802409809974ed6594b0, type: 3}
+    typingTime: 0.05
+  - dialogues: "Si, aqu\xED es donde se materializa el \xE9ter"
+    girlName: 1
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
+    typingTime: 0.05
+  - dialogues: "Recuerden que lo siguiente va a ser una lucha dif\xEDcil"
+    girlName: 1
+    girlImage: {fileID: -4145229081023907216, guid: d43a1220114e0dc409aa7cf08e053cc3, type: 3}
+    typingTime: 0.05
+  - dialogues: "\xBFEst\xE1n listas?"
+    girlName: 1
+    girlImage: {fileID: -4145229081023907216, guid: d43a1220114e0dc409aa7cf08e053cc3, type: 3}
+    typingTime: 0.05
+  - dialogues: "En orden sin desorden mi capit\xE1n"
+    girlName: 3
+    girlImage: {fileID: 4270126398125041595, guid: 7c2365359c901f94c932d82de373011e, type: 3}
+    typingTime: 0.05
+  - dialogues: "Cuerpo al m\xE1ximo, todo perfecto"
+    girlName: 2
+    girlImage: {fileID: -7722098449307511267, guid: 5eccf63a040fed047803761473ced31e, type: 3}
+    typingTime: 0.05
+  - dialogues: "Okay, entonces Nozomi gu\xEDanos a donde hay que ir"
+    girlName: 1
+    girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
+    typingTime: 0.05
+  - dialogues: <i>Creo que es hora de pelear</i>
+    girlName: 0
+    girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
+    typingTime: 0.05
   questionText: []
   responsesMoreQuestions: []
