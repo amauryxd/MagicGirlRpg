@@ -4,7 +4,7 @@ public class ResetSobs : MonoBehaviour
 {
     [SerializeField] PlayerStatsSOB[] allPlayerToReset;
     public EnemysSOBActivate enemysSOBActivate;
-    void Awake()
+    void Start()
     {
         ThingsToReset();
     }
@@ -35,4 +35,5 @@ public class ResetSobs : MonoBehaviour
         DungeonManager.Door1 = true;
         DungeonManager.Door2 = true;
     }
+    //copntador
 }

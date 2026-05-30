@@ -7,6 +7,9 @@ public class OnEnterChange : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
+        {
             scString.sceneToChange(sceneToChange);
+            CheckPointLoader.checkPointIndex = 0;
+        }
     }
 }

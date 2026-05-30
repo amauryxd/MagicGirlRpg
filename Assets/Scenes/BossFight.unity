@@ -1056,6 +1056,50 @@ MonoBehaviour:
   nozomiTurn: {fileID: 0}
   particles: {fileID: 1241347330}
   plyHealth: {fileID: 483146782}
+--- !u!1 &132494293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132494295}
+  - component: {fileID: 132494294}
+  m_Layer: 0
+  m_Name: GoBackxd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &132494294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132494293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63ef8dab11c7ea4192d1cfb4fce4123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoBackInput
+--- !u!4 &132494295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132494293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137390186
 GameObject:
   m_ObjectHideFlags: 0
@@ -51797,7 +51841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c148136b691d14bb5ce68122006c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  enemyHealth: 50
+  enemyHealth: 600
   healthBar: {fileID: 160360691}
   tempPrefab: {fileID: 6087073601094197402, guid: a8ceebce0b49bbe42aeba8b51279d455, type: 3}
   canGetHit: 0
@@ -67601,19 +67645,7 @@ MonoBehaviour:
     m_ActionId: bf91241f-b89a-4303-b3ac-5885d9d564a3
     m_ActionName: 'OnFight/Confirm[/Keyboard/z]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1691698061}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: OnNegate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 2009a800-fde1-4744-a49c-3f603e8df61f
     m_ActionName: 'OnFight/Negate[/Keyboard/x]'
   - m_PersistentCalls:
@@ -68312,7 +68344,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 50cce6bdeedf56d428bb1005bd959978, type: 3}
+  m_Resource: {fileID: 8300000, guid: aa29676e6722eb5458fadeadd6f8a1e1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -81374,7 +81406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c148136b691d14bb5ce68122006c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  enemyHealth: 50
+  enemyHealth: 600
   healthBar: {fileID: 870890991}
   tempPrefab: {fileID: 6087073601094197402, guid: a8ceebce0b49bbe42aeba8b51279d455, type: 3}
   canGetHit: 0
@@ -81413,3 +81445,4 @@ SceneRoots:
   - {fileID: 150934225}
   - {fileID: 137390188}
   - {fileID: 202521542}
+  - {fileID: 132494295}

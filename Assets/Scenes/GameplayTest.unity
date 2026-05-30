@@ -16391,14 +16391,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Puedes seleccionar entre <color=red>"Atacar"</color>, <color=yellow>"Emociones"</color>
-    y <color=Purple>"Escapar"</color>:
-
-    <color=yellow>Emociones:</color> Puedes
-    checar como se combinan las emociones
-
-    <color=Purple>Escapar:</color> Trata
-    de salir del combate, si fallas, el turno se pasa a los enemigos'
+  m_text: "Puedes seleccionar entre <color=red>\"Atacar\"</color>, <color=yellow>\"Emociones\"</color>
+    y <color=Purple>\"Escapar\"</color>:\n<color=yellow>Emociones:</color> Puedes
+    checar c\xF3mo se combinan las emociones\n<color=Purple>Escapar:</color> Trata
+    de salir del combate, si fallas, el turno se pasa a los enemigos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: -1667187561779130985, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
@@ -44902,9 +44898,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Si tu aliada cae, podr\xE1 seguir atacando, pero todo su da\xF1o sera
-    reducido hasta que no se cure por numeros positivos\n\xA1Ten mucho cuidado! si
-    todas tus aliadas estan en n\xFAmeros negativos, perder\xE1s el combate"
+  m_text: "Si tu aliada cae, podr\xE1 seguir atacando, pero todo su da\xF1o ser\xE1
+    reducido hasta que no se cure por n\xFAmeros positivos\r\n\xA1Ten mucho cuidado!
+    si todas tus aliadas est\xE1n en n\xFAmeros negativos, perder\xE1s el combate\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: -1667187561779130985, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
@@ -47573,6 +47569,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193621644}
   m_CullTransparentMesh: 1
+--- !u!1 &1200356114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200356116}
+  - component: {fileID: 1200356115}
+  m_Layer: 0
+  m_Name: GoBackxd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1200356115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200356114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63ef8dab11c7ea4192d1cfb4fce4123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoBackInput
+--- !u!4 &1200356116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200356114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207785689
 GameObject:
   m_ObjectHideFlags: 0
@@ -51440,19 +51480,7 @@ MonoBehaviour:
     m_ActionId: bf91241f-b89a-4303-b3ac-5885d9d564a3
     m_ActionName: 'OnFight/Confirm[/Keyboard/z]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1623240333}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: OnNegate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 2009a800-fde1-4744-a49c-3f603e8df61f
     m_ActionName: 'OnFight/Negate[/Keyboard/x]'
   - m_PersistentCalls:
@@ -53175,7 +53203,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 50cce6bdeedf56d428bb1005bd959978, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3582b775b6961bc43a8b864a07c04863, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -58956,8 +58984,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<color=red>Atacar:</color> selecciona los ataques de tus aliadas, recuerda
-    que 2 de ellas se combinaran y resultaran en un movimento extra, al seleccionar
-    esta opcion no podras regresar \xA1Cuidado!"
+    que 2 de ellas se combinar\xE1n y resultaron en un movimiento extra, al seleccionar
+    esta opci\xF3n no podr\xE1s regresar \xA1Cuidado!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: -1667187561779130985, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
@@ -76097,7 +76125,7 @@ GameObject:
   - component: {fileID: 1266494753692687460}
   - component: {fileID: 1266494753692687459}
   m_Layer: 0
-  m_Name: Observador
+  m_Name: Existencialista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78896,3 +78924,4 @@ SceneRoots:
   - {fileID: 1733650846}
   - {fileID: 2116658955}
   - {fileID: 1215223142}
+  - {fileID: 1200356116}

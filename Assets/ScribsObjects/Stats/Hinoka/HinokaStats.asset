@@ -20,7 +20,7 @@ MonoBehaviour:
   playerAtaqueBase: 5
   playerCurrentAtaque: 5
   playerDefensaBase: 2
-  playerCurrentDefensa: 12
-  playerDrive: 20
+  playerCurrentDefensa: 2
+  playerDrive: 0
   plyName: Hinoka
   plyImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
