@@ -90,6 +90,8 @@ public class EnemyHealth : MonoBehaviour
             if(isBossHealth)
             {
                 anim.SetTrigger("DeathBoss");
+                FightManager.Instance.enemies.Remove(this);
+                FightManager.Instance.StopAllCoroutines();
                 return;
             }
             if (isBossHand)

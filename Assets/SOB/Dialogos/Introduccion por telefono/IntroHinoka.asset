@@ -28,8 +28,8 @@ MonoBehaviour:
     girlName: 1
     girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05
-  - dialogues: "Se que eres nueva en esto de la tecnolog\xEDa pero recuerda lo que
-      te dije"
+  - dialogues: "S\xE9 que eres nueva en esto de la tecnolog\xEDa pero recuerda lo
+      que te dije"
     girlName: 1
     girlImage: {fileID: -1013584696244200389, guid: b8b30ddd1e8787d40ab7a3afd58e75bf, type: 3}
     typingTime: 0.05

@@ -43,7 +43,7 @@ public class CanvasFIghtRef : MonoBehaviour
         //PopulateAbilites();
         ChangeButtonEvent();
     }
-    public void PopulateAbilites()
+    /*public void PopulateAbilites()
     {
         if(fightInstance.partyMembers[fightInstance.partyIndex+1].stats.statsBase.playerDrive >= 100)
         {
@@ -56,7 +56,7 @@ public class CanvasFIghtRef : MonoBehaviour
             att2Text.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.secondAbility.abilityName);
             statText.SetText(fightInstance.partyMembers[fightInstance.partyIndex+1].abilites.statAbility.abilityName);
         }
-    }
+    }*/
     public bool isDrivenCharacter()
     {
         if(fightInstance.partyMembers[fightInstance.partyIndex+1].stats.statsBase.playerDrive >= 100)

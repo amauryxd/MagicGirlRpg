@@ -31,11 +31,11 @@ public class AttackTurnEnemy : MonoBehaviour
     {
         if(!isBoss || isBossHand){
             plyRef = FightManager.Instance.partyMembers[Random.Range(1, FightManager.Instance.partyMembers.Count)].GetComponent<PlayerAlliesAutoReference>();
-            plyRef.stats.statsBase.playerCurrentHealth -= attackDamage - plyRef.stats.statsBase.playerCurrentDefensa;
+            plyRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - plyRef.stats.statsBase.playerCurrentDefensa);
             anim.SetTrigger("AttackEn");
             //StartCoroutine(activarAttaque(plyRef));
             //Debug.Log("El enemigo " + gameObject.name + " ataca a " + plyRef.gameObject.name + " con " + attackDamage + " de daño.");
-            textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (attackDamage - plyRef.stats.statsBase.playerCurrentDefensa) + " de daño.";
+            textoStatico.textoGlobal = "<color=red>"+gameObject.name + "</color> ataca a <color=blue>" + plyRef.gameObject.name + "</color> con " + (Mathf.Abs(attackDamage - plyRef.stats.statsBase.playerCurrentDefensa)) + " de daño.";
             healthForBoss.canGetHit = false;
             //turnFinishedEnemy?.Invoke(); 
             //turnFinishedEnemy?.Invoke();
@@ -47,9 +47,9 @@ public class AttackTurnEnemy : MonoBehaviour
                 if (canAttackBoss)
                 {
                     cargar.Stop();
-                    HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
-                    YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
-                    SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;
+                    HinokaRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa);
+                    YamiRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa);
+                    SayoRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa);
                     anim.SetTrigger("AttackPhase2");
                     textoStatico.textoGlobal = "<color=red>" + gameObject.name + "</color> ataca a todas";
                     healthForBoss.canGetHit = false;
@@ -68,9 +68,9 @@ public class AttackTurnEnemy : MonoBehaviour
             else
             {
                 cargar.Stop();
-                HinokaRef.stats.statsBase.playerCurrentHealth -= attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa;
-                YamiRef.stats.statsBase.playerCurrentHealth -= attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa;
-                SayoRef.stats.statsBase.playerCurrentHealth -= attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa;
+                HinokaRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - HinokaRef.stats.statsBase.playerCurrentDefensa);
+                YamiRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - YamiRef.stats.statsBase.playerCurrentDefensa);
+                SayoRef.stats.statsBase.playerCurrentHealth -= Mathf.Abs(attackDamage - SayoRef.stats.statsBase.playerCurrentDefensa);
                 anim.SetTrigger("AttackPhase2");
                 textoStatico.textoGlobal = "<color=red>" + gameObject.name + "</color> ataca a todas";
                 healthForBoss.canGetHit = false;

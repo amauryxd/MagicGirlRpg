@@ -43,6 +43,7 @@ public class FightManager : MonoBehaviour
 
     [Header("DungeonCosas")]
     public string wichDungeon;
+    public Coroutine ToStopCor;
 
     //[Header()]
     void Awake()
@@ -173,7 +174,7 @@ public class FightManager : MonoBehaviour
             textoStatico.textoGlobal = "Haz ganado el combate!";
             //Win Logic
             //StartCoroutine(tempCHange());
-            StartCoroutine(PlayerWinEnd());
+            ToStopCor = StartCoroutine(PlayerWinEnd());
             onCheckTurn = false;
             return;
             }

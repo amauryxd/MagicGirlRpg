@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SayoStatFirst
   m_EditorClassIdentifier: Assembly-CSharp::AbilitesStatSOb
   abilityName: Caricia
-  abilityDesc: Sayo hace sana de sana colita de rana
+  abilityDesc: Sayo hace sana, sana colita de rana
   abilityStatModif: 20
   abilityCost: 10
   abilityDrive: 15

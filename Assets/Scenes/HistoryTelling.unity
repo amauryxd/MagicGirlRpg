@@ -1181,6 +1181,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02ec6a4e378a25f4eb64e79ba12935f0, type: 2}
   - {fileID: 11400000, guid: 600f014583c13864fb4d2550d7231f6e, type: 2}
   enemysSOBActivate: {fileID: 11400000, guid: ad0be5c3d689e3e4198ac415d3ef7a74, type: 2}
+  rangoTiempo: 10
 --- !u!4 &459387076
 Transform:
   m_ObjectHideFlags: 0

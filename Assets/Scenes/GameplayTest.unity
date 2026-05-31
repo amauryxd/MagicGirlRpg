@@ -44899,8 +44899,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Si tu aliada cae, podr\xE1 seguir atacando, pero todo su da\xF1o ser\xE1
-    reducido hasta que no se cure por n\xFAmeros positivos\r\n\xA1Ten mucho cuidado!
-    si todas tus aliadas est\xE1n en n\xFAmeros negativos, perder\xE1s el combate\r\n"
+    reducido hasta que no se cure por arriba del 0\r\n\xA1Ten mucho cuidado! si todas
+    tus aliadas caen, perder\xE1s el combate\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}
   m_sharedMaterial: {fileID: -1667187561779130985, guid: 506481273244d8e4d888cf17b2a4885e, type: 2}

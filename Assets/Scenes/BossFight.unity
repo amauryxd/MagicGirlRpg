@@ -1116,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &137390187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,9 +1440,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 179425693}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 600
+  m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 600
+  m_Value: 400
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17907,9 +17907,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 225469673}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 600
+  m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 600
+  m_Value: 400
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23670,7 +23670,7 @@ Transform:
   m_GameObject: {fileID: 991956268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -5.61, y: 1.62, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23793,9 +23793,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 6
+  field of view: 25
+  orthographic: 0
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -51841,7 +51841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c148136b691d14bb5ce68122006c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  enemyHealth: 600
+  enemyHealth: 400
+  actualHealth: 0
   healthBar: {fileID: 160360691}
   tempPrefab: {fileID: 6087073601094197402, guid: a8ceebce0b49bbe42aeba8b51279d455, type: 3}
   canGetHit: 0
@@ -81186,6 +81187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemyHealth: 500
+  actualHealth: 0
   healthBar: {fileID: 1970762554}
   tempPrefab: {fileID: 6087073601094197402, guid: a8ceebce0b49bbe42aeba8b51279d455, type: 3}
   canGetHit: 0
@@ -81207,6 +81209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossBehaviour
   handsDestroyed: 0
+  music: {fileID: 1788301652}
+  shitThis: {fileID: 1523607486}
 --- !u!114 &8618937299566439442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81406,7 +81410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c148136b691d14bb5ce68122006c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  enemyHealth: 600
+  enemyHealth: 400
+  actualHealth: 0
   healthBar: {fileID: 870890991}
   tempPrefab: {fileID: 6087073601094197402, guid: a8ceebce0b49bbe42aeba8b51279d455, type: 3}
   canGetHit: 0

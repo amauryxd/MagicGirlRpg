@@ -19,7 +19,7 @@ MonoBehaviour:
     girlName: 0
     girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.05
-  - dialogues: "quisiera que se viera as\xED todos lo d\xEDas"
+  - dialogues: "quisiera que se viera as\xED todos los d\xEDas"
     girlName: 0
     girlImage: {fileID: -4394797741446421295, guid: 1b3726ed6b0b0cf4f8d2e7f4cabcd0b2, type: 3}
     typingTime: 0.05

@@ -57,7 +57,7 @@ MonoBehaviour:
   - dialogues: entre a un mundo diferente
     anexedText: 1
     typingTime: 0.05
-  - dialogues: 'este sitio es el Caeltheria '
+  - dialogues: 'este sitio es el Caeltheria. '
     anexedText: 0
     typingTime: 0.05
   - dialogues: un sitio habitado por estos monstruos

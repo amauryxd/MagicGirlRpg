@@ -135,6 +135,7 @@ public class NozomiTurn : MonoBehaviour
     {
         FightManager.Instance.turnActual = FightManager.ActualTurn.CheckWinnerPlayer;
         FightManager.Instance.nozomiOnce = true;
+        StartCoroutine(WaitForAnim(false));
     }
     public void doDamageNozomi()
     {

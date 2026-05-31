@@ -4,6 +4,9 @@ public class ResetSobs : MonoBehaviour
 {
     [SerializeField] PlayerStatsSOB[] allPlayerToReset;
     public EnemysSOBActivate enemysSOBActivate;
+
+    private float t;
+    public float rangoTiempo;
     void Start()
     {
         ThingsToReset();
@@ -11,6 +14,15 @@ public class ResetSobs : MonoBehaviour
     [ContextMenu("ResetThingsPls")]
     public void ThingsToReset()
     {
+        enemysSOBActivate.wichEnemyNow = 0;
+        enemysSOBActivate.enemy1Active = true;
+        enemysSOBActivate.enemy2Active = true;
+        enemysSOBActivate.enemy3Active = true;
+        enemysSOBActivate.enemy4Active = true;
+        HasBeenDungeon.hasBeen = false;
+        CheckPointLoader.checkPointIndex = 0;
+        DungeonManager.Door1 = true;
+        DungeonManager.Door2 = true;
         for(int index = 0; index < allPlayerToReset.Length; index++)
         {
             allPlayerToReset[index].playerCurrentHealth = allPlayerToReset[index].playerMaxHealth;
@@ -25,15 +37,14 @@ public class ResetSobs : MonoBehaviour
             Debug.Log(allPlayerToReset[index].name +" reseteo este dato a: "+ allPlayerToReset[index].playerDrive);
             Debug.Log("Player " + allPlayerToReset[index].name + " reseted");
         }
-        enemysSOBActivate.wichEnemyNow = 0;
-        enemysSOBActivate.enemy1Active = true;
-        enemysSOBActivate.enemy2Active = true;
-        enemysSOBActivate.enemy3Active = true;
-        enemysSOBActivate.enemy4Active = true;
-        HasBeenDungeon.hasBeen = false;
-        CheckPointLoader.checkPointIndex = 0;
-        DungeonManager.Door1 = true;
-        DungeonManager.Door2 = true;
     }
-    //copntador
+    private void Update()
+    {
+        t += Time.deltaTime;
+        if(t >= rangoTiempo)
+        {
+            ThingsToReset();
+            t = 0; ;
+        }
+    }
 }

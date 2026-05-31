@@ -3,6 +3,8 @@ using UnityEngine;
 public class BossBehaviour : MonoBehaviour
 {
     public int handsDestroyed = 0;
+    public AudioSource music;
+    public ParticleSystem shitThis;
 
     public bool CheckHandDestroyed()
     {
@@ -14,6 +16,11 @@ public class BossBehaviour : MonoBehaviour
         {
             return false;
         }
+    }
+    public void muteMusic()
+    {
+        music.Stop();
+        shitThis.Stop();
     }
     //para cambio de scena en la muerte
 }
